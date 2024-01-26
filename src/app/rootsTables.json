@@ -7,23 +7,23 @@
       "bu"
     ],
     "children": {
-      "du": "badau = space + low = down, below, under.",
-      "gi": "bagai = [classifier] + X = touch? join? accompany?",
-      "gu": "bagau = space + side = side, with, by, around, near.",
-      "ka": "buka = space + outside = outside.",
-      "li": "balai = space + above = up, above, over.",
-      "lu": "balau = direction + night = west.",
-      "ma": "buma = direction + sun = east.",
-      "mi": "bamai = space + inside = inside, middle.",
-      "mu": "bamau = space + contain = contain.",
-      "na": "buna = space + one = at, be located at.",
-      "ni": "banai = space + point = towards, point at.",
-      "nu": "banau = space + front = before, in front, to face.",
-      "pa": "bupa = space + back = behind, in back.",
-      "pi": "bapai = space + long = far, removed (from), separate (from), away.",
-      "pu": "bapau = space + through = through, pierce, penetrate.",
-      "sa": "busa = space + same = touch.",
-      "tu": "batau = form + repetition = resemble, similar, identical, isomorphic."
+      "du": "badau = space + low = in the {D:space} at the {DO:low}er part of something. = down, below, under.",
+      "gi": "bagai = [classifier] + X =  = touch? join? accompany?",
+      "gu": "bagau = space + side = in the {D:space} to the {GO:side} of something. = side, with, by, around, near.",
+      "ka": "buka = space + outside = in the {D:space} {KA:outside} of something. = outside.",
+      "li": "balai = space + above = in the {D:space} {LE:above} something. = up, above, over.",
+      "lu": "balau = direction + night = in the {D:direction} where the sun goes at {LO:night}. = west.",
+      "ma": "buma = direction + sun = in the {D:direction} where the {MA:sun} rises. = east.",
+      "mi": "bamai = space + inside = in the {D:space} on the {ME:inside} of something. = inside, middle.",
+      "mu": "bamau = space + contain = to {MO:contain} in the {D:space} inside. = contain.",
+      "na": "buna = space + one = in {NA:one} {D:space} together with something. = at, be located at.",
+      "ni": "banai = space + point = with one {NE:point} oriented towards something in {D:space}. = towards, point at.",
+      "nu": "banau = space + front = in the {D:space} in {NO:front} of something. = before, in front, to face.",
+      "pa": "bupa = space + back = in the {D:space} at the {PA:back} of something. = behind, in back.",
+      "pi": "bapai = space + long = in a {D:space} located a {PE:long} way from somehing. = far, removed (from), separate (from), away.",
+      "pu": "bapau = space + through = in the {D:space} going {PO:through} something. = through, pierce, penetrate.",
+      "sa": "busa = space + same = in the {SA:same} exact place as something, with no {D:space} in between. = touch.",
+      "tu": "batau = form + repetition = with a {D:form} like the {TO:repetition} of another form. = resemble, similar, identical, isomorphic."
     }
   },
   "bugu": {
@@ -33,8 +33,8 @@
       "bugu"
     ],
     "children": {
-      "ka": "buguka = side + away = right.",
-      "mi": "bugume = side + heart = left."
+      "ka": "buguka = side + away = the {side} further {KA:away} from the heart. = right.",
+      "mi": "bugume = side + heart = the {side} where the {ME:heart} is located. = left."
     }
   },
   "buma": {
@@ -44,8 +44,8 @@
       "bumo"
     ],
     "children": {
-      "ka": "bumoka = east + away = south.",
-      "mi": "bumome = east + heart = north."
+      "ka": "bumoka = east + away = for someone facing {east}, on the side further {KA:away} from the heart. = south.",
+      "mi": "bumome = east + heart = for someone facing {east}, on the side where the {ME:heart} is located. = north."
     }
   },
   "bumi": {
@@ -55,8 +55,8 @@
       "bimi"
     ],
     "children": {
-      "bi": "bimibai = middle + center = center, in the middle of.",
-      "gi": "bimigai = middle + group = between, among, amid."
+      "bi": "bimibai = middle + center = in the {D:middle} of something at the very {BE:center}. = center, in the middle of.",
+      "gi": "bimigai = middle + group = in the {middle} of a {GE:group} of things. = between, among, amid."
     }
   },
   "bupi": {
@@ -66,7 +66,7 @@
       "bipi"
     ],
     "children": {
-      "da": "bipida = away + great = distant, far, remote."
+      "da": "bipida = away + great = at a {DA:great} distance {away} from something. = distant, far, remote."
     }
   },
   "busa": {
@@ -76,7 +76,7 @@
       "buso"
     ],
     "children": {
-      "gi": "busoge = touch + join = connect, link."
+      "gi": "busoge = touch + join = with parts that are {touch}ing so as to {GE:join} two things together. = connect, link."
     }
   },
   "di": {
@@ -88,55 +88,55 @@
       "di"
     ],
     "children": {
-      "du": "dadau = body + down = hide, conceal.",
-      "dupu": "dudupau = body + earth+through = dig, burrow.",
-      "ga": "diga = [classifier] + X = say.",
-      "gi": "dagai = body + gather = assemble, collect.",
-      "gibi": "digibai = [classifier] + X+X = fix, arrange",
-      "gu": "dagau = body + side = accompany, join, together.",
-      "gudi": "dugude = [classifier] + X+X = handle, deal with",
-      "gupa": "dugupa = [classifier] + X+X = imitate?",
-      "gusagi": "dugusoge = [classifier] + X+X+X = harmonize with",
-      "gutu": "dugutau = [classifier] + X+X = copulate",
-      "ka": "dika = mind + outside = to not know, unaware of, ignorant.",
-      "ki": "dakai = body + move = do, make, work, act.",
-      "kiba": "dikiba = [classifier] + X+X = do with difficulty, have a hard time, exert oneself",
-      "kibati": "dikibetai = [classifier] + X+X+X = do with ease, have an easy time",
-      "kisa": "dikisa = body + change+same = become, change into, turn into, transform.",
-      "ku": "dakau = body + break down = digest, burn, use up.",
-      "kudu": "dukudau = [classifier] + X+X = crush",
-      "la": "dila = mind + amount = count.",
-      "li": "dalai = body + air = breathe, breath.",
-      "lu": "dalau = sense + dark = hear.",
-      "ma": "dima = sense + light = see.",
-      "mi": "damai = mind + inside = think, feel, know, believe, want, sense.",
-      "miba": "dimiba = [classifier] + X+X = remember",
-      "miki": "dimikai = [classifier] + X+X = want, desire, urge",
-      "mu": "damau = body + receive = accept, receive, take, keep, hold.",
-      "muma": "dumuma = [classifier] + X+X = respect, revere, venerate",
-      "musi": "dumuse = [classifier] + X+X = drink, absorb",
-      "ni": "danai = body + sharp = bite.",
-      "nu": "danau = body + front = protect, preserve, keep.",
-      "pa": "dipa = body + after = follow.",
-      "padi": "dipedai = [classifier] + X+X = depend on, rely on.",
-      "pama": "dipema = [classifier] + X+X = wait (for), hope, expect.",
-      "pamu": "dipemo = [classifier] + after+take = chase, hunt.",
-      "pi": "dapai = sense + long = dislike, hate, suffer (from), discomfort.",
-      "piku": "dipiko = [classifier] + X+X = startle",
-      "pipa": "dipipa = [classifier] + X+X = tired of",
-      "pu": "dapau = [classifier] + X = dislike.",
-      "mipu": "dupume = [classifier] + feel+against = angry at.",
-      "punu": "dupunau = body + against+before = prevent, forbid.",
-      "puta": "duputa = [classifier] + X+X = fight.",
-      "sa": "disa = [classifier] + X = like, love, enjoy, be happy (about).",
-      "si": "dasai = body + water = wash, rinse.",
-      "su": "dasau = mind + cut = choose, select, decide (on).",
-      "ta": "dita = body + push = repel, push, hit, throw, cast.",
-      "tada": "diteda = [classifier] + X+X = grow",
-      "ti": "datai = [classifier] + X = trim, thin out, disperse?",
-      "tu": "datau = [classifier] + X = repeat, reproduce.",
-      "tugi": "dutuge = [classifier] + X+X = copulate?",
-      "tupa": "dutupa = [classifier] + X+X = give birth?"
+      "du": "dadau = body + down = to use one's {B:body} to keep something {DO:down} below cover. = hide, conceal.",
+      "dupu": "dudupau = body + earth+through = to use one's {B:body} to break into something like {DO:earth} so as to reach {PO:through} to the interior. = dig, burrow.",
+      "ga": "diga = [classifier] + X =  = say.",
+      "gi": "dagai = body + gather = to use one's {B:body} to {GE:gather} things together. = assemble, collect.",
+      "gibi": "digibai = [classifier] + X+X =  = fix, arrange",
+      "gu": "dagau = body + side = to bring one's {B:body} {GO:side} by side with others. = accompany, join, together.",
+      "gudi": "dugude = [classifier] + X+X =  = handle, deal with",
+      "gupa": "dugupa = [classifier] + X+X =  = imitate?",
+      "gusagi": "dugusoge = [classifier] + X+X+X =  = harmonize with",
+      "gutu": "dugutau = [classifier] + X+X =  = copulate",
+      "ka": "dika = mind + outside = a {B:mind} relation with something {KA:outside} of one's understanding or experience. = to not know, unaware of, ignorant.",
+      "ki": "dakai = body + move = to use one's {B:body} to {KE:move} something. = do, make, work, act.",
+      "kiba": "dikiba = [classifier] + X+X =  = do with difficulty, have a hard time, exert oneself",
+      "kibati": "dikibetai = [classifier] + X+X+X =  = do with ease, have an easy time",
+      "kisa": "dikisa = body + change+same = to have one's {B:body} {KE:change} in such a way that it is the {SA:same} as another sort of thing. = become, change into, turn into, transform.",
+      "ku": "dakau = body + break down = to use one's {B:body} to {KO:break down} some material. = digest, burn, use up.",
+      "kudu": "dukudau = [classifier] + X+X =  = crush",
+      "la": "dila = mind + amount = to use the {B:mind} to apprehend the {LA:amount} of something. = count.",
+      "li": "dalai = body + air = to use one's {B:body} to take {LE:air} in and out. = breathe, breath.",
+      "lu": "dalau = sense + dark = to {B:sense} with the ears, as is possible even in the {LO:dark}. = hear.",
+      "ma": "dima = sense + light = to {B:sense} as {MA:light} with the eyes. = see.",
+      "mi": "damai = mind + inside = to think or feel something {ME:inside} one's {B:mind}. = think, feel, know, believe, want, sense.",
+      "miba": "dimiba = [classifier] + X+X =  = remember",
+      "miki": "dimikai = [classifier] + X+X =  = want, desire, urge",
+      "mu": "damau = body + receive = use one's {B:body} to {MO:receive} something. = accept, receive, take, keep, hold.",
+      "muma": "dumuma = [classifier] + X+X =  = respect, revere, venerate",
+      "musi": "dumuse = [classifier] + X+X =  = drink, absorb",
+      "ni": "danai = body + sharp = to use one's {B:body} where it is {NE:sharp}est to cut through something. = bite.",
+      "nu": "danau = body + front = to use one's {B:body} to stand in {NO:front} of some precious thing in danger. = protect, preserve, keep.",
+      "pa": "dipa = body + after = to use one's {B:body} to go {PA:after} something. = follow.",
+      "padi": "dipedai = [classifier] + X+X =  = depend on, rely on.",
+      "pama": "dipema = [classifier] + X+X =  = wait (for), hope, expect.",
+      "pamu": "dipemo = [classifier] + after+take = to go {PA:after} something and try to {MO:take} it. = chase, hunt.",
+      "pi": "dapai = sense + long = to {B:sense} something that makes the moment feel {PE:long}. = dislike, hate, suffer (from), discomfort.",
+      "piku": "dipiko = [classifier] + X+X =  = startle",
+      "pipa": "dipipa = [classifier] + X+X =  = tired of",
+      "pu": "dapau = [classifier] + X =  = dislike.",
+      "mipu": "dupume = [classifier] + feel+against = to {ME:feel} such a way about something as though wishing to fight {PO:against} it. = angry at.",
+      "punu": "dupunau = body + against+before = to use one's {B:body} to take measures {PO:against} something {NO:before} it happens. = prevent, forbid.",
+      "puta": "duputa = [classifier] + X+X =  = fight.",
+      "sa": "disa = [classifier] + X =  = like, love, enjoy, be happy (about).",
+      "si": "dasai = body + water = to use one's {B:body} to apply {SE:water} to something so as to clean it. = wash, rinse.",
+      "su": "dasau = mind + cut = to {SO:cut} off other options or possibilities to leave only one remaining in one's {mind}. = choose, select, decide (on).",
+      "ta": "dita = body + push = to use one's {B:body} to {TA:push} something away. = repel, push, hit, throw, cast.",
+      "tada": "diteda = [classifier] + X+X =  = grow",
+      "ti": "datai = [classifier] + X =  = trim, thin out, disperse?",
+      "tu": "datau = [classifier] + X =  = repeat, reproduce.",
+      "tugi": "dutuge = [classifier] + X+X =  = copulate?",
+      "tupa": "dutupa = [classifier] + X+X =  = give birth?"
     }
   },
   "digu": {
@@ -146,8 +146,8 @@
       "dugu"
     ],
     "children": {
-      "mi": "dugume = together + feel = pity, sympathy, compassion.",
-      "sa": "dugusa = join + accord = help, assist."
+      "mi": "dugume = together + feel = to join {together} with someone in {ME:feel}ing something. = pity, sympathy, compassion.",
+      "sa": "dugusa = join + accord = to {join} in some effort and act in {SA:accord} with the goals of another. = help, assist."
     }
   },
   "digusa": {
@@ -157,7 +157,7 @@
       "duguso"
     ],
     "children": {
-      "nu": "dugusonau = help + before = prepare."
+      "nu": "dugusonau = help + before = to do something to {help} some cause {NO:before} the moment in question. = prepare."
     }
   },
   "dika": {
@@ -167,7 +167,7 @@
       "dike"
     ],
     "children": {
-      "pi": "dikepai = unaware + away = lose track of, lose."
+      "pi": "dikepai = unaware + away = to become {unaware} of something's location or presence, as though it had gone {PE:away}. = lose track of, lose."
     }
   },
   "dikaki": {
@@ -177,7 +177,7 @@
       "dikekai"
     ],
     "children": {
-      "": "dikekai = not know +  = surprised at."
+      "": "dikekai = not know +  = the feeling of encountering something one did {not know} might happen. = surprised at."
     }
   },
   "diki": {
@@ -187,10 +187,10 @@
       "diki"
     ],
     "children": {
-      "gu": "dikigo = do + byproduct = do accidentally, err?.",
-      "na": "dikina = do + complete = succeed at?.",
-      "pu": "dikipo = do + different = fail at?.",
-      "tu": "dikito = do + repeat = copy, imitate?."
+      "gu": "dikigo = do + byproduct = to {do} something as a {GO:byproduct} of one's conscious actions. = do accidentally, err?.",
+      "na": "dikina = do + complete = to {do} something and achieve a {NA:complete} result as intended. = succeed at?.",
+      "pu": "dikipo = do + different = to {do} something and achieve a result that was {PO:different} than intended. = fail at?.",
+      "tu": "dikito = do + repeat = to {do} something so as to {TO:repeat} the result of someone's previous actions. = copy, imitate?."
     }
   },
   "dili": {
@@ -200,10 +200,10 @@
       "dili"
     ],
     "children": {
-      "ka": "dilika = breathe + out = exhale.",
-      "mi": "dilimai = breathe + in = inhale.",
-      "mu": "dilimo = breathe + pull = suck.",
-      "ta": "dilita = breathe + expel = blow."
+      "ka": "dilika = breathe + out = to {breathe} {KA:out}. = exhale.",
+      "mi": "dilimai = breathe + in = to {breathe} {ME:in}. = inhale.",
+      "mu": "dilimo = breathe + pull = to {MO:pull} something in as the air one {breathe}s. = suck.",
+      "ta": "dilita = breathe + expel = tp {TA:expel} something out as as the air one {breathe}s. = blow."
     }
   },
   "dima": {
@@ -213,10 +213,10 @@
       "dime"
     ],
     "children": {
-      "bi": "dimebai = see + concentrate = look at, pay attention.",
-      "gu": "dimego = see + side = compare, measure.",
-      "ka": "dimeka = see + unknown = try, test, attempt, examine, inspect, investigate, seek, search for.",
-      "mi": "dimemai = see + inside = imagine, consider."
+      "bi": "dimebai = see + concentrate = to {see} something and {BE:concentrate} one's awareness on it. = look at, pay attention.",
+      "gu": "dimego = see + side = to {see} things {GO:side} by side so as to understand their differences. = compare, measure.",
+      "ka": "dimeka = see + unknown = to make an effort to {see} the result or condition of something {KA:unknown}. = try, test, attempt, examine, inspect, investigate, seek, search for.",
+      "mi": "dimemai = see + inside = to {see} something {ME:inside} one's mind. = imagine, consider."
     }
   },
   "dimami": {
@@ -226,7 +226,7 @@
       "dimemi"
     ],
     "children": {
-      "nu": "dimemino = imagine + before = predict, foresee."
+      "nu": "dimemino = imagine + before = to {imagine} something {NO:before} it happens. = predict, foresee."
     }
   },
   "dimi": {
@@ -236,12 +236,12 @@
       "dimi"
     ],
     "children": {
-      "di": "dimidai = sense + hand = feel, touch.",
-      "la": "dimila = sense + tongue = taste.",
-      "li": "dimilai = sense + air = smell.",
-      "na": "dimina = believe + complete = certain, sure, know.",
-      "pu": "dimipo = believe + different = mistake, error.",
-      "tu": "dimito = think + repeat = remember."
+      "di": "dimidai = sense + hand = to {sense} as one does with the {DE:hand}s. = feel, touch.",
+      "la": "dimila = sense + tongue = to {sense} as one does specially with the {LA:tongue}. = taste.",
+      "li": "dimilai = sense + air = to {sense} as one does specially by taking in {LE:air} with the nose. = smell.",
+      "na": "dimina = believe + complete = to {believe} something with {NA:complete} confidence. = certain, sure, know.",
+      "pu": "dimipo = believe + different = to {believe} something that is {PO:different} from the actual circumstances. = mistake, error.",
+      "tu": "dimito = think + repeat = to {think} about something for a {TO:repeat}ed time. = remember."
     }
   },
   "dimidi": {
@@ -251,7 +251,7 @@
       "dimidai"
     ],
     "children": {
-      "": "dimidai = hand +  = grasp, hold, grab, take."
+      "": "dimidai = hand +  = to {keep} something as with the {hand}. = grasp, hold, grab, take."
     }
   },
   "dimitu": {
@@ -261,7 +261,7 @@
       "dimito"
     ],
     "children": {
-      "": "dimito = repeat +  = doubt, wonder, concern, worry."
+      "": "dimito = repeat +  = to {think} about something {repeat}edly, with no resolution. = doubt, wonder, concern, worry."
     }
   },
   "dimu": {
@@ -271,10 +271,10 @@
       "dumu"
     ],
     "children": {
-      "bi": "dumube = keep + order = control.",
-      "du": "dumudau = keep + base = support.",
-      "ga": "dumuga = take + mouth = eat, drink, consume.",
-      "pi": "dumupe = hold + path = carry, take away, bring, deliver, convey."
+      "bi": "dumube = keep + order = to {keep} it in {BE:order} according to one's direction. = control.",
+      "du": "dumudau = keep + base = to {keep} something up as a {DO:base}. = support.",
+      "ga": "dumuga = take + mouth = to {take} something in the {GA:mouth}. = eat, drink, consume.",
+      "pi": "dumupe = hold + path = to {hold} something while moving along a {PE:path}. = carry, take away, bring, deliver, convey."
     }
   },
   "dimuga": {
@@ -284,8 +284,8 @@
       "dumugo"
     ],
     "children": {
-      "mi": "dumugome = eat + inside = swallow, drink.",
-      "ta": "dumugota = eat + expel = spit out."
+      "mi": "dumugome = eat + inside = as when {eat}ing, to take somethning {ME:inside} the throat. = swallow, drink.",
+      "ta": "dumugota = eat + expel = to take something that was {eat}en and {TA:expel} it back out. = spit out."
     }
   },
   "dini": {
@@ -295,7 +295,7 @@
       "dini"
     ],
     "children": {
-      "ku": "diniko = bite + break down = chew."
+      "ku": "diniko = bite + break down = to {KO:break down} something using the teeth with an action like so many {bite}s. = chew."
     }
   },
   "dinu": {
@@ -305,8 +305,8 @@
       "dunu"
     ],
     "children": {
-      "mi": "dunume = keep + inside = pregnant with.",
-      "ti": "dunute = protect + small = be careful of, watch out for, be cautious about, take care of, meticulous."
+      "mi": "dunume = keep + inside = to {keep} a baby {ME:inside} the womb. = pregnant with.",
+      "ti": "dunute = protect + small = to {protect} something by keeping one's sphere of attention to a {TE:small} area. = be careful of, watch out for, be cautious about, take care of, meticulous."
     }
   },
   "dipadi": {
@@ -316,7 +316,7 @@
       "dipedi"
     ],
     "children": {
-      "ba": "dipediba = depend + firm = trust."
+      "ba": "dipediba = depend + firm = to {depend} on a person or a notion, as something that will stand {BA:firm}. = trust."
     }
   },
   "dipi": {
@@ -326,8 +326,8 @@
       "dipi"
     ],
     "children": {
-      "du": "dipido = dislike + down = ashamed of.",
-      "ka": "dipika = dislike + unknown = fear, afraid (of)."
+      "du": "dipido = dislike + down = the feeling when one {dislike}s something such that it makes one put one's head {DO:down}, to avoid facing others. = ashamed of.",
+      "ka": "dipika = dislike + unknown = the feeling when {dislike}s something that is {KA:unknown} or unexpected. = fear, afraid (of)."
     }
   },
   "dita": {
@@ -337,7 +337,7 @@
       "dite"
     ],
     "children": {
-      "pi": "ditepai = push + long = reach for."
+      "pi": "ditepai = push + long = to {push} towards something by making the body {PE:long}. = reach for."
     }
   },
   "gi": {
@@ -349,49 +349,49 @@
       "gu"
     ],
     "children": {
-      "ba": "giba = body + still = rest, sit.",
-      "babu": "gibebo = organic + hard+round = pearl.",
-      "basi": "gibesai = organic + hard+water = coral.",
-      "bi": "gabai = body part + think = head.",
-      "bu": "gabau = plant part + full = fruit, vegetable, vegetal flesh.",
-      "da": "gida = plant part + branch out = stem, trunk.",
-      "daba": "gideba = plant part + tree+hard = wood.",
-      "daka": "gideka = plant part + tree+outside = bark.",
-      "dapi": "gidepai = plant part + tree+long = vine.",
-      "di": "gadai = body part + grasp = hand.",
-      "du": "gadau = body part + down = root.",
-      "dudi": "gudude = body part + ground+hand = foot.",
-      "dugi": "guduge = body part + low+joint = knee.",
-      "duta": "guduta = body part + low+push = leg.",
-      "ka": "gika = body part + outside = skin.",
-      "kaba": "gikeba = body part + outside+hard = shell.",
-      "ki": "gakai = body + move = go, walk, move.",
-      "ku": "gakau = body part + break down = stomach, gut.",
-      "pa": "gipa = plant + offspring = seed, kernel, stone/pit.",
-      "la": "gila = body part + flap = tongue.",
-      "li": "galai = body + air = breath.",
-      "lu": "galau = body + sound = voice, cry.",
-      "luli": "gulule = body + sound+high = whistle.",
-      "ma": "gima = body part + light = eye.",
-      "mi": "gamai = body part + inside = heart, insides.",
-      "miba": "gimiba = body part + inside+hard = bone.",
-      "mibu": "gimibo = body part + inside+round = heart.",
-      "mida": "gimida = body part + inside+big = liver.",
-      "milu": "gimilo = body + thought+night = sleep, slumber.",
-      "mima": "gimima = body + thought+day = awake, wakefulness, consciousness.",
-      "mimu": "gimimo = body part + inside+keep = womb.",
-      "mu": "gamau = body part + contain = mouth.",
-      "na": "gina = body + entire = body.",
-      "ni": "ganai = body part + point = horn.",
-      "niti": "ginitai = plant part + point+thin = thorn, barb.",
-      "nu": "ganau = body part + front = face.",
-      "pabu": "gipebo = [classifier] + offspring+round = egg.",
-      "pi": "gapai = body part + long = tail.",
-      "si": "gasai = body + liquid = blood, bodily fluid.",
-      "su": "gasau = body + part = organ, body part, organic material.",
-      "ta": "gita = body part + protrude = limb, branch, arm.",
-      "ti": "gatai = plant part + thin = leaf, leaves.",
-      "tu": "gatau = body part + reproduction = genitals."
+      "ba": "giba = body + still = the state of having one's {G:body} settled, staying {BA:still} in one place. = rest, sit.",
+      "babu": "gibebo = organic + hard+round = an {G:organic} material that is {BA:hard} and {BO:round}. = pearl.",
+      "basi": "gibesai = organic + hard+water = an {G:organic} material that is {BA:hard} and is grown in the {SE:water} of the sea. = coral.",
+      "bi": "gabai = body part + think = a {G:body part} which is important for {BE:think}ing. = head.",
+      "bu": "gabau = plant part + full = a {G:plant part} which is {BO:full} of flesh. = fruit, vegetable, vegetal flesh.",
+      "da": "gida = plant part + branch out = a {G:plant part} out of which limbs may {DA:branch out}. = stem, trunk.",
+      "daba": "gideba = plant part + tree+hard = a {G:plant part} which comes from {DA:tree}s and is very {BA:hard}. = wood.",
+      "daka": "gideka = plant part + tree+outside = a {G:plant part} which comes from {DA:tree}s and is found on the {KA:outside}. = bark.",
+      "dapi": "gidepai = plant part + tree+long = a {G:plant part} which hangs on things like {DA:tree}s and is very {PE:long}. = vine.",
+      "di": "gadai = body part + grasp = a {G:body part} used for {DE:grasp}ing. = hand.",
+      "du": "gadau = body part + down = a {G:body part} which is {DO:down} below the rest of the body. = root.",
+      "dudi": "gudude = body part + ground+hand = a {G:body part} usually kept to {DO:ground} resembling a {DE:hand}. = foot.",
+      "dugi": "guduge = body part + low+joint = a {G:body part} in the middle of the {DO:low}er limbs where there is a major {GE:joint}. = knee.",
+      "duta": "guduta = body part + low+push = a {G:body part} on the {DO:low}er part of the body suited for {TA:push}ing things. = leg.",
+      "ka": "gika = body part + outside = a {G:body part} on the {KA:outside}. = skin.",
+      "kaba": "gikeba = body part + outside+hard = a {G:body part} which is located on the {KA:outside} and is especially {BA:hard}. = shell.",
+      "ki": "gakai = body + move = an action whereby one {KE:move}s one's {G:body}. = go, walk, move.",
+      "ku": "gakau = body part + break down = a {G:body part} used to {KO:break down} food. = stomach, gut.",
+      "pa": "gipa = plant + offspring = the initial form of a {G:plant}'s {PA:offspring}. = seed, kernel, stone/pit.",
+      "la": "gila = body part + flap = a {G:body part} shaped like a {LA:flap}. = tongue.",
+      "li": "galai = body + air = a puff of {LE:air} expelled from the {G:body}. = breath.",
+      "lu": "galau = body + sound = a {LO:sound} from the {G:body}. = voice, cry.",
+      "luli": "gulule = body + sound+high = a {LO:sound} from the {G:body} with a {LE:high} pitch. = whistle.",
+      "ma": "gima = body part + light = the {G:body part} that detects {MA:light}. = eye.",
+      "mi": "gamai = body part + inside = a {G:body part} on the {ME:inside}. = heart, insides.",
+      "miba": "gimiba = body part + inside+hard = a {G:body part} on the {ME:inside} which is especially {BA:hard}. = bone.",
+      "mibu": "gimibo = body part + inside+round = an important {G:body part} on the {ME:inside} with a generally {BO:round} shape. = heart.",
+      "mida": "gimida = body part + inside+big = an important {G:body part} on the {ME:inside} which is the {DA:big}gest of the internal organs. = liver.",
+      "milu": "gimilo = body + thought+night = the state of one's {G:body} when conscious {ME:thought} is stalled, usually during the {LO:night}. = sleep, slumber.",
+      "mima": "gimima = body + thought+day = the state of one's {G:body} when conscious {ME:thought} is active, usually during the {MA:day}. = awake, wakefulness, consciousness.",
+      "mimu": "gimimo = body part + inside+keep = the {G:body part} on the {ME:inside} which {MO:keep}s a new baby. = womb.",
+      "mu": "gamau = body part + contain = a {G:body part} that can {MO:contain} things. = mouth.",
+      "na": "gina = body + entire = the {NA:entire} {G:body}. = body.",
+      "ni": "ganai = body part + point = a {G:body part} shaped like a {NE:point}. = horn.",
+      "niti": "ginitai = plant part + point+thin = a {G:plant part} shaped like a {NE:point} which is very {TE:thin}. = thorn, barb.",
+      "nu": "ganau = body part + front = a {G:body part} at the {NO:front} of the head. = face.",
+      "pabu": "gipebo = [classifier] + offspring+round = a organic thing containing an animal's {PA:offspring} which is {BO:round} in shape. = egg.",
+      "pi": "gapai = body part + long = a {G:body part} with a {PE:long} shape. = tail.",
+      "si": "gasai = body + liquid = {SE:liquid} from the {G:body}. = blood, bodily fluid.",
+      "su": "gasau = body + part = a {G:body} {SO:part}. = organ, body part, organic material.",
+      "ta": "gita = body part + protrude = a {G:body part} that {TA:protrude}s from the trunk. = limb, branch, arm.",
+      "ti": "gatai = plant part + thin = a {G:plant part} that is typically {TE:thin}. = leaf, leaves.",
+      "tu": "gatau = body part + reproduction = a {G:body part} used specially in {TO:reproduction}. = genitals."
     }
   },
   "giba": {
@@ -401,7 +401,7 @@
       "gibe"
     ],
     "children": {
-      "la": "gibela = rest + flat = lie down, recline."
+      "la": "gibela = rest + flat = to {rest} with the body spread out {LA:flat} across a surface. = lie down, recline."
     }
   },
   "gibi": {
@@ -411,9 +411,9 @@
       "gibi"
     ],
     "children": {
-      "ba": "gibiba = head + hard = skull.",
-      "la": "gibila = head + flap = ear.",
-      "pi": "gibipai = head + path = neck."
+      "ba": "gibiba = head + hard = a part of the {head} which is {BA:hard}. = skull.",
+      "la": "gibila = head + flap = a part of the {head} which is shaped like a {LA:flap}. = ear.",
+      "pi": "gibipai = head + path = a part of the {head} which traces a {PE:path} from the rest of the body. = neck."
     }
   },
   "gibiba": {
@@ -423,7 +423,7 @@
       "gibibe"
     ],
     "children": {
-      "mi": "gibibemai = skull + inside = brain."
+      "mi": "gibibemai = skull + inside = a body part which is {ME:inside} the {skull}. = brain."
     }
   },
   "gibu": {
@@ -433,8 +433,8 @@
       "gubu"
     ],
     "children": {
-      "ka": "gubuka = fruit + outside = husk.",
-      "ti": "gubute = fruit + small = bud."
+      "ka": "gubuka = fruit + outside = a covering on the {KA:outside} of the {fruit}. = husk.",
+      "ti": "gubute = fruit + small = a {TE:small} growth which will become a larger {fruit}. = bud."
     }
   },
   "gida": {
@@ -444,7 +444,7 @@
       "gide"
     ],
     "children": {
-      "si": "gidesai = plant material + liquid = sap."
+      "si": "gidesai = plant material + liquid = a {G:plant material} which is {SE:liquid}. = sap."
     }
   },
   "gidi": {
@@ -454,9 +454,9 @@
       "gidi"
     ],
     "children": {
-      "gi": "gidigai = hand + joint = wrist.",
-      "ni": "gidinai = hand + sharp = fingernail.",
-      "ti": "giditai = hand + thin = finger."
+      "gi": "gidigai = hand + joint = part of the {hand} where the {GE:joint} connects to the arm. = wrist.",
+      "ni": "gidinai = hand + sharp = part of the {hand} which is very {NE:sharp}. = fingernail.",
+      "ti": "giditai = hand + thin = part of the {hand} which is small and {TE:thin}. = finger."
     }
   },
   "giditi": {
@@ -466,12 +466,12 @@
       "giditi"
     ],
     "children": {
-      "gi": "giditigai = finger + joint = knuckle.",
-      "ku": "giditiko = finger + four = pinky finger.",
-      "ma": "giditima = finger + five = thumb.",
-      "na": "giditina = finger + one = index finger.",
-      "si": "giditisai = finger + three = ring finger.",
-      "tu": "giditito = finger + two = middle finger."
+      "gi": "giditigai = finger + joint = a {GE:joint} of the {finger}. = knuckle.",
+      "ku": "giditiko = finger + four = the {finger} raised when spelling the number {KO:four}. = pinky finger.",
+      "ma": "giditima = finger + five = the {finger} raised when spelling the number {MA:five}. = thumb.",
+      "na": "giditina = finger + one = the {finger} raised when spelling the number {NA:one}. = index finger.",
+      "si": "giditisai = finger + three = the {finger} raised when spelling the number {SE:three}. = ring finger.",
+      "tu": "giditito = finger + two = the {finger} raised when spelling the number {TO:two}. = middle finger."
     }
   },
   "gidudi": {
@@ -481,7 +481,7 @@
       "gududa"
     ],
     "children": {
-      "ti": "gududatai = foot + thin = toe."
+      "ti": "gududatai = foot + thin = part of the {foot} which is small and {TE:thin}. = toe."
     }
   },
   "gidugi": {
@@ -491,8 +491,8 @@
       "gudugi"
     ],
     "children": {
-      "du": "gudugido = knee + down = kneel.",
-      "nu": "gudugino = knee + front = kneecap."
+      "du": "gudugido = knee + down = the action of getting {DO:down} on one's {knee}s. = kneel.",
+      "nu": "gudugino = knee + front = the {NO:front} part of the {knee}. = kneecap."
     }
   },
   "gika": {
@@ -502,7 +502,7 @@
       "gike"
     ],
     "children": {
-      "ti": "giketai = skin + thin = hair."
+      "ti": "giketai = skin + thin = a {TE:thin} strand growing out of the {skin}. = hair."
     }
   },
   "giki": {
@@ -512,12 +512,12 @@
       "giki"
     ],
     "children": {
-      "du": "gikido = move + low = crawl.",
-      "gu": "gikigo = walk + disorder = limp.",
-      "li": "gikilai = move + air = fly.",
-      "pi": "gikipai = move + path = walk, run.",
-      "si": "gikisai = move + water = swim.",
-      "ta": "gikita = walk + push = strut, swagger, parade."
+      "du": "gikido = move + low = to {move} while {DO:low} to the ground. = crawl.",
+      "gu": "gikigo = walk + disorder = to {walk} in a {GO:disorder}ed fashion. = limp.",
+      "li": "gikilai = move + air = to {move} through {LE:air}. = fly.",
+      "pi": "gikipai = move + path = to {move} straight across a {PE:path}. = walk, run.",
+      "si": "gikisai = move + water = to {move} through {SE:water}. = swim.",
+      "ta": "gikita = walk + push = to {walk} with such posture that the body is {TA:push}ed outwards. = strut, swagger, parade."
     }
   },
   "gikipi": {
@@ -527,7 +527,7 @@
       "gikipi"
     ],
     "children": {
-      "da": "gikipida = run + great = run."
+      "da": "gikipida = run + great = to {run} at a {DA:great} speed. = run."
     }
   },
   "giku": {
@@ -537,9 +537,9 @@
       "guku"
     ],
     "children": {
-      "bu": "gukubau = gut + full = stomach.",
-      "nu": "gukunau = gut + front = belly, abdomen.",
-      "pi": "gukupe = gut + long = gut, intestines."
+      "bu": "gukubau = gut + full = part of the {gut} which gets {BO:full} with food. = stomach.",
+      "nu": "gukunau = gut + front = part of the body which is in {NO:front} of the {gut}. = belly, abdomen.",
+      "pi": "gukupe = gut + long = part of the {gut} which is {PE:long}. = gut, intestines."
     }
   },
   "gikubu": {
@@ -549,8 +549,8 @@
       "gukubu"
     ],
     "children": {
-      "li": "gukubule = stomach + air = burp, belch.",
-      "ta": "gukubuta = stomach + expel = vomit."
+      "li": "gukubule = stomach + air = {LE:air} from the {stomach}. = burp, belch.",
+      "ta": "gukubuta = stomach + expel = material which is {TA:expel}led from the {stomach}. = vomit."
     }
   },
   "gikunu": {
@@ -560,7 +560,7 @@
       "gukunu"
     ],
     "children": {
-      "bi": "gukunube = belly + center = navel, bellybutton."
+      "bi": "gukunube = belly + center = part of the {belly} at the very {BE:center}. = navel, bellybutton."
     }
   },
   "gikunubi": {
@@ -570,7 +570,7 @@
       "gukunuba"
     ],
     "children": {
-      "pi": "gukunubapai = navel + long = umbilical cord."
+      "pi": "gukunubapai = navel + long = a {PE:long} thing attached where the {navel} will go. = umbilical cord."
     }
   },
   "gipa": {
@@ -580,9 +580,9 @@
       "gipe"
     ],
     "children": {
-      "ba": "gipeba = seed + hard = nut.",
-      "kupi": "gipekupe = seed + PHONETIC+PHONETIC = coffee.",
-      "nu": "gipeno = seed + face = flower."
+      "ba": "gipeba = seed + hard = a {BA:hard} thing with a {seed} inside. = nut.",
+      "kupi": "gipekupe = seed + PHONETIC+PHONETIC = a {seed} whose name sounds like {KO:PHONETIC} {PE:PHONETIC}. = coffee.",
+      "nu": "gipeno = seed + face = a plant part which eventually develops {seed}s and has a distinctive {NO:face} that attracts bees and the like. = flower."
     }
   },
   "gili": {
@@ -592,11 +592,11 @@
       "gili"
     ],
     "children": {
-      "bu": "gilibo = breath + round = lung.",
-      "ka": "gilika = breath + outside = exhalation.",
-      "ku": "giliko = breath + force = cough.",
-      "mi": "gilimai = breath + inside = inhalation.",
-      "ni": "gilinai = breath + point = nose."
+      "bu": "gilibo = breath + round = a {BO:round} body part used to take in and push out {breath}. = lung.",
+      "ka": "gilika = breath + outside = {breath} that has gone {KA:outside} the body. = exhalation.",
+      "ku": "giliko = breath + force = {breath} expelled with with great {KO:force}. = cough.",
+      "mi": "gilimai = breath + inside = {breath} that has gone {ME:inside} the body. = inhalation.",
+      "ni": "gilinai = breath + point = a {NE:point}ed body part that lets out the {breath}. = nose."
     }
   },
   "gilini": {
@@ -606,9 +606,9 @@
       "gilini"
     ],
     "children": {
-      "ga": "giliniga = nose + opening = nostril.",
-      "ku": "giliniko = nose + force = sneeze.",
-      "mi": "gilinimai = nose + inside = nasal cavity, sinus."
+      "ga": "giliniga = nose + opening = an {GA:opening} in the {nose}. = nostril.",
+      "ku": "giliniko = nose + force = air expelled from the {nose} with great {KO:force}. = sneeze.",
+      "mi": "gilinimai = nose + inside = the {ME:inside} part of the {nose}. = nasal cavity, sinus."
     }
   },
   "gilu": {
@@ -618,10 +618,10 @@
       "gulu"
     ],
     "children": {
-      "bi": "gulube = voice + order = song, call.",
-      "da": "guluda = voice + great = shout, scream.",
-      "gu": "gulugau = voice + disorder = cry, wail.",
-      "ti": "gulute = voice + small = whisper."
+      "bi": "gulube = voice + order = an {BE:order}ly sound made with the {voice}. = song, call.",
+      "da": "guluda = voice + great = a {DA:great} sound made with the {voice}. = shout, scream.",
+      "gu": "gulugau = voice + disorder = a {GO:disorder}ed sound made with the {voice}. = cry, wail.",
+      "ti": "gulute = voice + small = speech with the {voice} brought to a {TE:small} volume. = whisper."
     }
   },
   "gima": {
@@ -631,10 +631,10 @@
       "gime"
     ],
     "children": {
-      "bi": "gimebai = eye + center = pupil.",
-      "nu": "gimeno = eye + front = eyelid.",
-      "si": "gimesai = eye + water = tears.",
-      "ti": "gimetai = eye + hair = eyelash."
+      "bi": "gimebai = eye + center = the part of the {eye} in the very {BE:center}. = pupil.",
+      "nu": "gimeno = eye + front = the body part that goes {NO:front} of the {eye}. = eyelid.",
+      "si": "gimesai = eye + water = {SE:water} from the {eye}. = tears.",
+      "ti": "gimetai = eye + hair = the {TE:hair} lining the {eye}s. = eyelash."
     }
   },
   "gimabi": {
@@ -644,7 +644,7 @@
       "gimebi"
     ],
     "children": {
-      "ka": "gimebika = pupil + outside = iris."
+      "ka": "gimebika = pupil + outside = the part of the eye {KA:outside} of the {pupil}. = iris."
     }
   },
   "gimali": {
@@ -655,8 +655,8 @@
       "gimeli"
     ],
     "children": {
-      "": "gimelai = eye +  = brow.",
-      "ti": "gimelitai = brow + hair = eyebrow."
+      "": "gimelai = eye +  = the {G:body part} above the {eye}s. = brow.",
+      "ti": "gimelitai = brow + hair = the {TE:hair} on the {brow}. = eyebrow."
     }
   },
   "gimi": {
@@ -666,8 +666,8 @@
       "gimi"
     ],
     "children": {
-      "nu": "gimino = heart + front = breast.",
-      "pa": "gimipa = heart + behind = back."
+      "nu": "gimino = heart + front = the body part in {NO:front} of the {heart}. = breast.",
+      "pa": "gimipa = heart + behind = the body part {PA:behind} the {heart}. = back."
     }
   },
   "gimilu": {
@@ -677,7 +677,7 @@
       "gimila"
     ],
     "children": {
-      "gu": "gimilagau = asleep + disorder = fainted."
+      "gu": "gimilagau = asleep + disorder = being as though {asleep} through {GO:disorder}ed circumstances. = fainted."
     }
   },
   "giminu": {
@@ -687,8 +687,8 @@
       "giminu"
     ],
     "children": {
-      "ni": "giminune = breast + point = nipple.",
-      "si": "giminuse = breast + liquid = milk."
+      "ni": "giminune = breast + point = the part where the {breast} reaches a {NE:point}. = nipple.",
+      "si": "giminuse = breast + liquid = {SE:liquid} from the {breast}. = milk."
     }
   },
   "gimu": {
@@ -698,11 +698,11 @@
       "gumu"
     ],
     "children": {
-      "ga": "gumuga = mouth + gape = yawn.",
-      "ka": "gumuka = mouth + outside = lip.",
-      "mi": "gumume = mouth + inside = throat.",
-      "ni": "gumune = mouth + point = tooth.",
-      "si": "gumuse = mouth + water = saliva, spit."
+      "ga": "gumuga = mouth + gape = a body state where the {mouth} {GA:gape}s. = yawn.",
+      "ka": "gumuka = mouth + outside = the part right {KA:outside} the {mouth}. = lip.",
+      "mi": "gumume = mouth + inside = the part deep {ME:inside} the {mouth}. = throat.",
+      "ni": "gumune = mouth + point = the {NE:point}ed parts of the {mouth}. = tooth.",
+      "si": "gumuse = mouth + water = {SE:water} from the {mouth}. = saliva, spit."
     }
   },
   "gimuni": {
@@ -712,7 +712,7 @@
       "gumuni"
     ],
     "children": {
-      "du": "gumunido = teeth + base = gums."
+      "du": "gumunido = teeth + base = the {DO:base} where the {teeth} come out. = gums."
     }
   },
   "gina": {
@@ -722,10 +722,10 @@
       "gine"
     ],
     "children": {
-      "gu": "ginego = body + side = side, ribs.",
-      "ku": "gineko = body + destroy = harm, injury, wound, disease, illness.",
-      "ni": "ginenai = body + point = shoulder.",
-      "pa": "ginepa = body + remains = dead, remains."
+      "gu": "ginego = body + side = the {GO:side} of the {body}. = side, ribs.",
+      "ku": "gineko = body + destroy = part of a {body} that has been to some extent {KO:destroy}ed. = harm, injury, wound, disease, illness.",
+      "ni": "ginenai = body + point = the {NE:point}ed parts at the top of the {body}. = shoulder.",
+      "pa": "ginepa = body + remains = the {PA:remains} of a {body}. = dead, remains."
     }
   },
   "ginaku": {
@@ -735,7 +735,7 @@
       "gineku"
     ],
     "children": {
-      "mi": "ginekume = harm + inside = illness, disease."
+      "mi": "ginekume = harm + inside = a kind of {harm} to the {ME:inside} of the body. = illness, disease."
     }
   },
   "ginu": {
@@ -745,10 +745,10 @@
       "gunu"
     ],
     "children": {
-      "bu": "gunubau = face + goal = smile, laugh.",
-      "du": "gunudau = face + bottom = chin.",
-      "gu": "gunugau = face + side = cheek.",
-      "li": "gunule = face + top = forehead."
+      "bu": "gunubau = face + goal = the {face} of someone who has reached their {BO:goal}. = smile, laugh.",
+      "du": "gunudau = face + bottom = the part at the very {DO:bottom} of the {face}. = chin.",
+      "gu": "gunugau = face + side = the part at the {GO:side} of the {face}. = cheek.",
+      "li": "gunule = face + top = the part at the very {LE:top} of the {face}. = forehead."
     }
   },
   "gipaba": {
@@ -758,7 +758,7 @@
       "gipebe"
     ],
     "children": {
-      "ka": "gipebeka = nut + outside = nutshell, shell."
+      "ka": "gipebeka = nut + outside = the part {KA:outside} of a {nut}. = nutshell, shell."
     }
   },
   "gipi": {
@@ -768,7 +768,7 @@
       "gipi"
     ],
     "children": {
-      "du": "gipido = tail + down = buttocks."
+      "du": "gipido = tail + down = a body part {DO:down} below the {tail}. = buttocks."
     }
   },
   "gisi": {
@@ -778,7 +778,7 @@
       "gisi"
     ],
     "children": {
-      "gu": "gisigo = bodily fluid + byproduct = urine."
+      "gu": "gisigo = bodily fluid + byproduct = a {bodily fluid} produced as a {GO:byproduct} of digestion. = urine."
     }
   },
   "gisu": {
@@ -788,7 +788,7 @@
       "gusu"
     ],
     "children": {
-      "pa": "gusupa = body part + remains = rot."
+      "pa": "gusupa = body part + remains = the {PA:remains} of a {G:body part}. = rot."
     }
   },
   "gita": {
@@ -798,9 +798,9 @@
       "gite"
     ],
     "children": {
-      "gi": "gitegai = arm + joint = elbow.",
-      "la": "gitela = limb + flap = wing, fin.",
-      "li": "gitelai = limb + top = arm."
+      "gi": "gitegai = arm + joint = the {GE:joint} in the middle of the {arm}. = elbow.",
+      "la": "gitela = limb + flap = a {limb} that is shaped like a {LA:flap}. = wing, fin.",
+      "li": "gitelai = limb + top = a {limb} that is at the {LE:top} part of the body. = arm."
     }
   },
   "giti": {
@@ -810,7 +810,7 @@
       "giti"
     ],
     "children": {
-      "ta": "gitita = leaves + protrude = stalk."
+      "ta": "gitita = leaves + protrude = a plant part that typically {TA:protrude}s upward and sprouts {leaves}. = stalk."
     }
   },
   "gitu": {
@@ -820,8 +820,8 @@
       "gutu"
     ],
     "children": {
-      "mu": "gutumau = genitals + recess = female genitals.",
-      "ta": "gututa = genitals + protrude = male genitals."
+      "mu": "gutumau = genitals + recess = {genitals} outwardly characterized by a {MO:recess}ed shape. = female genitals.",
+      "ta": "gututa = genitals + protrude = {genitals} outwardly characterized by a shape that {TA:protrude}s. = male genitals."
     }
   },
   "ku": {
@@ -833,44 +833,44 @@
       "ki"
     ],
     "children": {
-      "ba": "kuba = life + still = plant, flora, inanimate life.",
-      "bu": "kabau = life + cultivate = crop.",
-      "buba": "kububa = [classifier] + X+X = bean, legume",
-      "budu": "kubudau = [classifier] + X+X = potato, yam, tuber",
-      "bukapi": "kubukope = [classifier] + X+X+X = coffee",
-      "da": "kuda = life + large = tree.",
-      "daba": "kudoba = [classifier] + X+X = evergreen",
-      "dabitu": "kudobito = [classifier] + X+X+X = birch?",
-      "dabu": "kudobau = [classifier] + X+X = fig tree",
-      "dabulu": "kudobulau = [classifier] + X+X+X = oak?",
-      "daki": "kudoke = [classifier] + X+X = deciduous",
-      "dapi": "kudope = [classifier] + X+X = palm tree",
-      "dati": "kudote = [classifier] + X+X = bush",
-      "du": "kadau = life + Earth = person, human.",
-      "dubi": "kudube = [classifier] + X+X = human",
-      "dugu": "kudugau = [classifier] + X+X = ape, monkey",
-      "ga": "kuga = [classifier] + X = staple crop",
-      "gaba": "kugoba = [classifier] + X+X = wheat",
-      "gami": "kugome = [classifier] + X+X = maize, corn",
-      "gasi": "kugose = [classifier] + X+X = rice",
-      "gu": "kagau = life + side = dog.",
-      "li": "kalai = life + air = bird, flying creature.",
-      "lilu": "kililo = [classifier] + X+X = bat",
-      "lu": "kalau = life + invisible = microbe, invisible life, spirit.",
-      "luku": "kulukau = [classifier] + X+X = pathogen",
-      "mi": "kamai = life + domestic = livestock.",
-      "mu": "kamau = life + PHONETIC = cat.",
-      "na": "kuna = life + entire = life, alive.",
-      "nakimu": "kunokimo = [classifier] + X+X+X = mammal",
-      "ti": "katai = life + leaf = grass.",
-      "natimu": "kunotimo = [classifier] + X+X+X = infant, suckling young",
-      "pu": "kapau = [classifier] + X = worm",
-      "si": "kasai = life + water = fish, aquatic creature.",
-      "siba": "kisiba = life + water+hard = coral.",
-      "su": "kasau = life + segment = insect, bug, arthropod.",
-      "suti": "kusute = [classifier] + X+X = larva",
-      "tiku": "kitiko = [classifier] + X+X = tobacco",
-      "tila": "kitila = [classifier] + X+X = moss, lichen"
+      "ba": "kuba = life + still = {K:life} which stays {BA:still}. = plant, flora, inanimate life.",
+      "bu": "kabau = life + cultivate = plant {K:life} that is {BO:cultivate}d. = crop.",
+      "buba": "kububa = [classifier] + X+X =  = bean, legume",
+      "budu": "kubudau = [classifier] + X+X =  = potato, yam, tuber",
+      "bukapi": "kubukope = [classifier] + X+X+X =  = coffee",
+      "da": "kuda = life + large = a {DA:large} kind of plant {K:life}. = tree.",
+      "daba": "kudoba = [classifier] + X+X =  = evergreen",
+      "dabitu": "kudobito = [classifier] + X+X+X =  = birch?",
+      "dabu": "kudobau = [classifier] + X+X =  = fig tree",
+      "dabulu": "kudobulau = [classifier] + X+X+X =  = oak?",
+      "daki": "kudoke = [classifier] + X+X =  = deciduous",
+      "dapi": "kudope = [classifier] + X+X =  = palm tree",
+      "dati": "kudote = [classifier] + X+X =  = bush",
+      "du": "kadau = life + Earth = a sentient kind of {K:life} like those inhabiting the {DO:Earth}. = person, human.",
+      "dubi": "kudube = [classifier] + X+X =  = human",
+      "dugu": "kudugau = [classifier] + X+X =  = ape, monkey",
+      "ga": "kuga = [classifier] + X =  = staple crop",
+      "gaba": "kugoba = [classifier] + X+X =  = wheat",
+      "gami": "kugome = [classifier] + X+X =  = maize, corn",
+      "gasi": "kugose = [classifier] + X+X =  = rice",
+      "gu": "kagau = life + side = a kind of animal {K:life} that often stays at people's {GO:side}s. = dog.",
+      "li": "kalai = life + air = a kind of animal {K:life} that typically can fly in the {LE:air}. = bird, flying creature.",
+      "lilu": "kililo = [classifier] + X+X =  = bat",
+      "lu": "kalau = life + invisible = a kind of {K:life} that is {LO:invisible} to the naked eye. = microbe, invisible life, spirit.",
+      "luku": "kulukau = [classifier] + X+X =  = pathogen",
+      "mi": "kamai = life + domestic = a kind of animal {K:life} that is {ME:domestic}ated. = livestock.",
+      "mu": "kamau = life + PHONETIC = a kind of animal {K:life} that makes a sound like {MO:PHONETIC}. = cat.",
+      "na": "kuna = life + entire = an {NA:entire} {K:life} form. = life, alive.",
+      "nakimu": "kunokimo = [classifier] + X+X+X =  = mammal",
+      "ti": "katai = life + leaf = a kind of plant {K:life} with a {TE:leaf}y structure. = grass.",
+      "natimu": "kunotimo = [classifier] + X+X+X =  = infant, suckling young",
+      "pu": "kapau = [classifier] + X =  = worm",
+      "si": "kasai = life + water = a kind of animal {K:life} that typically lives in {SE:water}. = fish, aquatic creature.",
+      "siba": "kisiba = life + water+hard = a {K:life} form that lives in the {SE:water} and creates {BA:hard} structures. = coral.",
+      "su": "kasau = life + segment = a kind of animal {K:life} with a body divided sharply into distinct {SO:segment}s. = insect, bug, arthropod.",
+      "suti": "kusute = [classifier] + X+X =  = larva",
+      "tiku": "kitiko = [classifier] + X+X =  = tobacco",
+      "tila": "kitila = [classifier] + X+X =  = moss, lichen"
     }
   },
   "kuba": {
@@ -880,8 +880,8 @@
       "kubo"
     ],
     "children": {
-      "la": "kubola = plant + flat = moss.",
-      "lu": "kubolau = inanimate life + dark = mushroom, fungus."
+      "la": "kubola = plant + flat = a {plant} that lies {LA:flat} along a surface. = moss.",
+      "lu": "kubolau = inanimate life + dark = a kind of {inanimate life} that can grow in the {LO:dark}. = mushroom, fungus."
     }
   },
   "kudu": {
@@ -891,7 +891,7 @@
       "kudu"
     ],
     "children": {
-      "ti": "kudute = person + small = child."
+      "ti": "kudute = person + small = a {TE:small} {person}. = child."
     }
   },
   "kugu": {
@@ -901,8 +901,8 @@
       "kugu"
     ],
     "children": {
-      "lu": "kugulau = dog + night = wolf.",
-      "ti": "kugute = dog + small = puppy."
+      "lu": "kugulau = dog + night = a kind of animal like a {dog} that hunts at {LO:night}. = wolf.",
+      "ti": "kugute = dog + small = a {TE:small} {dog}. = puppy."
     }
   },
   "kuli": {
@@ -912,7 +912,7 @@
       "kili"
     ],
     "children": {
-      "mi": "kilimai = bird + domestic = chicken."
+      "mi": "kilimai = bird + domestic = a widely {ME:domestic}ated kind of {bird}. = chicken."
     }
   },
   "kumi": {
@@ -922,8 +922,8 @@
       "kimi"
     ],
     "children": {
-      "ki": "kimikai = livestock + fast = horse.",
-      "si": "kimisai = livestock + liquid = cattle."
+      "ki": "kimikai = livestock + fast = a kind of animal that is kept as {livestock} and is typically {KE:fast} at running. = horse.",
+      "si": "kimisai = livestock + liquid = a kind of animal that is kept as {livestock} and typically provides {SE:liquid} milk. = cattle."
     }
   },
   "kumu": {
@@ -933,8 +933,8 @@
       "kumu"
     ],
     "children": {
-      "sima": "kumusima = cat + PHONETIC+PHONETIC = lion.",
-      "ti": "kumute = cat + small = kitten."
+      "sima": "kumusima = cat + PHONETIC+PHONETIC = a kind of {cat} that has a name sounding like {SE:PHONETIC}{MA:PHONETIC} in various languages. = lion.",
+      "ti": "kumute = cat + small = a {TE:small} {cat}. = kitten."
     }
   },
   "kuna": {
@@ -944,7 +944,7 @@
       "kuno"
     ],
     "children": {
-      "ki": "kunoke = life + move = animal."
+      "ki": "kunoke = life + move = a {life} form that {KE:move}s. = animal."
     }
   },
   "kuti": {
@@ -954,7 +954,7 @@
       "kiti"
     ],
     "children": {
-      "ba": "kitiba = grass + hard = bamboo."
+      "ba": "kitiba = grass + hard = a kind of plant that grows fast like {grass} but typically has a very {BA:hard} woody stem. = bamboo."
     }
   },
   "kupi": {
@@ -965,9 +965,9 @@
       "kipi"
     ],
     "children": {
-      "": "kapai = long +  = snake, reptile.",
-      "ba": "kipiba = reptile + hard = turtle, tortoise.",
-      "ki": "kipikai = reptile + fast = lizard."
+      "": "kapai = long +  = a kind of animal {K:life} that typically has a {P:long} shape. = snake, reptile.",
+      "ba": "kipiba = reptile + hard = a kind of {reptile} that typically has a {BA:hard} shell. = turtle, tortoise.",
+      "ki": "kipikai = reptile + fast = a kind of {reptile} that can move relatively {KE:fast} on its legs. = lizard."
     }
   },
   "kusi": {
@@ -977,7 +977,7 @@
       "kisi"
     ],
     "children": {
-      "da": "kisida = aquatic creature + large = whale, cetacean."
+      "da": "kisida = aquatic creature + large = a {DA:large} kind of {aquatic creature}. = whale, cetacean."
     }
   },
   "kusida": {
@@ -987,7 +987,7 @@
       "kiside"
     ],
     "children": {
-      "ti": "kisidetai = cetacean + small = dolphin."
+      "ti": "kisidetai = cetacean + small = a {TE:small} kind of {cetacean}. = dolphin."
     }
   },
   "kusu": {
@@ -997,8 +997,8 @@
       "kusu"
     ],
     "children": {
-      "mikili": "kusumikilai = insect + inside+change+air = butterfly, moth.",
-      "si": "kususe = arthropod + water = crustacean."
+      "mikili": "kusumikilai = insect + inside+change+air = an {insect} which was hiding {ME:inside} a cocoon before it had {KE:change}d into a creature than can fly in the {LE:air}. = butterfly, moth.",
+      "si": "kususe = arthropod + water = a kind of {arthropod} that typically lives in {SE:water}. = crustacean."
     }
   },
   "li": {
@@ -1010,34 +1010,34 @@
       "lu"
     ],
     "children": {
-      "ba": "liba = substance + hard = stone, mineral.",
-      "bama": "libema = substance + hard+light = metal.",
-      "bapu": "libepo = substance + hard+through = glass, crystal.",
-      "bi": "labai = substance + concentrate = matter.",
-      "bu": "labau = sensation + satisfy = sweet, pleasant.",
-      "du": "ladau = substance + ground = dirt, earth, soil, clay.",
-      "ka": "lika = intangible property + outside = color.",
-      "ki": "lakai = intangible property + activity = strong, force, energy.",
-      "titi": "likitai = [classifier] + small+force = weak, ineffectual.",
-      "ku": "lakau = substance + burn = fire.",
-      "liku": "lukule = [classifier] + air+fire = smoke, fumes.",
-      "ma": "lima = intangible property + visible = light, shine, bright.",
-      "mi": "lamai = sensation + mind = feeling, sensation.",
-      "mu": "lamau = sensation + mouth = taste.",
-      "na": "lina = [classifier] + X = substance",
-      "nabutu": "linebatau = [classifier] + X+X+X = lead",
-      "naduga": "lineduga = [classifier] + X+X+X = copper",
-      "nagiduga": "linegiduga = [classifier] + X+X+X+X = bronze",
-      "nakupi": "linekupe = [classifier] + X+X+X = silver",
-      "namapu": "linemepo = [classifier] + X+X+X = tin",
-      "napiga": "linepiga = [classifier] + X+X+X = gold",
-      "ni": "lanai = sensation + nose = smell.",
-      "nu": "lanau = intangible property + shield = dark.",
-      "pi": "lapai = sensation + long = bitter, painful, discomfort.",
-      "si": "lasai = substance + liquid = water.",
-      "tu": "latau = [classifier] + X = shadow, reflection",
-      "tulu": "lutulau = [classifier] + X+X = shadow",
-      "tuma": "lutuma = [classifier] + X+X = reflection"
+      "ba": "liba = substance + hard = a kind of {L:substance} which is typically very {BA:hard}. = stone, mineral.",
+      "bama": "libema = substance + hard+light = a kind of {L:substance} which is typically very {BA:hard} and shines in the {MA:light}. = metal.",
+      "bapu": "libepo = substance + hard+through = a kind of {L:substance} which is typically very {BA:hard} and which you can see {PO:through}. = glass, crystal.",
+      "bi": "labai = substance + concentrate = a {L:substance} which is {BE:concentrate}d in one place. = matter.",
+      "bu": "labau = sensation + satisfy = a typically {BO:satisfy}ing {L:sensation}. = sweet, pleasant.",
+      "du": "ladau = substance + ground = a kind of {L:substance} that covers the {DO:ground}. = dirt, earth, soil, clay.",
+      "ka": "lika = intangible property + outside = an {L:intangible property} of something's {KA:outside} appearance. = color.",
+      "ki": "lakai = intangible property + activity = an {L:intangible property} of something in a state of {KE:activity}. = strong, force, energy.",
+      "titi": "likitai = [classifier] + small+force = having a {TE:small} amount of {TE:force}. = weak, ineffectual.",
+      "ku": "lakau = substance + burn = a kind of {L:substance} that {KO:burn}s. = fire.",
+      "liku": "lukule = [classifier] + air+fire = the sort of {LE:air} that comes from a {KO:fire}. = smoke, fumes.",
+      "ma": "lima = intangible property + visible = an {L:intangible property} that is {MA:visible}. = light, shine, bright.",
+      "mi": "lamai = sensation + mind = an {L:sensation} that is experienced in the {ME:mind}. = feeling, sensation.",
+      "mu": "lamau = sensation + mouth = a {L:sensation} that is felt in the {MO:mouth} = taste.",
+      "na": "lina = [classifier] + X =  = substance",
+      "nabutu": "linebatau = [classifier] + X+X+X =  = lead",
+      "naduga": "lineduga = [classifier] + X+X+X =  = copper",
+      "nagiduga": "linegiduga = [classifier] + X+X+X+X =  = bronze",
+      "nakupi": "linekupe = [classifier] + X+X+X =  = silver",
+      "namapu": "linemepo = [classifier] + X+X+X =  = tin",
+      "napiga": "linepiga = [classifier] + X+X+X =  = gold",
+      "ni": "lanai = sensation + nose = a {L:sensation} that is felt via the {NE:nose}. = smell.",
+      "nu": "lanau = intangible property + shield = an {L:intangible property} of something that is {NO:shield}ed from light. = dark.",
+      "pi": "lapai = sensation + long = - an {L:sensation} that makes a moment feel {PE:long}. = bitter, painful, discomfort.",
+      "si": "lasai = substance + liquid = a kind of {L:substance} that is typically {SE:liquid}. = water.",
+      "tu": "latau = [classifier] + X =  = shadow, reflection",
+      "tulu": "lutulau = [classifier] + X+X =  = shadow",
+      "tuma": "lutuma = [classifier] + X+X =  = reflection"
     }
   },
   "libi": {
@@ -1047,7 +1047,7 @@
       "libi"
     ],
     "children": {
-      "na": "libina = matter + unit = atom."
+      "na": "libina = matter + unit = a tiny {NA:unit} of {matter}. = atom."
     }
   },
   "libina": {
@@ -1057,8 +1057,8 @@
       "libine"
     ],
     "children": {
-      "ku": "libineko = atom + force = electron.",
-      "si": "libinesai = atom + water = proton."
+      "ku": "libineko = atom + force = a particle found in {atom}s whose movement comprises an electric current, as in a {KO:force}ful blast of lightning. = electron.",
+      "si": "libinesai = atom + water = a particle that can form the core of an {atom} of hydrogen, which forms {SE:water} when exposed to oxygen. = proton."
     }
   },
   "lidu": {
@@ -1068,8 +1068,8 @@
       "ludu"
     ],
     "children": {
-      "ba": "luduba = earth + hard = sand.",
-      "na": "luduna = earth + pure = clay."
+      "ba": "luduba = earth + hard = a kind of {earth} made up of many small, {BA:hard} particles. = sand.",
+      "na": "luduna = earth + pure = a kind of {earth} that is especially {NA:pure}. = clay."
     }
   },
   "lika": {
@@ -1079,15 +1079,15 @@
       "like"
     ],
     "children": {
-      "bu": "likebo = color + fertile = green.",
-      "da": "likeda = color + great = bright (color), saturated.",
-      "gi": "likegai = color + mix = brown.",
-      "lu": "likelo = color + dark = black.",
-      "ma": "likema = color + light = white.",
-      "mi": "likemai = color + inside = red.",
-      "pa": "likepa = color + remains = grey.",
-      "si": "likesai = color + water = blue.",
-      "ti": "liketai = color + small = dull (color), faint, washed-out."
+      "bu": "likebo = color + fertile = the {color} of healthy, {BO:fertile} plants. = green.",
+      "da": "likeda = color + great = having a {DA:great} amount of {color}. = bright (color), saturated.",
+      "gi": "likegai = color + mix = a {color} produced by {GE:mix}ing together various colors. = brown.",
+      "lu": "likelo = color + dark = the {color} that is {LO:dark}est. = black.",
+      "ma": "likema = color + light = the {color} of {MA:light} at its brightest. = white.",
+      "mi": "likemai = color + inside = the {color} of blood {ME:inside} the body. = red.",
+      "pa": "likepa = color + remains = the {color} of ashen {PA:remains} of a fire. = grey.",
+      "si": "likesai = color + water = the {color} of the {SE:water} in the sea. = blue.",
+      "ti": "liketai = color + small = having a {TE:small} amount of {color}. = dull (color), faint, washed-out."
     }
   },
   "likabu": {
@@ -1098,11 +1098,11 @@
       "likeba"
     ],
     "children": {
-      "da": "likebuda = green + great = bright green.",
-      "lu": "likebalau = green + black = dark green.",
-      "ma": "likebuma = green + white = light green.",
-      "si": "likebuse = green + blue = cyan.",
-      "ti": "likebute = green + small = greenish, dull green."
+      "da": "likebuda = green + great = {green} that has a {DA:great} amount of saturation. = bright green.",
+      "lu": "likebalau = green + black = {green} mixed with {LO:black}. = dark green.",
+      "ma": "likebuma = green + white = {green} mixed with {MA:white}. = light green.",
+      "si": "likebuse = green + blue = a color between {green} and {SE:blue}. = cyan.",
+      "ti": "likebute = green + small = {green} that has a {TE:small} amount of saturation. = greenish, dull green."
     }
   },
   "likami": {
@@ -1112,12 +1112,12 @@
       "likemi"
     ],
     "children": {
-      "bu": "likemibo = red + green = yellow.",
-      "da": "likemida = red + great = bright red.",
-      "lu": "likemilo = red + black = dark red.",
-      "ma": "likemima = red + white = pink, light red.",
-      "si": "likemisai = red + blue = magenta.",
-      "ti": "likemitai = red + small = reddish, dull red."
+      "bu": "likemibo = red + green = a color between {red} and {BO:green}. = yellow.",
+      "da": "likemida = red + great = {red} that has a {DA:great} amount of saturation. = bright red.",
+      "lu": "likemilo = red + black = {red} mixed with {LO:black}. = dark red.",
+      "ma": "likemima = red + white = {red} mixed with {MA:white}. = pink, light red.",
+      "si": "likemisai = red + blue = a color between {red} and {SE:blue}. = magenta.",
+      "ti": "likemitai = red + small = {red} that has a {TE:small} amount of saturation. = reddish, dull red."
     }
   },
   "likamibu": {
@@ -1127,7 +1127,7 @@
       "likemibu"
     ],
     "children": {
-      "mi": "likemibume = yellow + red = orange."
+      "mi": "likemibume = yellow + red = a color between {yellow} and {ME:red}. = orange."
     }
   },
   "likamisi": {
@@ -1137,7 +1137,7 @@
       "likemisai"
     ],
     "children": {
-      "": "likemisai = blue +  = magenta."
+      "": "likemisai = blue +  = a color between {red} and {blue}. = magenta."
     }
   },
   "likapa": {
@@ -1147,7 +1147,7 @@
       "likepe"
     ],
     "children": {
-      "ma": "likepema = grey + white = light grey."
+      "ma": "likepema = grey + white = {grey} mixed with {MA:white}. = light grey."
     }
   },
   "likapalu": {
@@ -1157,7 +1157,7 @@
       "likepelo"
     ],
     "children": {
-      "": "likepelo = black +  = dark grey."
+      "": "likepelo = black +  = {grey} mixed with {black}. = dark grey."
     }
   },
   "likasi": {
@@ -1167,10 +1167,10 @@
       "likesi"
     ],
     "children": {
-      "da": "likesida = blue + great = bright blue.",
-      "lu": "likesilo = blue + black = dark blue.",
-      "ma": "likesima = blue + white = light blue.",
-      "ti": "likesitai = blue + small = blueish, dull blue."
+      "da": "likesida = blue + great = {blue} that has a {DA:great} amount of saturation. = bright blue.",
+      "lu": "likesilo = blue + black = {blue} mixed with {LO:black}. = dark blue.",
+      "ma": "likesima = blue + white = {blue} mixed with {MA:white}. = light blue.",
+      "ti": "likesitai = blue + small = {blue} that has a {TE:small} amount of saturation. = blueish, dull blue."
     }
   },
   "likasimisi": {
@@ -1180,7 +1180,7 @@
       "likesimisai"
     ],
     "children": {
-      "": "likesimisai = blue +  = purple, violet."
+      "": "likesimisai = blue +  = a {color} betwen {blue} and magenta, which in turn is between {red} and {blue}. = purple, violet."
     }
   },
   "liku": {
@@ -1190,7 +1190,7 @@
       "luku"
     ],
     "children": {
-      "pa": "lukupa = fire + remains = ash, char."
+      "pa": "lukupa = fire + remains = the {PA:remains} of a {fire}. = ash, char."
     }
   },
   "limi": {
@@ -1200,9 +1200,9 @@
       "limi"
     ],
     "children": {
-      "ba": "limiba = sensation + hard = cold.",
-      "ku": "limiko = sensation + fire = warmth, heat.",
-      "ma": "limima = sensation + visual = appearance, sight, vision, apparition, visual sensation."
+      "ba": "limiba = sensation + hard = a {sensation} of things that are frozen {BA:hard}. = cold.",
+      "ku": "limiko = sensation + fire = a {sensation} of {KO:fire}. = warmth, heat.",
+      "ma": "limima = sensation + visual = a {MA:visual} {sensation}. = appearance, sight, vision, apparition, visual sensation."
     }
   },
   "limiba": {
@@ -1212,7 +1212,7 @@
       "limibe"
     ],
     "children": {
-      "li": "limibelai = cold + air = cool."
+      "li": "limibelai = cold + air = a sensation of moderate {cold} like from flowing {LE:air}. = cool."
     }
   },
   "limiku": {
@@ -1222,7 +1222,7 @@
       "limiku"
     ],
     "children": {
-      "mi": "limikume = heat + inside = warmth."
+      "mi": "limikume = heat + inside = a sensation of moderate {heat} like {ME:inside} a body. = warmth."
     }
   },
   "limu": {
@@ -1232,10 +1232,10 @@
       "lumu"
     ],
     "children": {
-      "bu": "lumubau = taste + satisfy = sweet.",
-      "du": "lumudau = taste + earth = salty.",
-      "ku": "lumukau = taste + corrode = sour.",
-      "ta": "lumuta = taste + expel = bitter."
+      "bu": "lumubau = taste + satisfy = a {BO:satisfy}ing {taste}. = sweet.",
+      "du": "lumudau = taste + earth = the {taste} of certain rocks from the {DO:earth}. = salty.",
+      "ku": "lumukau = taste + corrode = the {taste} of acidic things which can {KO:corrode} materials. = sour.",
+      "ta": "lumuta = taste + expel = a {taste} that can make one wish to {TA:expel} something from the mouth. = bitter."
     }
   },
   "lipi": {
@@ -1245,9 +1245,9 @@
       "lipi"
     ],
     "children": {
-      "ga": "lipiga = discomfort + consume = hunger, hungry.",
-      "ku": "lipiko = discomfort + dry = thirsty, thirst.",
-      "ni": "lipinai = discomfort + sharp = itch."
+      "ga": "lipiga = discomfort + consume = a feeling of {discomfort} compelling one to {GA:consume} food. = hunger, hungry.",
+      "ku": "lipiko = discomfort + dry = a feeling of {discomfort} accompanied by a {KO:dry} mouth and throat. = thirsty, thirst.",
+      "ni": "lipinai = discomfort + sharp = a kind of {discomfort} that drives one to scratch one's body with {NE:sharp} fingernails. = itch."
     }
   },
   "lisi": {
@@ -1257,10 +1257,10 @@
       "lisi"
     ],
     "children": {
-      "ba": "lisiba = water + hard = ice.",
-      "ku": "lisiko = water + fire = alcohol.",
-      "li": "lisilai = water + air = steam, vapor.",
-      "su": "lisiso = water + separate = oil."
+      "ba": "lisiba = water + hard = {water} which has frozen into a {BA:hard} form. = ice.",
+      "ku": "lisiko = water + fire = a substance that looks like {water} but causes a burning sensation like {KO:fire} in the mouth. = alcohol.",
+      "li": "lisilai = water + air = {water} which has become gaseous like {LE:air}. = steam, vapor.",
+      "su": "lisiso = water + separate = a kind of liquid which stays {SO:separate} from {water}. = oil."
     }
   },
   "mi": {
@@ -1272,34 +1272,34 @@
       "mi"
     ],
     "children": {
-      "bi": "mabai = [classifier] + X = space, center, hub",
-      "bu": "mabau = [classifier] + X = farm",
-      "bumi": "mubume = [classifier] + X+X = barn",
-      "bumika": "mubumika = [classifier] + X+X+X = barnyard, farmyard",
-      "du": "madau = artificial structure + land = plot.",
-      "gi": "magai = artificial structure + gather = town, city, village, settlement, complex.",
-      "gu": "magau = artificial structure + side = wall, barrier.",
-      "ki": "makai = artificial structure + move = vehicle, car.",
-      "ku": "makau = artificial structure + fire = hearth, fireplace.",
-      "la": "mila = [classifier] + X = tent",
-      "li": "malai = [classifier] + X = tower",
-      "na": "mina = artificial structure + entire = house, building.",
-      "nada": "mineda = [classifier] + X+X = castle, fort, burg, town",
-      "nali": "minelai = [classifier] + X+X = roof",
-      "nu": "manau = artificial structure + preserve = storage place, warehouse, closet.",
-      "nuku": "munukau = [classifier] + X+X = fuel storage place",
-      "nukupa": "munukupa = [classifier] + X+X+X = dump, landfill",
-      "musi": "munuse = artificial structure + contain+water = well, reservoir.",
-      "pa": "mipa = artifical structure + remains = ruins.",
-      "pi": "mapai = artificial structure + long = road, way, path.",
-      "pu": "mapau = artificial structure + through = gate, door.",
-      "si": "masai = artificial structure + water = pool, fountain, sink, reservoir.",
-      "sinu": "misino = [classifier] + X+X = harbor, port",
-      "sinula": "misinula = [classifier] + X+X+X = wharf, quay",
-      "sipi": "misipai = artificial structure + water+path = canal.",
-      "sipu": "misipo = artificial structure + water+across = bridge.",
-      "su": "masau = artificial structure + segment = room, chamber.",
-      "ti": "matai = artificial structure + small = hut, shed."
+      "bi": "mabai = [classifier] + X =  = space, center, hub",
+      "bu": "mabau = [classifier] + X =  = farm",
+      "bumi": "mubume = [classifier] + X+X =  = barn",
+      "bumika": "mubumika = [classifier] + X+X+X =  = barnyard, farmyard",
+      "du": "madau = artificial structure + land = an {M:artificial structure} consisting of {DO:land}. = plot.",
+      "gi": "magai = artificial structure + gather = a group of {M:artificial structure}s {GE:gather}ed ogether. = town, city, village, settlement, complex.",
+      "gu": "magau = artificial structure + side = a {GO:side} of an {M:artificial structure}. = wall, barrier.",
+      "ki": "makai = artificial structure + move = an {M:artificial structure} for {KE:move}ment. = vehicle, car.",
+      "ku": "makau = artificial structure + fire = an {M:artificial structure} where a {KO:fire} is made. = hearth, fireplace.",
+      "la": "mila = [classifier] + X =  = tent",
+      "li": "malai = [classifier] + X =  = tower",
+      "na": "mina = artificial structure + entire = an {NA:entire} {M:artificial structure}. = house, building.",
+      "nada": "mineda = [classifier] + X+X =  = castle, fort, burg, town",
+      "nali": "minelai = [classifier] + X+X =  = roof",
+      "nu": "manau = artificial structure + preserve = an {M:artificial structure} to {NO:preserve} things in. = storage place, warehouse, closet.",
+      "nuku": "munukau = [classifier] + X+X =  = fuel storage place",
+      "nukupa": "munukupa = [classifier] + X+X+X =  = dump, landfill",
+      "musi": "munuse = artificial structure + contain+water = an {M:artificial structure} for {MO:contain}ing {SE:water}. = well, reservoir.",
+      "pa": "mipa = artifical structure + remains = the {PA:remains} of an {M:artifical structure}. = ruins.",
+      "pi": "mapai = artificial structure + long = a {M:artificial structure} that stretches a {PE:long} way. = road, way, path.",
+      "pu": "mapau = artificial structure + through = an {M:artificial structure} that allows passage {PO:through} itself. = gate, door.",
+      "si": "masai = artificial structure + water = an {M:artificial structure} filled with {SE:water}. = pool, fountain, sink, reservoir.",
+      "sinu": "misino = [classifier] + X+X =  = harbor, port",
+      "sinula": "misinula = [classifier] + X+X+X =  = wharf, quay",
+      "sipi": "misipai = artificial structure + water+path = an {M:artificial structure} filled with {SE:water} which forms a long {PE:path}. = canal.",
+      "sipu": "misipo = artificial structure + water+across = an {M:artificial structure} over the {SE:water} that allows passage {PO:across}. = bridge.",
+      "su": "masau = artificial structure + segment = a {SO:segment} of an {M:artificial structure}. = room, chamber.",
+      "ti": "matai = artificial structure + small = an {M:artificial structure} that is {TE:small}. = hut, shed."
     }
   },
   "midu": {
@@ -1309,8 +1309,8 @@
       "mudu"
     ],
     "children": {
-      "bu": "mudubau = plot + leisure = garden.",
-      "ka": "muduka = plot + outside = yard, lot, courtyard."
+      "bu": "mudubau = plot + leisure = a {plot} used for {BO:leisure}. = garden.",
+      "ka": "muduka = plot + outside = a {plot} located {KA:outside} one or more buildings. = yard, lot, courtyard."
     }
   },
   "migi": {
@@ -1320,8 +1320,8 @@
       "migi"
     ],
     "children": {
-      "da": "migida = settlement + large = city.",
-      "ti": "migitai = settlement + small = village."
+      "da": "migida = settlement + large = a {DA:large} {settlement}. = city.",
+      "ti": "migitai = settlement + small = a {TE:small} {settlement}. = village."
     }
   },
   "miki": {
@@ -1331,12 +1331,12 @@
       "miki"
     ],
     "children": {
-      "bu": "mikibo = vehicle + round = wheeled vehicle.",
-      "ku": "mikiko = vehicle + burn = automobile, car, motor vehicle.",
-      "li": "mikilai = vehicle + air = airplane, aircraft.",
-      "pa": "mikipa = vehicle + behind = cart, trailer.",
-      "pi": "mikipai = vehicle + long = train.",
-      "si": "mikisai = vehicle + water = boat, ship, watercraft."
+      "bu": "mikibo = vehicle + round = a {vehicle} with {BO:round} wheels. = wheeled vehicle.",
+      "ku": "mikiko = vehicle + burn = a {vehicle} that {KO:burn}s fuel. = automobile, car, motor vehicle.",
+      "li": "mikilai = vehicle + air = a {vehicle} that flies in the {LE:air}. = airplane, aircraft.",
+      "pa": "mikipa = vehicle + behind = a {vehicle} or vehicle attachment which trails {PA:behind}. = cart, trailer.",
+      "pi": "mikipai = vehicle + long = a {vehicle} that moves along {PE:long} tracks. = train.",
+      "si": "mikisai = vehicle + water = a {vehicle} that moves in {SE:water} = boat, ship, watercraft."
     }
   },
   "mikibu": {
@@ -1346,7 +1346,7 @@
       "mikiba"
     ],
     "children": {
-      "tu": "mikibatau = wheeled vehicle + two = bicycle."
+      "tu": "mikibatau = wheeled vehicle + two = a {wheeled vehicle} with {TO:two} wheels. = bicycle."
     }
   },
   "mikiku": {
@@ -1356,7 +1356,7 @@
       "mikika"
     ],
     "children": {
-      "tu": "mikikatau = motor vehicle + two = motorcycle, motorbike."
+      "tu": "mikikatau = motor vehicle + two = a {motor vehicle} with {TO:two} wheels. = motorcycle, motorbike."
     }
   },
   "mikili": {
@@ -1366,8 +1366,8 @@
       "mikili"
     ],
     "children": {
-      "bi": "mikilibai = aircraft + spin = helicopter.",
-      "la": "mikilila = aircraft + flat = airplane, fixed-wing aircraft."
+      "bi": "mikilibai = aircraft + spin = an {aircraft} that uses a {BE:spin}ning propeller. = helicopter.",
+      "la": "mikilila = aircraft + flat = an {aircraft} with {LA:flat} wings. = airplane, fixed-wing aircraft."
     }
   },
   "mikisi": {
@@ -1377,9 +1377,9 @@
       "mikisi"
     ],
     "children": {
-      "du": "mikisido = watercraft + down = submarine.",
-      "la": "mikisila = watercraft + flat = raft.",
-      "li": "mikisilai = boat + air = sailboat."
+      "du": "mikisido = watercraft + down = a kind of {watercraft} that dives {DO:down} below the surface. = submarine.",
+      "la": "mikisila = watercraft + flat = a kind of {watercraft} that is mostly {LA:flat}. = raft.",
+      "li": "mikisilai = boat + air = a kind of {boat} that is propelled by {LE:air} moving in the wind. = sailboat."
     }
   },
   "miku": {
@@ -1389,7 +1389,7 @@
       "muku"
     ],
     "children": {
-      "su": "mukusau = hearth + room = kitchen."
+      "su": "mukusau = hearth + room = a {SO:room} where a {hearth} is used for cooking. = kitchen."
     }
   },
   "mipida": {
@@ -1399,7 +1399,7 @@
       "mipida"
     ],
     "children": {
-      "": "mipida = large +  = road."
+      "": "mipida = large +  = a {M:large} road. = road."
     }
   },
   "mipu": {
@@ -1409,7 +1409,7 @@
       "mupu"
     ],
     "children": {
-      "li": "mupule = gate + air = window."
+      "li": "mupule = gate + air = an artificial structure that acts like a {gate} allowing {LE:air} from the outside to come in. = window."
     }
   },
   "mipuli": {
@@ -1419,7 +1419,7 @@
       "mupuli"
     ],
     "children": {
-      "ba": "mupuliba = window + hard = windowpane."
+      "ba": "mupuliba = window + hard = the {BA:hard} part of a {window}. = windowpane."
     }
   },
   "misu": {
@@ -1429,8 +1429,8 @@
       "musu"
     ],
     "children": {
-      "du": "musudau = room + bottom = floor.",
-      "li": "musule = room + top = ceiling."
+      "du": "musudau = room + bottom = the {DO:bottom} surface of a {room}. = floor.",
+      "li": "musule = room + top = the {LE:top} surface of a {room}. = ceiling."
     }
   },
   "nu": {
@@ -1441,33 +1441,33 @@
       "na"
     ],
     "children": {
-      "ba": "nuba = [classifier] + X = live, inhabit.",
-      "bagu": "nubogau = [classifier] + X+X = to claim, to own",
-      "baki": "nuboke = [classifier] + X+X = move, immigrate to, emigrate to",
-      "bu": "nabau = social + goal = play, perform, celebrate, observe.",
-      "buda": "nubuda = social + goal+gain = win, earn, be awarded.",
-      "da": "nuda = [classifier] + X = rule, control, dominate",
-      "dasa": "nudosa = [classifier] + X+X = free, free (from)",
-      "di": "nadai = [classifier] + X = to be addressed to, to",
-      "gu": "nagau = [classifier] + X = friend, companion",
-      "guki": "nuguke = [classifier] + X+X = cooperate, collaborate, work together",
-      "gumi": "nugume = [classifier] + X+X = to live with",
-      "gumu": "nugumau = [classifier] + X+X = to be gendered as female",
-      "guna": "nuguna = [classifier] + X+X = marry, spouse",
-      "guta": "nuguta = [classifier] + X+X = to be gendered as male",
-      "ka": "nuka = [classifier] + X = foreign, strange",
-      "kaki": "nukoke = [classifier] + X+X = voyage to, travel among, be a guest",
-      "la": "nula = [classifier] + X = according to, to follow, to be correct (by)",
-      "lu": "nalau = speech + hear = say, talk.",
-      "lumi": "nulume = [classifier] + X+X = to call something by.",
-      "lumina": "nulumina = [classifier] + X+X+X = call, call on, call for",
-      "ma": "numa = [classifier] + X = read",
-      "mi": "namai = [classifier] + X = live, reside, inhabit",
-      "mu": "namau = [classifier] + X = parent, father, mother",
-      "pa": "nupa = social + offspring = child.",
-      "pagu": "nupogau = [classifier] + X+X = sibling, brother, sister",
-      "sa": "nusa = speech + same = agree on, reach a consensus on.",
-      "ta": "nuta = [classifier] + X = give"
+      "ba": "nuba = [classifier] + X =  = live, inhabit.",
+      "bagu": "nubogau = [classifier] + X+X =  = to claim, to own",
+      "baki": "nuboke = [classifier] + X+X =  = move, immigrate to, emigrate to",
+      "bu": "nabau = social + goal = a {N:social} action involving a shared intrinsic {BO:goal}. = play, perform, celebrate, observe.",
+      "buda": "nubuda = social + goal+gain = a {N:social} action involving a shared {BO:goal} in which someone {DA:gain}s a prize at the end. = win, earn, be awarded.",
+      "da": "nuda = [classifier] + X =  = rule, control, dominate",
+      "dasa": "nudosa = [classifier] + X+X =  = free, free (from)",
+      "di": "nadai = [classifier] + X =  = to be addressed to, to",
+      "gu": "nagau = [classifier] + X =  = friend, companion",
+      "guki": "nuguke = [classifier] + X+X =  = cooperate, collaborate, work together",
+      "gumi": "nugume = [classifier] + X+X =  = to live with",
+      "gumu": "nugumau = [classifier] + X+X =  = to be gendered as female",
+      "guna": "nuguna = [classifier] + X+X =  = marry, spouse",
+      "guta": "nuguta = [classifier] + X+X =  = to be gendered as male",
+      "ka": "nuka = [classifier] + X =  = foreign, strange",
+      "kaki": "nukoke = [classifier] + X+X =  = voyage to, travel among, be a guest",
+      "la": "nula = [classifier] + X =  = according to, to follow, to be correct (by)",
+      "lu": "nalau = speech + hear = a {N:speech} action typically meant to be {LO:hear}d. = say, talk.",
+      "lumi": "nulume = [classifier] + X+X =  = to call something by.",
+      "lumina": "nulumina = [classifier] + X+X+X =  = call, call on, call for",
+      "ma": "numa = [classifier] + X =  = read",
+      "mi": "namai = [classifier] + X =  = live, reside, inhabit",
+      "mu": "namau = [classifier] + X =  = parent, father, mother",
+      "pa": "nupa = social + offspring = a {N:social} relation between {PA:offspring} and parent. = child.",
+      "pagu": "nupogau = [classifier] + X+X =  = sibling, brother, sister",
+      "sa": "nusa = speech + same = a {N:speech} action involving people saying the {SA:same} thing. = agree on, reach a consensus on.",
+      "ta": "nuta = [classifier] + X =  = give"
     }
   },
   "nulu": {
@@ -1477,8 +1477,8 @@
       "nulu"
     ],
     "children": {
-      "nu": "nulunau = say + before = promise, declare, commit.",
-      "pu": "nulupau = say + different = lie."
+      "nu": "nulunau = say + before = to {say} that something will happen a long time {NO:before} it does. = promise, declare, commit.",
+      "pu": "nulupau = say + different = to {say} something {PO:different} from what one knows. = lie."
     }
   },
   "pi": {
@@ -1490,104 +1490,104 @@
       "pu"
     ],
     "children": {
-      "ba": "piba = [classifier] + X = plug, stopper",
-      "bi": "pabai = tool + think = computer.",
-      "bidu": "pibido = tool + think+weight = scale.",
-      "bigu": "pibigo = tool + think+time = clock.",
-      "bila": "pibila = tool + think+amount = calculator.",
-      "bu": "pabau = [classifier] + X = music, play",
-      "bula": "pubula = [classifier] + X+X = poetry, belles lettres",
-      "bunu": "pubunau = [classifier] + X+X = musical instrument",
-      "da": "pida = [classifier] + X = weapon?",
-      "di": "padai = [classifier] + X = keyboard?",
-      "dimu": "pidimo = tool + hand+recess = spoon.",
-      "ditu": "pidito = [classifier] + X+X = fork",
-      "du": "padau = tool + base = stool, chair.",
-      "duli": "pudule = tool + base+high = ladder.",
-      "dulu": "pudulau = [classifier] + X+X = bed, bedding",
-      "ga": "piga = artifact + consume = food, meal, consumable.",
-      "gaba": "pigeba = [classifier] + X+X = preserves",
-      "gabaku": "pigebeko = [classifier] + X+X+X = dried food",
-      "gabakuti": "pigebekute = [classifier] + X+X+X+X = hay, straw",
-      "gi": "pagai = tool + join = link, tie, fastener.",
-      "gibadi": "pigibedai = [classifier] + X+X+X = key",
-      "gibadu": "pigibedo = [classifier] + X+X+X = anchor",
-      "gidu": "pigido = tool + join+earth = glue, adhesive, paste.",
-      "ka": "pika = tool + outside = blanket, cover, covering, wrapping.",
-      "kaladi": "pikeledai = [classifier] + X+X+X = glove",
-      "kaladu": "pikeledo = [classifier] + X+X+X = shoe",
-      "kamadi": "pikemedai = [classifier] + X+X+X = writing utensil, pen, pencil",
-      "kamalu": "pikemelo = [classifier] + X+X+X = writing, handwriting, print",
-      "kamaluba": "pikemeluba = [classifier] + X+X+X+X = inscription, engraving",
-      "kamalunu": "pikemelanau = [classifier] + X+X+X+X = print",
-      "kanu": "pikeno = [classifier] + X+X = shield, guard",
-      "ki": "pakai = tool + move = machine, lever.",
-      "kibu": "pikibo = tool + move+round = wheel.",
-      "kidi": "pikidai = [classifier] + X+X = steering wheel, helm, control panel",
-      "kiku": "pikiko = tool + move+burn = motor.",
-      "kila": "pikila = [classifier] + X+X = sail, wing, rudder, keel",
-      "ku": "pakau = tool + burn = fuel.",
-      "kula": "pukula = [classifier] + X+X = stove",
-      "kumabi": "pukumobe = [classifier] + X+X+X = signal, beacon.",
-      "kumu": "pukumau = [classifier] + X+X = oven",
-      "kunu": "pukunau = [classifier] + X+X = lighter, burner",
-      "kupa": "pukupa = [classifier] + X+X = forged, metalwork?",
-      "kusaba": "pukusoba = [classifier] + X+X+X = anvil",
-      "la": "pila = tool + flat = surface, tray, table, board.",
-      "li": "palai = tool + air = cushion.",
-      "lu": "palau = tool + sound = words, speech, language.",
-      "luka": "puluka = [classifier] + X+X = writing",
-      "lukana": "pulukona = [classifier] + X+X+X = book, publication, text, work, composition",
-      "lula": "pulula = [classifier] + X+X = money",
-      "lulabu": "pululobau = [classifier] + X+X+X = coin",
-      "lulati": "pululote = [classifier] + X+X+X = bank note, bill",
-      "lunu": "pulunau = [classifier] + X+X = speaker, loudspeaker",
-      "lupi": "pulupe = [classifier] + X+X = telephone",
-      "luti": "pulute = [classifier] + X+X = note",
-      "lutu": "pulutau = [classifier] + X+X = audio recording",
-      "lutunu": "pulutunau = [classifier] + X+X+X = microphone",
-      "ma": "pima = tool + visual = picture.",
-      "manuku": "pimenakau = [classifier] + X+X+X = film",
-      "manuma": "pimenuma = [classifier] + X+X+X = lens",
-      "mapu": "pimepo = [classifier] + X+X = lens",
-      "mapugi": "pimepuge = [classifier] + X+X+X = telescope, binoculars",
-      "maputi": "pimepute = [classifier] + X+X+X = microscope",
-      "mi": "pamai = tool + home = furniture, houseware.",
-      "midu": "pimido = [classifier] + X+X = mat, rug",
-      "mu": "pamau = tool + keep = vessel, container, receptacle.",
-      "munu": "pumunau = [classifier] + X+X = dispenser",
-      "na": "pina = tool + entire = tool.",
-      "nalu": "pinelo = [classifier] + X+X = bell, soundmaker",
-      "naluku": "pinelakau = [classifier] + X+X+X = rattle",
-      "naluni": "pinelune = [classifier] + X+X+X = horn",
-      "nalupi": "pinelupe = [classifier] + X+X+X = flute, pipe",
-      "naluta": "pineluta = [classifier] + X+X+X = drum",
-      "napa": "pinepa = [classifier] + X+X = trash, rubbish, garbage",
-      "ni": "panai = tool + point = knife, blade.",
-      "niba": "piniba = [classifier] + X+X = chisel",
-      "nibi": "pinibai = [classifier] + X+X = drill",
-      "nida": "pinida = [classifier] + X+X = axe?",
-      "nidugi": "piniduge = [classifier] + X+X+X = plough",
-      "nidumu": "pinidamau = [classifier] + X+X+X = shovel",
-      "nigi": "pinigai = [classifier] + X+X = saw, serrated blade",
-      "nipa": "pinipa = [classifier] + X+X = carving",
-      "nitu": "pinito = [classifier] + X+X = scissors, shears",
-      "si": "pasai = tool + clean = soap, cleanser, solvent.",
-      "su": "pasau = tool + part = component, building material, mechanical part.",
-      "ta": "pita = tool + rod = staff, rod, bar, stick, post.",
-      "taba": "piteba = tool + push+solid = hammer.",
-      "tali": "pitelai = tool + push+air = fan.",
-      "tasi": "pitesai = tool + push+water = oar.",
-      "tati": "pitetai = tool + rod+thin = needle.",
-      "tatila": "pitetila = [classifier] + X+X+X = knitting needle, crochet hook",
-      "ti": "patai = [classifier] + thin = rope, string, cord, fiber.",
-      "tigi": "pitigai = [classifier] + X+X = knot, tie",
-      "tigila": "pitigila = [classifier] + X+X+X = net, woven, knit",
-      "tipu": "pitipo = [classifier] + thin+through = pipe, tube.",
-      "tu": "patau = [classifier] + X = copy, duplicate",
-      "tudu": "putudau = [classifier] + X+X = sculpture, statue",
-      "tudunu": "putudunau = [classifier] + X+X+X = model, mould",
-      "tudupa": "putudupa = [classifier] + X+X+X = casting"
+      "ba": "piba = [classifier] + X =  = plug, stopper",
+      "bi": "pabai = tool + think = a {P:tool} used to help with {BE:think}ing. = computer.",
+      "bidu": "pibido = tool + think+weight = a {P:tool} used to help with {BE:think}ing about the {DO:weight} of different things. = scale.",
+      "bigu": "pibigo = tool + think+time = a {P:tool} used to help with {BE:think}ing about the {GO:time} of different things. = clock.",
+      "bila": "pibila = tool + think+amount = a {P:tool} used to help with {BE:think}ing about the {LA:amount} of different things. = calculator.",
+      "bu": "pabau = [classifier] + X =  = music, play",
+      "bula": "pubula = [classifier] + X+X =  = poetry, belles lettres",
+      "bunu": "pubunau = [classifier] + X+X =  = musical instrument",
+      "da": "pida = [classifier] + X =  = weapon?",
+      "di": "padai = [classifier] + X =  = keyboard?",
+      "dimu": "pidimo = tool + hand+recess = a {P:tool} held in the {DE:hand} having an end with a {MO:recess}ed shape. = spoon.",
+      "ditu": "pidito = [classifier] + X+X =  = fork",
+      "du": "padau = tool + base = a {P:tool} used as a {DO:base} for sitting or standing. = stool, chair.",
+      "duli": "pudule = tool + base+high = a {P:tool} used as a {DO:base} for reaching {LE:high} places. = ladder.",
+      "dulu": "pudulau = [classifier] + X+X =  = bed, bedding",
+      "ga": "piga = artifact + consume = an {P:artifact} to be {GA:consume}d. = food, meal, consumable.",
+      "gaba": "pigeba = [classifier] + X+X =  = preserves",
+      "gabaku": "pigebeko = [classifier] + X+X+X =  = dried food",
+      "gabakuti": "pigebekute = [classifier] + X+X+X+X =  = hay, straw",
+      "gi": "pagai = tool + join = a {P:tool} used to {GE:join} things together. = link, tie, fastener.",
+      "gibadi": "pigibedai = [classifier] + X+X+X =  = key",
+      "gibadu": "pigibedo = [classifier] + X+X+X =  = anchor",
+      "gidu": "pigido = tool + join+earth = a {P:tool} used to {GE:join} things together with a consistency like moist {DO:earth}. = glue, adhesive, paste.",
+      "ka": "pika = tool + outside = a {P:tool} to be placed on the {KA:outside} of something else. = blanket, cover, covering, wrapping.",
+      "kaladi": "pikeledai = [classifier] + X+X+X =  = glove",
+      "kaladu": "pikeledo = [classifier] + X+X+X =  = shoe",
+      "kamadi": "pikemedai = [classifier] + X+X+X =  = writing utensil, pen, pencil",
+      "kamalu": "pikemelo = [classifier] + X+X+X =  = writing, handwriting, print",
+      "kamaluba": "pikemeluba = [classifier] + X+X+X+X =  = inscription, engraving",
+      "kamalunu": "pikemelanau = [classifier] + X+X+X+X =  = print",
+      "kanu": "pikeno = [classifier] + X+X =  = shield, guard",
+      "ki": "pakai = tool + move = a {P:tool} for the {KE:move}ment of something. = machine, lever.",
+      "kibu": "pikibo = tool + move+round = a {P:tool} for {KE:move}ment of something which is {BO:round}. = wheel.",
+      "kidi": "pikidai = [classifier] + X+X =  = steering wheel, helm, control panel",
+      "kiku": "pikiko = tool + move+burn = a {P:tool} for {KE:move}ment of something which works by {KO:burn}ing fuel. = motor.",
+      "kila": "pikila = [classifier] + X+X =  = sail, wing, rudder, keel",
+      "ku": "pakau = tool + burn = a {P:tool} to be {KO:burn}ed. = fuel.",
+      "kula": "pukula = [classifier] + X+X =  = stove",
+      "kumabi": "pukumobe = [classifier] + X+X+X =  = signal, beacon.",
+      "kumu": "pukumau = [classifier] + X+X =  = oven",
+      "kunu": "pukunau = [classifier] + X+X =  = lighter, burner",
+      "kupa": "pukupa = [classifier] + X+X =  = forged, metalwork?",
+      "kusaba": "pukusoba = [classifier] + X+X+X =  = anvil",
+      "la": "pila = tool + flat = a {P:tool} which is {LA:flat}. = surface, tray, table, board.",
+      "li": "palai = tool + air = a {P:tool} which is soft and {LE:air}y. = cushion.",
+      "lu": "palau = tool + sound = a {P:tool} for communicating typically by means of {LO:sound}. = words, speech, language.",
+      "luka": "puluka = [classifier] + X+X =  = writing",
+      "lukana": "pulukona = [classifier] + X+X+X =  = book, publication, text, work, composition",
+      "lula": "pulula = [classifier] + X+X =  = money",
+      "lulabu": "pululobau = [classifier] + X+X+X =  = coin",
+      "lulati": "pululote = [classifier] + X+X+X =  = bank note, bill",
+      "lunu": "pulunau = [classifier] + X+X =  = speaker, loudspeaker",
+      "lupi": "pulupe = [classifier] + X+X =  = telephone",
+      "luti": "pulute = [classifier] + X+X =  = note",
+      "lutu": "pulutau = [classifier] + X+X =  = audio recording",
+      "lutunu": "pulutunau = [classifier] + X+X+X =  = microphone",
+      "ma": "pima = tool + visual = a {P:tool} for {MA:visual} depiction of something. = picture.",
+      "manuku": "pimenakau = [classifier] + X+X+X =  = film",
+      "manuma": "pimenuma = [classifier] + X+X+X =  = lens",
+      "mapu": "pimepo = [classifier] + X+X =  = lens",
+      "mapugi": "pimepuge = [classifier] + X+X+X =  = telescope, binoculars",
+      "maputi": "pimepute = [classifier] + X+X+X =  = microscope",
+      "mi": "pamai = tool + home = a {P:tool} typically used for furnishing a {ME:home}. = furniture, houseware.",
+      "midu": "pimido = [classifier] + X+X =  = mat, rug",
+      "mu": "pamau = tool + keep = a {P:tool} used to {MO:keep} something in. = vessel, container, receptacle.",
+      "munu": "pumunau = [classifier] + X+X =  = dispenser",
+      "na": "pina = tool + entire = an {NA:entire} {P:tool}. = tool.",
+      "nalu": "pinelo = [classifier] + X+X =  = bell, soundmaker",
+      "naluku": "pinelakau = [classifier] + X+X+X =  = rattle",
+      "naluni": "pinelune = [classifier] + X+X+X =  = horn",
+      "nalupi": "pinelupe = [classifier] + X+X+X =  = flute, pipe",
+      "naluta": "pineluta = [classifier] + X+X+X =  = drum",
+      "napa": "pinepa = [classifier] + X+X =  = trash, rubbish, garbage",
+      "ni": "panai = tool + point = a {P:tool} with a {NE:point}ed edge. = knife, blade.",
+      "niba": "piniba = [classifier] + X+X =  = chisel",
+      "nibi": "pinibai = [classifier] + X+X =  = drill",
+      "nida": "pinida = [classifier] + X+X =  = axe?",
+      "nidugi": "piniduge = [classifier] + X+X+X =  = plough",
+      "nidumu": "pinidamau = [classifier] + X+X+X =  = shovel",
+      "nigi": "pinigai = [classifier] + X+X =  = saw, serrated blade",
+      "nipa": "pinipa = [classifier] + X+X =  = carving",
+      "nitu": "pinito = [classifier] + X+X =  = scissors, shears",
+      "si": "pasai = tool + clean = a {P:tool} used for {SE:clean}ing things. = soap, cleanser, solvent.",
+      "su": "pasau = tool + part = a {SO:part} of a {tool}. = component, building material, mechanical part.",
+      "ta": "pita = tool + rod = a {tool} shaped like a {TA:rod}. = staff, rod, bar, stick, post.",
+      "taba": "piteba = tool + push+solid = a {tool} for {TA:push}ing down hard on {BA:solid} things. = hammer.",
+      "tali": "pitelai = tool + push+air = a {tool} for {TA:push}ing {LE:air}. = fan.",
+      "tasi": "pitesai = tool + push+water = a {tool} for {TA:push}ing {SE:water}. = oar.",
+      "tati": "pitetai = tool + rod+thin = a {tool} shaped like a {TA:rod} that is especially {TE:thin}. = needle.",
+      "tatila": "pitetila = [classifier] + X+X+X =  = knitting needle, crochet hook",
+      "ti": "patai = [classifier] + thin = a tool that is especially long and {TE:thin}. = rope, string, cord, fiber.",
+      "tigi": "pitigai = [classifier] + X+X =  = knot, tie",
+      "tigila": "pitigila = [classifier] + X+X+X =  = net, woven, knit",
+      "tipu": "pitipo = [classifier] + thin+through = a tool that is especially long and {TE:thin} with a hole allowing things to pass {PO:through} its length. = pipe, tube.",
+      "tu": "patau = [classifier] + X =  = copy, duplicate",
+      "tudu": "putudau = [classifier] + X+X =  = sculpture, statue",
+      "tudunu": "putudunau = [classifier] + X+X+X =  = model, mould",
+      "tudupa": "putudupa = [classifier] + X+X+X =  = casting"
     }
   },
   "pibi": {
@@ -1597,8 +1597,8 @@
       "pibi"
     ],
     "children": {
-      "di": "pibidai = computer + hand = smartphone.",
-      "na": "pibina = computer + unit = computer program, application."
+      "di": "pibidai = computer + hand = a {computer} that can be held in the {DE:hand}. = smartphone.",
+      "na": "pibina = computer + unit = a {NA:unit} of software on a {computer}. = computer program, application."
     }
   },
   "piga": {
@@ -1608,9 +1608,9 @@
       "pige"
     ],
     "children": {
-      "da": "pigeda = food + add = spice, seasoning.",
-      "ku": "pigeko = food + hot = cooking.",
-      "si": "pigesai = consumable + liquid = drink, concoction."
+      "da": "pigeda = food + add = something to be {DA:add}ed to {food}. = spice, seasoning.",
+      "ku": "pigeko = food + hot = {food} which has been processed using a {KO:hot} temperature. = cooking.",
+      "si": "pigesai = consumable + liquid = {consumable} in the form of a {SE:liquid}. = drink, concoction."
     }
   },
   "pigi": {
@@ -1620,10 +1620,10 @@
       "pigi"
     ],
     "children": {
-      "ba": "pigiba = fasten + still = lock, latch.",
-      "ki": "pigikai = fasten + move = hinge.",
-      "ni": "piginai = fasten + point = nail.",
-      "pi": "pigipai = link + long = chain."
+      "ba": "pigiba = fasten + still = a {fasten}er used to keep something {BA:still} in one place. = lock, latch.",
+      "ki": "pigikai = fasten + move = a {fasten}er that keeps hold of something but lets it {KE:move} freely to some degree. = hinge.",
+      "ni": "piginai = fasten + point = a {fasten}er with a sharp {NE:point}. = nail.",
+      "pi": "pigipai = link + long = a series of {link}s joined together in a {PE:long} path. = chain."
     }
   },
   "pigidu": {
@@ -1633,7 +1633,7 @@
       "pigidu"
     ],
     "children": {
-      "na": "pigiduna = paste + health = ointment, medicine."
+      "na": "pigiduna = paste + health = a {paste} used to improve {NA:health}. = ointment, medicine."
     }
   },
   "pigini": {
@@ -1643,7 +1643,7 @@
       "pigini"
     ],
     "children": {
-      "bi": "piginibai = nail + spin = screw."
+      "bi": "piginibai = nail + spin = a tool like a {nail} that {BE:spin}s into place. = screw."
     }
   },
   "pika": {
@@ -1653,10 +1653,10 @@
       "pike"
     ],
     "children": {
-      "la": "pikela = cover + flat = clothing, garment.",
-      "li": "pikelai = cover + top = lid.",
-      "ma": "pikema = covering + visual = paint, marking, record, drawing, writing.",
-      "si": "pikesai = covering + water = umbrella."
+      "la": "pikela = cover + flat = a {cover} for the body made of {LA:flat} material. = clothing, garment.",
+      "li": "pikelai = cover + top = a {cover} to be placed on {LE:top} of something else. = lid.",
+      "ma": "pikema = covering + visual = a material that acts as a {covering} and changes the {MA:visual} appearance of something. = paint, marking, record, drawing, writing.",
+      "si": "pikesai = covering + water = a {covering} meant to block {SE:water}. = umbrella."
     }
   },
   "pikala": {
@@ -1666,8 +1666,8 @@
       "pikele"
     ],
     "children": {
-      "ka": "pikeleka = garment + outside = coat, jacket, outerwear.",
-      "su": "pikeleso = garment + part = cloth, fabric, textile."
+      "ka": "pikeleka = garment + outside = a {garment} worn on the {KA:outside}. = coat, jacket, outerwear.",
+      "su": "pikeleso = garment + part = material that is typically used as a {SO:part} of a {garment}. = cloth, fabric, textile."
     }
   },
   "pikibu": {
@@ -1677,8 +1677,8 @@
       "pikibu"
     ],
     "children": {
-      "li": "pikibule = wheel + air = tire, pneumatic tire.",
-      "pi": "pikibupe = wheel + long = axle."
+      "li": "pikibule = wheel + air = a {wheel} filled with {LE:air}. = tire, pneumatic tire.",
+      "pi": "pikibupe = wheel + long = a {PE:long} thing connecting {wheel}s. = axle."
     }
   },
   "piku": {
@@ -1688,7 +1688,7 @@
       "puku"
     ],
     "children": {
-      "ma": "pukuma = fuel + light = light, candle."
+      "ma": "pukuma = fuel + light = a tool that burns {fuel} to make {MA:light}. = light, candle."
     }
   },
   "pikuma": {
@@ -1698,8 +1698,8 @@
       "pukumo"
     ],
     "children": {
-      "di": "pukumode = light + hand = torch, flashlight.",
-      "ta": "pukumota = light + rod = candlestick."
+      "di": "pukumode = light + hand = a {light} to be held in the {DE:hand}. = torch, flashlight.",
+      "ta": "pukumota = light + rod = a {light} in the shape of a {TA:rod}. = candlestick."
     }
   },
   "pila": {
@@ -1709,10 +1709,10 @@
       "pile"
     ],
     "children": {
-      "ba": "pileba = surface + hard = table, board.",
-      "li": "pilelai = surface + high = shelf.",
-      "ma": "pilema = surface + see = mirror, screen, television.",
-      "ti": "piletai = surface + thin = paper."
+      "ba": "pileba = surface + hard = a {surface} that is {BA:hard}. = table, board.",
+      "li": "pilelai = surface + high = a {surface} that holds things up {LE:high}. = shelf.",
+      "ma": "pilema = surface + see = a {surface} used for {MA:see}ing things in. = mirror, screen, television.",
+      "ti": "piletai = surface + thin = material that has a flat {surface} and is very {TE:thin}. = paper."
     }
   },
   "pilu": {
@@ -1722,7 +1722,7 @@
       "pulu"
     ],
     "children": {
-      "na": "puluna = speech + entire = language."
+      "na": "puluna = speech + entire = an {NA:entire} kind of {speech}. = language."
     }
   },
   "pima": {
@@ -1732,9 +1732,9 @@
       "pime"
     ],
     "children": {
-      "gi": "pimegai = picture + gather = album.",
-      "nu": "pimeno = picture + produce = camera.",
-      "tu": "pimeto = picture + resemble = photograph, photocopy."
+      "gi": "pimegai = picture + gather = a place for {GE:gather}ing {picture}s together. = album.",
+      "nu": "pimeno = picture + produce = a device used to {NO:produce} {picture}s. = camera.",
+      "tu": "pimeto = picture + resemble = a {picture} that {TO:resemble}s something exactly. = photograph, photocopy."
     }
   },
   "pimaki": {
@@ -1744,7 +1744,7 @@
       "pimekai"
     ],
     "children": {
-      "": "pimekai = move +  = video, movie, film."
+      "": "pimekai = move +  = a {picture} that {move}s. = video, movie, film."
     }
   },
   "pimu": {
@@ -1754,8 +1754,8 @@
       "pumu"
     ],
     "children": {
-      "la": "pumula = container + flat = bag, pouch, pocket.",
-      "si": "pumuse = vessel + water = basin, washbasin."
+      "la": "pumula = container + flat = a {container} typically made of {LA:flat} cloth. = bag, pouch, pocket.",
+      "si": "pumuse = vessel + water = a {vessel} for {SE:water}. = basin, washbasin."
     }
   },
   "pina": {
@@ -1765,9 +1765,9 @@
       "pine"
     ],
     "children": {
-      "bi": "pinebai = tool + order = functioning, working.",
-      "bu": "pinebo = tool + leisure = toy.",
-      "gu": "pinego = tool + disorder = broken, out of order."
+      "bi": "pinebai = tool + order = a {tool} in working {BE:order}. = functioning, working.",
+      "bu": "pinebo = tool + leisure = a {P:tool} for {BO:leisure}. = toy.",
+      "gu": "pinego = tool + disorder = a {tool} that is in a state of {GO:disorder}. = broken, out of order."
     }
   },
   "pinabu": {
@@ -1777,7 +1777,7 @@
       "pineba"
     ],
     "children": {
-      "bu": "pinebabau = toy + round = ball."
+      "bu": "pinebabau = toy + round = a {toy} that is {BO:round}. = ball."
     }
   },
   "pini": {
@@ -1787,8 +1787,8 @@
       "pini"
     ],
     "children": {
-      "du": "pinido = blade + earth = hoe.",
-      "ti": "pinitai = blade + thin = razor."
+      "du": "pinido = blade + earth = a sort of blunt {blade} used for working {DO:earth}. = hoe.",
+      "ti": "pinitai = blade + thin = a {TE:thin} kind of {blade}. = razor."
     }
   },
   "pisu": {
@@ -1798,7 +1798,7 @@
       "pusu"
     ],
     "children": {
-      "ku": "pusukau = component + destroy = damage, harm."
+      "ku": "pusukau = component + destroy = a tool's {component} that has been {KO:destroy}ed. = damage, harm."
     }
   },
   "pitati": {
@@ -1808,7 +1808,7 @@
       "piteti"
     ],
     "children": {
-      "si": "pitetisai = needle + liquid = syringe."
+      "si": "pitetisai = needle + liquid = a {needle} for injecting {SE:liquid}. = syringe."
     }
   },
   "piti": {
@@ -1818,7 +1818,7 @@
       "piti"
     ],
     "children": {
-      "ba": "pitiba = cord + hard = wire."
+      "ba": "pitiba = cord + hard = a kind of {cord} made of {BA:hard} material. = wire."
     }
   },
   "si": {
@@ -1830,32 +1830,32 @@
       "su"
     ],
     "children": {
-      "ba": "siba = [classifier] + X = boulder",
-      "bu": "sabau = natural place + full = forest.",
-      "du": "sadau = natural place + ground = earth, land, terrain.",
-      "gi": "sagai = [classifier] + X = cloud",
-      "gu": "sagau = natural place + side = beach, shore, coast.",
-      "ka": "sika = natural place + outside = universe, world, space.",
-      "ki": "sakai = weather phenomenon + move = wind.",
-      "ku": "sakau = weather phenomenon + force = lightning.",
-      "lu": "salau = natural time + dark = night.",
-      "la": "sila = natural place + flat = plain, field.",
-      "li": "salai = natural place + above = sky.",
-      "ligu": "siligo = [classifier] + X+X = weather",
-      "mi": "samai = natural place + inside = cave, grotto.",
-      "lumaku": "sulumokau = [classifier] + X+X+X = lunar month",
-      "lumana": "sulumona = [classifier] + X+X+X = calendar month",
-      "ma": "sima = natural place + light = sun.",
-      "mabi": "simebai = [classifier] + X+X = eclipse",
-      "mana": "simena = [classifier] + X+X = star",
-      "mu": "samau = natural place + contain = sea, ocean, lake, water.",
-      "na": "sina = natural place + alone = island.",
-      "ni": "sanai = natural place + point = cliff.",
-      "pi": "sapai = natural place + path = river.",
-      "pu": "sapau = [classifier] + X = strait, channel",
-      "ta": "sita = natural place + push = mountain.",
-      "tamu": "sitemo = [classifier] + X+X = valley",
-      "ti": "sitetai = [classifier] + small = hill."
+      "ba": "siba = [classifier] + X =  = boulder",
+      "bu": "sabau = natural place + full = a {S:natural place} that is especially {BO:full} of trees and life in general. = forest.",
+      "du": "sadau = natural place + ground = a {S:natural place} forming the {DO:ground}. = earth, land, terrain.",
+      "gi": "sagai = [classifier] + X =  = cloud",
+      "gu": "sagau = natural place + side = a {S:natural place} at the {GO:side} of the water. = beach, shore, coast.",
+      "ka": "sika = natural place + outside = a {S:natural place} serving as the setting of everything that occurs {KA:outside} one's internal subjective experiences. = universe, world, space.",
+      "ki": "sakai = weather phenomenon + move = a {S:weather phenomenon} involving a massive {KE:move}ment of air. = wind.",
+      "ku": "sakau = weather phenomenon + force = a {S:weather phenomenon} involving a {KO:force}ful blast from the sky. = lightning.",
+      "lu": "salau = natural time + dark = a {S:natural time} when the sky is {LO:dark}. = night.",
+      "la": "sila = natural place + flat = a {S:natural place} that is especially {LA:flat}. = plain, field.",
+      "li": "salai = natural place + above = a {S:natural place} located {LE:above} the earth. = sky.",
+      "ligu": "siligo = [classifier] + X+X =  = weather",
+      "mi": "samai = natural place + inside = a {S:natural place} leading deep {ME:inside} the earth. = cave, grotto.",
+      "lumaku": "sulumokau = [classifier] + X+X+X =  = lunar month",
+      "lumana": "sulumona = [classifier] + X+X+X =  = calendar month",
+      "ma": "sima = natural place + light = a {S:natural place} which gives {MA:light}. = sun.",
+      "mabi": "simebai = [classifier] + X+X =  = eclipse",
+      "mana": "simena = [classifier] + X+X =  = star",
+      "mu": "samau = natural place + contain = a {S:natural place} which {MO:contain}s lots of water. = sea, ocean, lake, water.",
+      "na": "sina = natural place + alone = a {S:natural place} consisting of land floating {NA:alone} within a body of water. = island.",
+      "ni": "sanai = natural place + point = a {S:natural place} where the land reaches a sharp {NE:point}. = cliff.",
+      "pi": "sapai = natural place + path = a {S:natural place} where water flows in a long {PE:path}. = river.",
+      "pu": "sapau = [classifier] + X =  = strait, channel",
+      "ta": "sita = natural place + push = a {S:natural place} where the land {TA:push}es upward. = mountain.",
+      "tamu": "sitemo = [classifier] + X+X =  = valley",
+      "ti": "sitetai = [classifier] + small = a formation like a mountain, but relatively {TE:small}. = hill."
     }
   },
   "sidu": {
@@ -1865,10 +1865,10 @@
       "sudu"
     ],
     "children": {
-      "ki": "suduke = land + move = earthquake.",
-      "ku": "sudukau = land + dry = desert.",
-      "la": "sudula = land + flat = ground.",
-      "si": "suduse = terrain + water = swamp, marsh."
+      "ki": "suduke = land + move = the shaking {KE:move}ment of {land}. = earthquake.",
+      "ku": "sudukau = land + dry = a kind of {land} that is typically very {KO:dry}. = desert.",
+      "la": "sudula = land + flat = the {LA:flat} surface of the {land}. = ground.",
+      "si": "suduse = terrain + water = a kind of {terrain} that has lots of {SE:water}. = swamp, marsh."
     }
   },
   "sika": {
@@ -1878,7 +1878,7 @@
       "sike"
     ],
     "children": {
-      "si": "sikesai = space + liquid = galaxy."
+      "si": "sikesai = space + liquid = a massive formation in {space} that looks like a stream of {SE:liquid} running through the sky. = galaxy."
     }
   },
   "siki": {
@@ -1888,7 +1888,7 @@
       "siki"
     ],
     "children": {
-      "bi": "sikibai = wind + spin = cyclone, tornado."
+      "bi": "sikibai = wind + spin = {wind} that {BE:spin}s around. = cyclone, tornado."
     }
   },
   "silu": {
@@ -1898,9 +1898,9 @@
       "sulu"
     ],
     "children": {
-      "ma": "suluma = night + light = moon.",
-      "mi": "sulume = night + middle = midnight.",
-      "nu": "sulunau = night + before = evening."
+      "ma": "suluma = night + light = the main source of {MA:light} during the {night}. = moon.",
+      "mi": "sulume = night + middle = the {ME:middle} of the {night}. = midnight.",
+      "nu": "sulunau = night + before = the time {NO:before} the {night}. = evening."
     }
   },
   "sili": {
@@ -1910,9 +1910,9 @@
       "sili"
     ],
     "children": {
-      "ku": "siliko = sky + force = storm.",
-      "ma": "silima = sky + light = day, daytime.",
-      "si": "silisai = sky + water = rain."
+      "ku": "siliko = sky + force = {KO:force}ful winds and precipitation in the {sky}. = storm.",
+      "ma": "silima = sky + light = the time of day when the {sky} is filled with {MA:light}. = day, daytime.",
+      "si": "silisai = sky + water = {SE:water} from the {sky}. = rain."
     }
   },
   "silima": {
@@ -1922,10 +1922,10 @@
       "silime"
     ],
     "children": {
-      "na": "silimena = day + unit = date, one day long, day.",
-      "nu": "silimeno = day + before = morning.",
-      "pa": "silimepa = day + after = afternoon.",
-      "pi": "silimepai = day + seven = week."
+      "na": "silimena = day + unit = a {NA:unit} for counting the passage of {day}s. = date, one day long, day.",
+      "nu": "silimeno = day + before = the part of the {day} {NO:before} the rest. = morning.",
+      "pa": "silimepa = day + after = the part of the {day} {PA:after} the rest. = afternoon.",
+      "pi": "silimepai = day + seven = a sequence of {PE:seven} {day}s. = week."
     }
   },
   "silisi": {
@@ -1935,8 +1935,8 @@
       "silisi"
     ],
     "children": {
-      "ba": "silisiba = rain + hard = snow, sleet.",
-      "ma": "silisima = rain + light = rainbow."
+      "ba": "silisiba = rain + hard = stuff like {rain}, but frozen {BA:hard}. = snow, sleet.",
+      "ma": "silisima = rain + light = a special kind of {MA:light} that can accompany {rain}. = rainbow."
     }
   },
   "sima": {
@@ -1946,14 +1946,14 @@
       "sime"
     ],
     "children": {
-      "da": "simeda = sun + great = summer.",
-      "du": "simedo = sun + down = sunset, dusk.",
-      "li": "simelai = sun + up = sunrise, dawn.",
-      "nu": "simeno = sun + begin = spring.",
-      "pa": "simepa = sun + after = autumn.",
-      "pi": "simepai = sun + path = year.",
-      "pu": "simepo = sun + cross = twilight.",
-      "ti": "simetai = sun + least = winter."
+      "da": "simeda = sun + great = the season when the {sun} stays up for the {DA:great}est amount of time. = summer.",
+      "du": "simedo = sun + down = when the {sun} goes {DO:down}. = sunset, dusk.",
+      "li": "simelai = sun + up = when the {sun} comes {LE:up}. = sunrise, dawn.",
+      "nu": "simeno = sun + begin = the season when the {sun} {NO:begin}s to stay up for longer. = spring.",
+      "pa": "simepa = sun + after = the season {PA:after} the {sun} has reached its peak for the year. = autumn.",
+      "pi": "simepai = sun + path = the period of time it takes for the earth to complete its {PE:path} around the {sun}. = year.",
+      "pu": "simepo = sun + cross = when the {sun} {PO:cross}es the horizon. = twilight.",
+      "ti": "simetai = sun + least = the season when the {sun} stays up for the {TE:least} amount of time. = winter."
     }
   },
   "simapi": {
@@ -1963,7 +1963,7 @@
       "simepi"
     ],
     "children": {
-      "su": "simepiso = year + part = season."
+      "su": "simepiso = year + part = a {SO:part} of the {year}. = season."
     }
   },
   "simu": {
@@ -1973,9 +1973,9 @@
       "sumu"
     ],
     "children": {
-      "da": "sumuda = water + large = sea, ocean.",
-      "ki": "sumuke = water + move = wave.",
-      "luma": "sumuluma = sea + night+light = tide."
+      "da": "sumuda = water + large = a body of {water} that is especially {DA:large}. = sea, ocean.",
+      "ki": "sumuke = water + move = a mass of {water} which {KE:move}s along in one direction. = wave.",
+      "luma": "sumuluma = sea + night+light = the movement of the {sea} related to the moon, the {LO:night}'s main source of {MA:light}. = tide."
     }
   },
   "simukidu": {
@@ -1985,7 +1985,7 @@
       "sumukido"
     ],
     "children": {
-      "": "sumukido = land +  = flood."
+      "": "sumukido = land +  = a {wave} of water encroaching on normally dry {land}. = flood."
     }
   },
   "sita": {
@@ -1995,7 +1995,7 @@
       "site"
     ],
     "children": {
-      "ku": "siteko = mountain + hot = volcano."
+      "ku": "siteko = mountain + hot = a {mountain} that gets {KO:hot} like fire. = volcano."
     }
   },
   "sitaku": {
@@ -2005,7 +2005,7 @@
       "siteka"
     ],
     "children": {
-      "bu": "sitekabau = volcano + full = volcanic eruption."
+      "bu": "sitekabau = volcano + full = a {volcano} that has gotten overly {BO:full}. = volcanic eruption."
     }
   },
   "tu": {
@@ -2017,61 +2017,61 @@
       "ti"
     ],
     "children": {
-      "ba": "tuba = physical property + still = still, immobile.",
-      "badu": "tubodau = physical property + hard+ground = solid, hard, congealed, frozen.",
-      "bati": "tubote = physical property + still+small = slow.",
-      "bu": "tabau = physical property + full = thick, fat.",
-      "da": "tuda = physical property + big = big, great, loud.",
-      "du": "tadau = physical property + weight = heavy, weight, mass.",
-      "duli": "tudule = [classifier] + weight+air = lightweight, light.",
-      "ga": "tuga = physical property + opening = hole, hollow, opening.",
-      "gi": "tagai = physical property + gather = mixed.",
-      "gu": "tagau = [classifier] + X = long time, old.",
-      "nagu": "tuguna = [classifier] + unit+time = hour.",
-      "sugu": "tusugau = [classifier] + X+X = scattered, messy",
-      "tigu": "tugute = [classifier] + small+time = second.",
-      "ka": "tuka = physical property + outside = marked, smeared.",
-      "ki": "takai = physical property + move = moving.",
-      "kibi": "tikibai = [classifier] + X+X = spinning",
-      "kibila": "tikibila = [classifier] + X+X+X = roll",
-      "kibu": "tikibo = [classifier] + X+X = dance, sway, swing",
-      "kidu": "tikido = [classifier] + X+X = fall, drop",
-      "kigu": "tikigo = [classifier] + X+X = vibrate, shake",
-      "kili": "tikilai = [classifier] + X+X = fly, float",
-      "kilipi": "tikilipai = [classifier] + X+X+X = float, drift",
-      "kipi": "tikipai = [classifier] + X+X = drifting, shifting",
-      "kipila": "tikipila = [classifier] + X+X+X = slide, slip",
-      "kipitu": "tikipito = [classifier] + X+X+X = back and forth, to and fro",
-      "la": "tula = physical property + flat = flat, plane, surface.",
-      "lagi": "tuloge = [classifier] + X+X = smooth",
-      "lamu": "tulomau = [classifier] + X+X = soft",
-      "lana": "tulona = [classifier] + X+X = layer",
-      "lani": "tulone = [classifier] + X+X = furrow, groove, scratch, dent",
-      "li": "talai = physical property + air = vapor, air, gas.",
-      "lisi": "tilisai = [classifier] + X+X = spray, mist, splash",
-      "lu": "talau = physical property + hear = sound.",
-      "ma": "tuma = [classifier] + X = round, circle, ball",
-      "matu": "tumotau = [classifier] + X+X = spiral, coil",
-      "mi": "tamai = physical property + inside = small, little, quiet, slight.",
-      "na": "tuna = physical property + alone = pure, clean.",
-      "ni": "tanai = time + point = point, moment, instant.",
-      "nibu": "tinibo = [classifier] + X+X = hook",
-      "nipu": "tinipo = physical property + sharp+pierce = sharp.",
-      "nita": "tinita = shape + sharp+protrude = spike, barb.",
-      "nitigi": "tinitigai = [classifier] + X+X+X = spiky, toothed",
-      "pi": "tapai = physical property + long = long, line, path, course.",
-      "pili": "tipilai = [classifier] + X+X = stick, pole",
-      "pimitu": "tipimito = [classifier] + X+X+X = meter",
-      "pu": "tapau = physical property + different = end, finish, stopping.",
-      "punu": "tupunau = [classifier] + X+X = early",
-      "pupa": "tupupa = [classifier] + X+X = late",
-      "sa": "tusa = [classifier] + X = shape, form",
-      "sanu": "tusonau = [classifier] + X+X = start, beginning",
-      "si": "tasai = physical property + water = flow, liquid, melt.",
-      "siba": "tisiba = [classifier] + X+X = float?",
-      "su": "tasau = [classifier] + X = cut, separate, asunder",
-      "suni": "tusune = [classifier] + X+X = fold",
-      "sunipi": "tusunapai = [classifier] + X+X+X = seam"
+      "ba": "tuba = physical property + still = a {T:physical property} of something that stays {BA:still}. = still, immobile.",
+      "badu": "tubodau = physical property + hard+ground = a {T:physical property} of something {BA:hard} like solid {DO:ground}. = solid, hard, congealed, frozen.",
+      "bati": "tubote = physical property + still+small = a {T:physical property} of something that stay relatively {BA:still}, moving only a {TE:small} amount. = slow.",
+      "bu": "tabau = physical property + full = a {T:physical property} of something very {BO:full}. = thick, fat.",
+      "da": "tuda = physical property + big = a {T:physical property} of something {DA:big}. = big, great, loud.",
+      "du": "tadau = physical property + weight = a {T:physical property} of something of great {DO:weight}. = heavy, weight, mass.",
+      "duli": "tudule = [classifier] + weight+air = something light in {DO:weight} like {LE:air}. = lightweight, light.",
+      "ga": "tuga = physical property + opening = a {T:physical property} of something with an {GA:opening}. = hole, hollow, opening.",
+      "gi": "tagai = physical property + gather = a {T:physical property} of something with many different components {GE:gather}ed together. = mixed.",
+      "gu": "tagau = [classifier] + X =  = long time, old.",
+      "nagu": "tuguna = [classifier] + unit+time = a {NA:unit} of {GO:time}. = hour.",
+      "sugu": "tusugau = [classifier] + X+X =  = scattered, messy",
+      "tigu": "tugute = [classifier] + small+time = a {TE:small} unit of {GO:time}. = second.",
+      "ka": "tuka = physical property + outside = a {T:physical property} of something having been touched on the {KA:outside}. = marked, smeared.",
+      "ki": "takai = physical property + move = a {T:physical property} of something on the {KE:move}. = moving.",
+      "kibi": "tikibai = [classifier] + X+X =  = spinning",
+      "kibila": "tikibila = [classifier] + X+X+X =  = roll",
+      "kibu": "tikibo = [classifier] + X+X =  = dance, sway, swing",
+      "kidu": "tikido = [classifier] + X+X =  = fall, drop",
+      "kigu": "tikigo = [classifier] + X+X =  = vibrate, shake",
+      "kili": "tikilai = [classifier] + X+X =  = fly, float",
+      "kilipi": "tikilipai = [classifier] + X+X+X =  = float, drift",
+      "kipi": "tikipai = [classifier] + X+X =  = drifting, shifting",
+      "kipila": "tikipila = [classifier] + X+X+X =  = slide, slip",
+      "kipitu": "tikipito = [classifier] + X+X+X =  = back and forth, to and fro",
+      "la": "tula = physical property + flat = a {T:physical property} of something {LA:flat} in shape. = flat, plane, surface.",
+      "lagi": "tuloge = [classifier] + X+X =  = smooth",
+      "lamu": "tulomau = [classifier] + X+X =  = soft",
+      "lana": "tulona = [classifier] + X+X =  = layer",
+      "lani": "tulone = [classifier] + X+X =  = furrow, groove, scratch, dent",
+      "li": "talai = physical property + air = a {T:physical property} of something gaseous like {LE:air}. = vapor, air, gas.",
+      "lisi": "tilisai = [classifier] + X+X =  = spray, mist, splash",
+      "lu": "talau = physical property + hear = a {T:physical property} of something that can be {LO:hear}d. = sound.",
+      "ma": "tuma = [classifier] + X =  = round, circle, ball",
+      "matu": "tumotau = [classifier] + X+X =  = spiral, coil",
+      "mi": "tamai = physical property + inside = a {T:physical property} of something that can fit {ME:inside} something else. = small, little, quiet, slight.",
+      "na": "tuna = physical property + alone = a {T:physical property} of something entirely {NA:alone} without other things mixed in. = pure, clean.",
+      "ni": "tanai = time + point = a {NE:point} in {T:time}. = point, moment, instant.",
+      "nibu": "tinibo = [classifier] + X+X =  = hook",
+      "nipu": "tinipo = physical property + sharp+pierce = a {T:physical property} of something {NE:sharp} enough to {PO:pierce} something. = sharp.",
+      "nita": "tinita = shape + sharp+protrude = a {T:shape} that is {NE:sharp} and {TA:protrude}s outward. = spike, barb.",
+      "nitigi": "tinitigai = [classifier] + X+X+X =  = spiky, toothed",
+      "pi": "tapai = physical property + long = a {T:physical property} of something that stretches on for a {PE:long} time or distance. = long, line, path, course.",
+      "pili": "tipilai = [classifier] + X+X =  = stick, pole",
+      "pimitu": "tipimito = [classifier] + X+X+X =  = meter",
+      "pu": "tapau = physical property + different = a {T:physical property} of something that no longer continues in time or space, making room for something {PO:different}. = end, finish, stopping.",
+      "punu": "tupunau = [classifier] + X+X =  = early",
+      "pupa": "tupupa = [classifier] + X+X =  = late",
+      "sa": "tusa = [classifier] + X =  = shape, form",
+      "sanu": "tusonau = [classifier] + X+X =  = start, beginning",
+      "si": "tasai = physical property + water = a {T:physical property} of something that flows like {SE:water}. = flow, liquid, melt.",
+      "siba": "tisiba = [classifier] + X+X =  = float?",
+      "su": "tasau = [classifier] + X =  = cut, separate, asunder",
+      "suni": "tusune = [classifier] + X+X =  = fold",
+      "sunipi": "tusunapai = [classifier] + X+X+X =  = seam"
     }
   },
   "tubu": {
@@ -2081,7 +2081,7 @@
       "tubu"
     ],
     "children": {
-      "ti": "tubute = thick + small = thin, slender, fine."
+      "ti": "tubute = thick + small = something relatively {TE:small} in terms of {thick}ness. = thin, slender, fine."
     }
   },
   "tuda": {
@@ -2091,9 +2091,9 @@
       "tudo"
     ],
     "children": {
-      "du": "tudodau = great + down = deep.",
-      "gu": "tudogau = great + time = long time.",
-      "li": "tudole = great + above = tall, high."
+      "du": "tudodau = great + down = something that reaches {DO:down} a {great} distance in space. = deep.",
+      "gu": "tudogau = great + time = something spanning a {great} amount of {GO:time}. = long time.",
+      "li": "tudole = great + above = something of such {great} size as to reach {LE:above} other things. = tall, high."
     }
   },
   "tudu": {
@@ -2103,8 +2103,8 @@
       "tudu"
     ],
     "children": {
-      "bi": "tudube = mass + concentrate = dense, full, thick.",
-      "gu": "tudugau = mass + throughout = rarified, thin, empty."
+      "bi": "tudube = mass + concentrate = something with its {mass} {BE:concentrate}d in one relatively small place. = dense, full, thick.",
+      "gu": "tudugau = mass + throughout = something with its {mass} spread out all {GO:throughout} some place. = rarified, thin, empty."
     }
   },
   "tuga": {
@@ -2114,8 +2114,8 @@
       "tugo"
     ],
     "children": {
-      "ka": "tugoka = opening + outside = open.",
-      "mi": "tugome = opening + inside = closed."
+      "ka": "tugoka = opening + outside = something having an {opening} that leads {KA:outside}. = open.",
+      "mi": "tugome = opening + inside = something having an {opening} that is blocked, keeping things {ME:inside}. = closed."
     }
   },
   "tugi": {
@@ -2125,7 +2125,7 @@
       "tigi"
     ],
     "children": {
-      "si": "tigisai = mixed + water = wet, saturated, soaked."
+      "si": "tigisai = mixed + water = something {mixed} with {SE:water}. = wet, saturated, soaked."
     }
   },
   "tuguti": {
@@ -2135,7 +2135,7 @@
       "tuguta"
     ],
     "children": {
-      "si": "tugutasai = second + three = millisecond."
+      "si": "tugutasai = second + three = one part of a {second} divided into a equal parts numbering ten to the power of {SE:three}. = millisecond."
     }
   },
   "tuki": {
@@ -2145,7 +2145,7 @@
       "tiki"
     ],
     "children": {
-      "da": "tikida = move + great = fast."
+      "da": "tikida = move + great = something that {move}s a {DA:great} distance in a short amount of time. = fast."
     }
   },
   "tula": {
@@ -2155,7 +2155,7 @@
       "tulo"
     ],
     "children": {
-      "ba": "tuloba = surface + still = hard."
+      "ba": "tuloba = surface + still = a {surface} that remains {BA:still} on contact. = hard."
     }
   },
   "tuli": {
@@ -2165,8 +2165,8 @@
       "tili"
     ],
     "children": {
-      "gi": "tiligai = air + mix = fumes, smoke, mist, vapor.",
-      "ku": "tiliko = air + force = puff, blast."
+      "gi": "tiligai = air + mix = {air} with other things {GE:mix}ed in. = fumes, smoke, mist, vapor.",
+      "ku": "tiliko = air + force = {air} that moves with great {KO:force}. = puff, blast."
     }
   },
   "tulu": {
@@ -2176,12 +2176,12 @@
       "tulu"
     ],
     "children": {
-      "bi": "tulube = sound + order = ring, song, sonorous.",
-      "du": "tuludau = sound + weight = low pitch.",
-      "gu": "tulugau = sound + disorder = noise, racket.",
-      "li": "tulule = sound + air = high pitch.",
-      "pu": "tulupau = sound + without = silent, quiet.",
-      "tu": "tulutau = sound + repetition = echo, resonance."
+      "bi": "tulube = sound + order = an {BE:order}ly {sound}. = ring, song, sonorous.",
+      "du": "tuludau = sound + weight = a {sound} like that made by something of great {DO:weight}. = low pitch.",
+      "gu": "tulugau = sound + disorder = a {GO:disorder}ly {sound}. = noise, racket.",
+      "li": "tulule = sound + air = a {sound} like that made by something light and {LE:air}y. = high pitch.",
+      "pu": "tulupau = sound + without = something {PO:without} {sound}. = silent, quiet.",
+      "tu": "tulutau = sound + repetition = a {sound} which is like the {TO:repetition} of another sound. = echo, resonance."
     }
   },
   "tumi": {
@@ -2191,9 +2191,9 @@
       "timi"
     ],
     "children": {
-      "du": "timido = small + down = shallow.",
-      "gu": "timigo = small + time = short time.",
-      "li": "timilai = small + high = short, low."
+      "du": "timido = small + down = something {small} in terms of how far {DO:down} it reaches. = shallow.",
+      "gu": "timigo = small + time = something spanning a {small} amount of {GO:time}. = short time.",
+      "li": "timilai = small + high = something {small} in terms of how {LE:high} it reaches. = short, low."
     }
   },
   "tuna": {
@@ -2203,7 +2203,7 @@
       "tuno"
     ],
     "children": {
-      "ku": "tunokau = pure + dry = dry."
+      "ku": "tunokau = pure + dry = something basically {KO:dry} in its {pure} form, without any liquid mixed in. = dry."
     }
   },
   "tuni": {
@@ -2213,7 +2213,7 @@
       "tini"
     ],
     "children": {
-      "si": "tinisai = point + liquid = drop, droplet."
+      "si": "tinisai = point + liquid = {SE:liquid} concentrated into a {point}. = drop, droplet."
     }
   },
   "tupi": {
@@ -2223,9 +2223,9 @@
       "tipi"
     ],
     "children": {
-      "bi": "tipibai = path + spin = twist.",
-      "bu": "tipibo = path + round = curve, arch.",
-      "na": "tipina = path + one = straight, direct."
+      "bi": "tipibai = path + spin = something that moves along a {path} and {BE:spin}s in space or time. = twist.",
+      "bu": "tipibo = path + round = something that moves along a {BO:round}ed {path} going about some point. = curve, arch.",
+      "na": "tipina = path + one = something that moves in {NA:one} direction along a {path}. = straight, direct."
     }
   },
   "tupibu": {
@@ -2235,7 +2235,7 @@
       "tipibu"
     ],
     "children": {
-      "na": "tipibuna = curve + entire = ring."
+      "na": "tipibuna = curve + entire = something that moves along a {curve} that reaches the {NA:entire} way around some point. = ring."
     }
   },
   "tusi": {
@@ -2245,9 +2245,9 @@
       "tisi"
     ],
     "children": {
-      "bu": "tisibo = liquid + thick = viscous, thick.",
-      "li": "tisilai = liquid + air = mist, haze.",
-      "pi": "tisipai = liquid + long = runny, thin."
+      "bu": "tisibo = liquid + thick = {liquid} that would form a {BO:thick} stream when poured. = viscous, thick.",
+      "li": "tisilai = liquid + air = {liquid} dispersed in {LE:air}. = mist, haze.",
+      "pi": "tisipai = liquid + long = {liquid} that would form a {PE:long}, thin stream when poured. = runny, thin."
     }
   }
 }

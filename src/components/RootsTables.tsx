@@ -172,7 +172,8 @@ function TableCell({
         <div className="h-full w-full bg-[rgba(var(--foreground-rgb),_.04)]"></div>
       </div>
     );
-  const [word, derivationText, definition] = radicalSuffixEntry.split(" = ");
+  const [word, abbreviatedDerivation, derivationText, definition] =
+    radicalSuffixEntry.split(" = ");
   const suffixSyllables = suffix.split(
     /(?<=[aeiou])(?=[bdgklmnpst])/
   ) as Radical[];
@@ -184,7 +185,7 @@ function TableCell({
   return (
     <div className={`flex gap-2 ${className}`}>
       <div className="">
-        {derivationText.split(/ ?\+ ?/).map((meaningChunk, i) => {
+        {abbreviatedDerivation.split(/ ?\+ ?/).map((meaningChunk, i) => {
           const isPrefix = prefix && i === 0;
           // if (isPrefix) return meaningChunk;
           if (isPrefix) return null;
@@ -237,6 +238,51 @@ function TableCell({
           )}
         </div>
         <div className="">{definition}</div>
+        <div className="text-sm mt-4 p-1 bg-[rgba(var(--foreground-rgb),_.05)]">
+          {capitalize(derivationText)
+            .split(/(?={)|(?<=})/)
+            .map((segment, i) => {
+              if (segment.startsWith("{")) {
+                const colonSegments = segment.slice(1, -1).split(":");
+                if (colonSegments.length === 1) {
+                  const prefixDefinition = colonSegments[0];
+                  const wordSyllables = word.split(
+                    /(?<=[aeiou])(?=[bdgklmnpst])/
+                  );
+                  const prefixRealization = wordSyllables
+                    .slice(0, prefixSyllables.length)
+                    .join("");
+                  if (!prefix) throw new Error(`no prefix for ${word}`);
+                  return (
+                    <span key={String(i)}>
+                      <span className="[font-variant:small-caps] [font-size:1.2em]">
+                        {prefixDefinition}
+                      </span>
+                    </span>
+                  );
+                } else {
+                  const [syllable, syllableMeaning] = colonSegments;
+                  if (syllable.length === 1)
+                    return (
+                      <span key={String(i)}>
+                        <span className="[font-variant:small-caps] [font-size:1.2em]">
+                          {syllableMeaning}
+                        </span>
+                      </span>
+                    );
+                  return (
+                    <span key={String(i)}>
+                      <span className="inline-flex flex-col items-center">
+                        <span>/{toRadicalForm(syllable)}/</span>
+                      </span>{" "}
+                      <span className="font-bold">{syllableMeaning}</span>
+                    </span>
+                  );
+                }
+              }
+              return segment;
+            })}
+        </div>
       </div>
     </div>
   );
@@ -272,16 +318,6 @@ export default function RootsTables({
       <div className="flex flex-row gap-2">
         <button
           className={`px-1 rounded-sm ${
-            mode === "consonant triplets"
-              ? "text-[rgba(var(--background-end-rgb))] bg-[rgba(var(--foreground-rgb),_.5)]"
-              : "bg-[rgba(var(--foreground-rgb),_.1)]"
-          }`}
-          onClick={() => setMode("consonant triplets")}
-        >
-          consonant triplets
-        </button>
-        <button
-          className={`px-1 rounded-sm ${
             mode === "complementaryPairs"
               ? "text-[rgba(var(--background-end-rgb))] bg-[rgba(var(--foreground-rgb),_.5)]"
               : "bg-[rgba(var(--foreground-rgb),_.1)]"
@@ -289,6 +325,16 @@ export default function RootsTables({
           onClick={() => setMode("complementaryPairs")}
         >
           complementary pairs
+        </button>
+        <button
+          className={`px-1 rounded-sm ${
+            mode === "consonant triplets"
+              ? "text-[rgba(var(--background-end-rgb))] bg-[rgba(var(--foreground-rgb),_.5)]"
+              : "bg-[rgba(var(--foreground-rgb),_.1)]"
+          }`}
+          onClick={() => setMode("consonant triplets")}
+        >
+          consonant triplets
         </button>
       </div>
 
@@ -311,13 +357,19 @@ function RadicalHandshapeSvg({
   className?: string;
   size?: number;
 }) {
+  if (!radicalsPaths[radical]) throw new Error(`invalid radical ${radical}`);
+
   return (
     <svg
-      viewBox="0 0 500 500"
+      viewBox="30 30 450 450"
       height={size}
       width={size}
       className={`${className}`}
     >
+      <path
+        d={radicalsPaths[radical].fill}
+        style={{ fill: "rgb(var(--background-end-rgb))" }}
+      />
       <path
         d={radicalsPaths[radical].outline}
         style={{ fill: "rgb(var(--foreground-rgb))" }}
@@ -779,3 +831,14 @@ const classifierDescriptions: Record<Classifier | "null", string> = {
   si: "This classifier denotes natural places, weather phenomena, and other natural forces. These are all nouns and adjectives/intransitive verbs.",
   tu: "This classifier denotes shapes, physical and temporal dimensions, physical states, and physical actions. These are all nouns and adjectives/intransitive verbs.",
 };
+
+function capitalize(string: string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function toRadicalForm(derivationFormatSyllable: string) {
+  return derivationFormatSyllable
+    .toLowerCase()
+    .replace("e", "i")
+    .replace("o", "u") as Radical;
+}
