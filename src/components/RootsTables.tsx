@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import radicalsPaths from "@/app/svg/radicalsPaths.json";
 import classifiersPaths from "@/app/svg/classifiersPaths.json";
 import { RootsTable, rootsTables } from "@/app/dic/[prefix]/rootsTables";
@@ -65,71 +65,91 @@ function RootsTableDisplay({
   mode?: "consonant triplets" | "complementaryPairs";
   className?: string;
 }) {
-  const prefixRadicals =
-    prefix?.split(/(?<=[aeiou])(?=[bdgklmnpst])/).slice(1) || [];
+  const prefixSyllables = prefix?.split(/(?<=[aeiou])(?=[bdgklmnpst])/) || [];
+  const prefixRadicals = prefixSyllables.slice(1);
   return (
     <div className={`${className} flex flex-col gap-1`}>
       <h1 className="text-2xl  text-center mb-2">
         {prefix ? (
           <>
-            words with <strong>{prefix}</strong>-
+            words with {prefixRadicals.length ? <>prefix</> : <>classifier</>}{" "}
+            <strong>
+              {prefixRadicals.length ? (
+                <>{rootsTables[prefix].prefixForms?.join(", ") || prefix}</>
+              ) : (
+                <>{prefixSyllables[0]}</>
+              )}
+            </strong>
+            -
           </>
         ) : (
           <>monosyllables</>
         )}
       </h1>
-      <div className="text-center">
+      <div className="m-auto max-w-[500px]">
         <ClassifierOrPrefixSign
           prefix={prefix}
           size={150}
-          className="inline-flex"
+          className="float-left mr-4"
         />
         {prefix?.length === 2 || !prefix ? (
           <p>
             {classifierDescriptions[prefix?.length === 2 ? prefix : "null"]}
           </p>
         ) : null}
+        {prefix && rootsTables[prefix]?.definition && (
+          <>
+            These words are derived from{" "}
+            <b>{rootsTables[prefix].prefixAsRoot}</b>, meaning "
+            {rootsTables[prefix].definition.replace(/\.$/, "")}".
+          </>
+        )}
       </div>
-      {mode === "complementaryPairs"
-        ? complementaryPairs.map(([radicalA, radicalB]) => {
-            return (
-              <div key={radicalA} className="flex flex-row gap-4">
-                <TableCell
-                  prefix={prefix}
-                  suffix={radicalA}
-                  radicalSuffixEntry={table[radicalA]}
-                  key={radicalA}
-                  className={`basis-1/2 text-right flex-row-reverse`}
-                />
-                <TableCell
-                  prefix={prefix}
-                  suffix={radicalB}
-                  radicalSuffixEntry={table[radicalB]}
-                  key={radicalB}
-                  className="basis-1/2 flex-row"
-                />
-              </div>
-            );
-          })
-        : consonants.map((consonant) => {
-            return (
-              <div key={consonant} className="flex flex-row gap-3">
-                {vowels.map((vowel) => {
-                  const radical: Radical = (consonant + vowel) as Radical;
-                  const radicalSuffixEntry = table[radical];
-                  return (
-                    <TableCell
-                      prefix={prefix}
-                      suffix={radical}
-                      radicalSuffixEntry={radicalSuffixEntry}
-                      key={radical}
-                      className="basis-1/3 flex-row"
-                    />
-                  );
-                })}
-              </div>
-            );
-          })}
+      <div className="flex flex-col">
+        {mode === "complementaryPairs"
+          ? complementaryPairs.map(([radicalA, radicalB]) => {
+              return (
+                <div key={radicalA} className="flex flex-row flex-wrap ">
+                  <TableCell
+                    prefix={prefix}
+                    suffix={radicalA}
+                    radicalSuffixEntry={table.children[radicalA]}
+                    key={radicalA}
+                    className={`basis-1/2 flex-grow p-1 text-right flex-row-reverse`}
+                  />
+                  <TableCell
+                    prefix={prefix}
+                    suffix={radicalB}
+                    radicalSuffixEntry={table.children[radicalB]}
+                    key={radicalB}
+                    className="basis-1/2 flex-grow p-1 flex-row min-w-[200px]"
+                  />
+                </div>
+              );
+            })
+          : consonants.map((consonant) => {
+              return (
+                <div
+                  key={consonant}
+                  className="flex flex-row flex-wrap justify-center"
+                >
+                  {vowels.map((vowel) => {
+                    const radical: Radical = (consonant + vowel) as Radical;
+                    const radicalSuffixEntry = table.children[radical];
+                    return (
+                      <TableCell
+                        prefix={prefix}
+                        suffix={radical}
+                        radicalSuffixEntry={radicalSuffixEntry}
+                        key={radical}
+                        className="basis-1/3 p-1 flex-row min-w-[200px] max-sm:flex-grow"
+                      />
+                    );
+                  })}
+                </div>
+              );
+            })}
+      </div>
     </div>
   );
 }
@@ -145,7 +165,12 @@ function TableCell({
   radicalSuffixEntry: string;
   className?: string;
 }) {
-  if (!radicalSuffixEntry) return <div className={`${className}`}></div>;
+  if (!radicalSuffixEntry)
+    return (
+      <div className={`${className}  p-2`}>
+        <div className="h-full w-full bg-[rgba(var(--foreground-rgb),_.04)]"></div>
+      </div>
+    );
   const [word, derivationText, definition] = radicalSuffixEntry.split(" = ");
   const suffixSyllables = suffix.split(
     /(?<=[aeiou])(?=[bdgklmnpst])/
@@ -156,7 +181,7 @@ function TableCell({
   const firstRadical =
     (prefixSyllables[1] as Radical | undefined) || suffixSyllables[0];
   return (
-    <div className={`flex ${className}`}>
+    <div className={`flex gap-2 ${className}`}>
       <div className="">
         {derivationText.split(/ ?\+ ?/).map((meaningChunk, i) => {
           const isPrefix = prefix && i === 0;
@@ -168,7 +193,6 @@ function TableCell({
 
           return (
             <span key={String(i)} className="inline-block text-center">
-              {/* <RadicalHandshapeSvg radical={suffixSyllable} className="block" /> */}
               <svg
                 className="flex flex-row gap-2 bg-[rgba(var(--background-end-rgb),_.3)]"
                 viewBox="0 0 1000 1000"
@@ -200,9 +224,13 @@ function TableCell({
           <> </>
           {rootsTables[prefix + suffix] && (
             <>
-              <Link href={`/dic/${prefix}${suffix}`}>
-                /{prefix}
-                {suffix}-/
+              <Link
+                href={`/dic/${prefix}${suffix}`}
+                className="underline hover:no-underline"
+              >
+                {rootsTables[prefix + suffix].prefixForms
+                  ?.map((p) => p + "-")
+                  .join(", ")}
               </Link>
             </>
           )}
@@ -228,7 +256,7 @@ export default function RootsTables({
   );
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-24">
+    <main className="flex min-h-screen flex-col items-center p-4">
       <h2>classifiers</h2>
       <ul>
         <li className="inline-block p-2">
@@ -364,7 +392,7 @@ function NonDominantHandSvgObject({
               transformOrigin: `${-xOffset}px ${-yOffset}px`,
               transform: `rotate(${rotation}deg) scaleX(-1)`,
               fill: "rgb(var(--background-end-rgb))",
-              filter: "brightness(0.7)",
+              filter: "var(--non-dominant-hand-filter)",
             }}
           />
           <path
