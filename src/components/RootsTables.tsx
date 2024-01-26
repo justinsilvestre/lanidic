@@ -58,7 +58,6 @@ type Radical = `${Consonant}${Vowel}`;
 function RootsTableDisplay({
   prefix,
   table,
-  mode = "consonant triplets",
   className,
 }: {
   prefix: string | null;
@@ -66,6 +65,10 @@ function RootsTableDisplay({
   mode?: "consonant triplets" | "complementaryPairs";
   className?: string;
 }) {
+  const [mode, setMode] = useState<"consonant triplets" | "complementaryPairs">(
+    "complementaryPairs"
+  );
+
   const prefixSyllables = prefix?.split(/(?<=[aeiou])(?=[bdgklmnpst])/) || [];
   const prefixRadicals = prefixSyllables.slice(1);
   return (
@@ -84,7 +87,7 @@ function RootsTableDisplay({
             -
           </>
         ) : (
-          <>monosyllables</>
+          <>standalone radicals</>
         )}
       </h1>
       <div className="m-auto max-w-[500px]">
@@ -105,6 +108,28 @@ function RootsTableDisplay({
             {rootsTables[prefix].definition.replace(/\.$/, "")}".
           </>
         )}
+      </div>
+      <div className="flex flex-row gap-2 m-auto my-4 max-w-[500px]">
+        <button
+          className={`px-1 rounded-sm ${
+            mode === "complementaryPairs"
+              ? "text-[rgba(var(--background-end-rgb))] bg-[rgba(var(--foreground-rgb),_.5)]"
+              : "bg-[rgba(var(--foreground-rgb),_.1)]"
+          }`}
+          onClick={() => setMode("complementaryPairs")}
+        >
+          complementary pairs
+        </button>
+        <button
+          className={`px-1 rounded-sm ${
+            mode === "consonant triplets"
+              ? "text-[rgba(var(--background-end-rgb))] bg-[rgba(var(--foreground-rgb),_.5)]"
+              : "bg-[rgba(var(--foreground-rgb),_.1)]"
+          }`}
+          onClick={() => setMode("consonant triplets")}
+        >
+          consonant triplets
+        </button>
       </div>
       <div className="flex flex-col">
         {mode === "complementaryPairs"
@@ -297,10 +322,6 @@ export default function RootsTables({
   const prefixRadicals =
     prefix?.split(/(?<=[aeiou])(?=[bdgklmnpst])/).slice(1) || [];
 
-  const [mode, setMode] = useState<"consonant triplets" | "complementaryPairs">(
-    "complementaryPairs"
-  );
-
   return (
     <main className="flex min-h-screen flex-col items-center p-4">
       <h2>classifiers</h2>
@@ -314,33 +335,10 @@ export default function RootsTables({
           </li>
         ))}
       </ul>
-      <div className="flex flex-row gap-2">
-        <button
-          className={`px-1 rounded-sm ${
-            mode === "complementaryPairs"
-              ? "text-[rgba(var(--background-end-rgb))] bg-[rgba(var(--foreground-rgb),_.5)]"
-              : "bg-[rgba(var(--foreground-rgb),_.1)]"
-          }`}
-          onClick={() => setMode("complementaryPairs")}
-        >
-          complementary pairs
-        </button>
-        <button
-          className={`px-1 rounded-sm ${
-            mode === "consonant triplets"
-              ? "text-[rgba(var(--background-end-rgb))] bg-[rgba(var(--foreground-rgb),_.5)]"
-              : "bg-[rgba(var(--foreground-rgb),_.1)]"
-          }`}
-          onClick={() => setMode("consonant triplets")}
-        >
-          consonant triplets
-        </button>
-      </div>
 
       <RootsTableDisplay
         className="w-full max-w-screen-lg m-4"
         prefix={prefix}
-        mode={mode}
         table={table}
       />
     </main>
@@ -818,7 +816,7 @@ function ClassifierOrPrefixSign({
 }
 
 const classifierDescriptions: Record<Classifier | "null", string> = {
-  null: "Words having no classifier are the most common in the language. They include things like like numerals, pronouns, and grammatical helpers.",
+  null: "These especially common words include things like like numerals, pronouns, and grammatical helpers. They are all monosyllables, and they are signed in the neutral position.",
   bu: "This classifier denotes spatial relationships. These are all transitive verbs, i.e. verbs which take a direct object.",
   di: "This classiier denotes bodily relationships, bodily actions, and senses. These are all transitive verbs, i.e. verbs which take a direct object.",
   gi: "This classifier denotes body parts, plant parts, and organic things in general. These are all nouns and adjectives/intransitive verbs.",
