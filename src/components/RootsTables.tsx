@@ -213,9 +213,6 @@ function TableCell({
                   showMovement={prefixSyllables.length <= 1}
                 />
               </svg>
-              <span className="block text-sm">
-                {prefix ? meaningChunk : null}
-              </span>
             </span>
           );
         })}
@@ -238,51 +235,53 @@ function TableCell({
           )}
         </div>
         <div className="">{definition}</div>
-        <div className="text-sm mt-4 p-1 bg-[rgba(var(--foreground-rgb),_.05)]">
-          {capitalize(derivationText)
-            .split(/(?={)|(?<=})/)
-            .map((segment, i) => {
-              if (segment.startsWith("{")) {
-                const colonSegments = segment.slice(1, -1).split(":");
-                if (colonSegments.length === 1) {
-                  const prefixDefinition = colonSegments[0];
-                  const wordSyllables = word.split(
-                    /(?<=[aeiou])(?=[bdgklmnpst])/
-                  );
-                  const prefixRealization = wordSyllables
-                    .slice(0, prefixSyllables.length)
-                    .join("");
-                  if (!prefix) throw new Error(`no prefix for ${word}`);
-                  return (
-                    <span key={String(i)}>
-                      <span className="[font-variant:small-caps] [font-size:1.2em]">
-                        {prefixDefinition}
-                      </span>
-                    </span>
-                  );
-                } else {
-                  const [syllable, syllableMeaning] = colonSegments;
-                  if (syllable.length === 1)
+        {derivationText && (
+          <div className="text-sm mt-4 p-1 bg-[rgba(var(--foreground-rgb),_.05)]">
+            {capitalize(derivationText)
+              .split(/(?={)|(?<=})/)
+              .map((segment, i) => {
+                if (segment.startsWith("{")) {
+                  const colonSegments = segment.slice(1, -1).split(":");
+                  if (colonSegments.length === 1) {
+                    const prefixDefinition = colonSegments[0];
+                    const wordSyllables = word.split(
+                      /(?<=[aeiou])(?=[bdgklmnpst])/
+                    );
+                    const prefixRealization = wordSyllables
+                      .slice(0, prefixSyllables.length)
+                      .join("");
+                    if (!prefix) throw new Error(`no prefix for ${word}`);
                     return (
                       <span key={String(i)}>
                         <span className="[font-variant:small-caps] [font-size:1.2em]">
-                          {syllableMeaning}
+                          {prefixDefinition}
                         </span>
                       </span>
                     );
-                  return (
-                    <span key={String(i)}>
-                      <span className="inline-flex flex-col items-center">
-                        <span>/{toRadicalForm(syllable)}/</span>
-                      </span>{" "}
-                      <span className="font-bold">{syllableMeaning}</span>
-                    </span>
-                  );
+                  } else {
+                    const [syllable, syllableMeaning] = colonSegments;
+                    if (syllable.length === 1)
+                      return (
+                        <span key={String(i)}>
+                          <span className="[font-variant:small-caps] [font-size:1.2em]">
+                            {syllableMeaning}
+                          </span>
+                        </span>
+                      );
+                    return (
+                      <span key={String(i)}>
+                        <span className="inline-flex flex-col items-center">
+                          <span>/{toRadicalForm(syllable)}/</span>
+                        </span>{" "}
+                        <span className="font-bold">{syllableMeaning}</span>
+                      </span>
+                    );
+                  }
                 }
-              }
-              return segment;
-            })}
-        </div>
+                return segment;
+              })}
+          </div>
+        )}
       </div>
     </div>
   );
