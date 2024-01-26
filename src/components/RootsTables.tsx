@@ -6,6 +6,14 @@ import radicalsPaths from "@/app/svg/radicalsPaths.json";
 import classifiersPaths from "@/app/svg/classifiersPaths.json";
 import { RootsTable, rootsTables } from "@/app/dic/[prefix]/rootsTables";
 
+// to do:
+// - mnemonic sentences
+// - prefix forms
+// - show words with polysyllable suffixes
+// - prefix animation, whole word animation
+// - polysyllable preix descriptions (word definition + meanings used in mnemonics)
+// - view words containing radical
+
 const classifiers = [
   "bu",
   "di",
@@ -57,8 +65,31 @@ function RootsTableDisplay({
   mode?: "consonant triplets" | "complementaryPairs";
   className?: string;
 }) {
+  const prefixRadicals =
+    prefix?.split(/(?<=[aeiou])(?=[bdgklmnpst])/).slice(1) || [];
   return (
     <div className={`${className} flex flex-col gap-1`}>
+      <h1 className="text-2xl  text-center mb-2">
+        {prefix ? (
+          <>
+            words with <strong>{prefix}</strong>-
+          </>
+        ) : (
+          <>monosyllables</>
+        )}
+      </h1>
+      <div className="text-center">
+        <ClassifierOrPrefixSign
+          prefix={prefix}
+          size={150}
+          className="inline-flex"
+        />
+        {prefix?.length === 2 || !prefix ? (
+          <p>
+            {classifierDescriptions[prefix?.length === 2 ? prefix : "null"]}
+          </p>
+        ) : null}
+      </div>
       {mode === "complementaryPairs"
         ? complementaryPairs.map(([radicalA, radicalB]) => {
             return (
@@ -116,10 +147,14 @@ function TableCell({
 }) {
   if (!radicalSuffixEntry) return <div className={`${className}`}></div>;
   const [word, derivationText, definition] = radicalSuffixEntry.split(" = ");
-  const suffixSyllables = suffix.split(/(?<=[aeiou])(?=[bdgklmnpst])/);
+  const suffixSyllables = suffix.split(
+    /(?<=[aeiou])(?=[bdgklmnpst])/
+  ) as Radical[];
 
   const prefixSyllables = prefix?.split(/(?<=[aeiou])(?=[bdgklmnpst])/) || [];
   const classifier = (prefixSyllables[0] || null) as Classifier | null;
+  const firstRadical =
+    (prefixSyllables[1] as Radical | undefined) || suffixSyllables[0];
   return (
     <div className={`flex ${className}`}>
       <div className="">
@@ -136,15 +171,20 @@ function TableCell({
               {/* <RadicalHandshapeSvg radical={suffixSyllable} className="block" /> */}
               <svg
                 className="flex flex-row gap-2 bg-[rgba(var(--background-end-rgb),_.3)]"
-                viewBox="-100 -100 1200 1200"
+                viewBox="0 0 1000 1000"
                 width={130}
                 height={130}
                 style={{ fill: "rgb(var(--foreground-rgb))" }}
               >
-                <path d={classifiersPaths.bust} />
+                <path
+                  d={classifiersPaths.bust.outline}
+                  transform="translate(260,75)"
+                />
                 <ClassifiedHandshape
                   classifier={classifier}
-                  handshapePath={radicalsPaths[suffixSyllable]}
+                  dominantHand={radicalsPaths[suffixSyllable]}
+                  nondominantHand={radicalsPaths[firstRadical]}
+                  showMovement={prefixSyllables.length <= 1}
                 />
               </svg>
               <span className="block text-sm">
@@ -157,6 +197,15 @@ function TableCell({
       <div>
         <div className="">
           <b>{word}</b>
+          <> </>
+          {rootsTables[prefix + suffix] && (
+            <>
+              <Link href={`/dic/${prefix}${suffix}`}>
+                /{prefix}
+                {suffix}-/
+              </Link>
+            </>
+          )}
         </div>
         <div className="">{definition}</div>
       </div>
@@ -213,29 +262,9 @@ export default function RootsTables({
           complementary pairs
         </button>
       </div>
-      <h1 className="text-4xl  text-center mb-2">
-        {prefix ? (
-          <>
-            words with{" "}
-            {prefixRadicals.map((radical, i) => {
-              return (
-                <RadicalHandshapeSvg
-                  radical={radical as Radical}
-                  className="inline-block"
-                  key={i}
-                />
-              );
-            })}{" "}
-            <strong>{prefix}</strong>-
-          </>
-        ) : (
-          <>monosyllables</>
-        )}
-      </h1>
-      <ClassifierOrPrefixSign prefix={prefix} size={150} />
 
       <RootsTableDisplay
-        className="w-full max-w-screen-lg"
+        className="w-full max-w-screen-lg m-4"
         prefix={prefix}
         mode={mode}
         table={table}
@@ -261,7 +290,7 @@ function RadicalHandshapeSvg({
       className={`${className}`}
     >
       <path
-        d={radicalsPaths[radical]}
+        d={radicalsPaths[radical].outline}
         style={{ fill: "rgb(var(--foreground-rgb))" }}
       />
     </svg>
@@ -269,84 +298,126 @@ function RadicalHandshapeSvg({
 }
 
 function DominantHandSvgObject({
-  handshapePath,
+  handshapeForm,
   x,
   y,
   rotation,
+  scale = 1,
 }: {
-  handshapePath: string;
+  handshapeForm: HandshapeForm | "PLACEHOLDER";
   x: number;
   y: number;
   rotation: number;
+  scale?: number;
 }) {
-  return handshapePath === "PLACEHOLDER" ? (
-    <circle
-      cx={x}
-      cy={y}
-      r="100"
-      style={{ fill: "rgb(var(--foreground-rgb), .5)" }}
-    />
-  ) : (
-    <path
-      d={handshapePath}
-      transform={`rotate(${rotation}, ${x}, ${y}) translate(${x - 250} ${
-        y - 360
-      }) `}
-    />
-  );
-}
-
-function NonDominantHandSvgObject({
-  handshapePath,
-  x,
-  y,
-  rotation,
-}: {
-  handshapePath: string;
-  x: number;
-  y: number;
-  rotation: number;
-}) {
-  const xOffset = handshapePath === "PLACEHOLDER" ? 0 : -250;
-  const yOffset = handshapePath === "PLACEHOLDER" ? 0 : -360;
+  const xOffset = handshapeForm === "PLACEHOLDER" ? 0 : -250;
+  const yOffset = handshapeForm === "PLACEHOLDER" ? 0 : -250;
   return (
-    // mirror image
     <g style={{ transform: `translate(${x + xOffset}px, ${y + yOffset}px)` }}>
-      {handshapePath === "PLACEHOLDER" ? (
+      {handshapeForm === "PLACEHOLDER" ? (
         <circle r="100" style={{ fill: "rgb(var(--foreground-rgb), .5)" }} />
       ) : (
-        <path
-          d={handshapePath}
-          style={{
-            transformOrigin: `${-xOffset}px ${-yOffset}px`,
-            transform: `rotate(-${rotation}deg) scaleX(-1)`,
-          }}
-        />
+        <>
+          <path
+            d={handshapeForm.fill}
+            style={{
+              transformOrigin: `${-xOffset}px ${-yOffset}px`,
+              transform: `rotate(${rotation}deg) scale(${scale})`,
+              fill: "rgb(var(--background-end-rgb))",
+            }}
+          />
+          <path
+            d={handshapeForm.outline}
+            style={{
+              transformOrigin: `${-xOffset}px ${-yOffset}px`,
+              transform: `rotate(${rotation}deg) scale(${scale})`,
+            }}
+          />
+        </>
       )}
     </g>
   );
 }
 
+function NonDominantHandSvgObject({
+  handshapeForm,
+  x,
+  y,
+  rotation,
+}: {
+  handshapeForm: HandshapeForm | "PLACEHOLDER";
+  x: number;
+  y: number;
+  rotation: number;
+}) {
+  const xOffset = handshapeForm === "PLACEHOLDER" ? 0 : -250;
+  const yOffset = handshapeForm === "PLACEHOLDER" ? 0 : -250;
+  return (
+    <g style={{ transform: `translate(${x + xOffset}px, ${y + yOffset}px)` }}>
+      {handshapeForm === "PLACEHOLDER" ? (
+        <circle r="100" style={{ fill: "rgb(var(--foreground-rgb), .5)" }} />
+      ) : (
+        <>
+          <path
+            d={handshapeForm.fill}
+            style={{
+              transformOrigin: `${-xOffset}px ${-yOffset}px`,
+              transform: `rotate(${rotation}deg) scaleX(-1)`,
+              fill: "rgb(var(--background-end-rgb))",
+              filter: "brightness(0.7)",
+            }}
+          />
+          <path
+            d={handshapeForm.outline}
+            style={{
+              transformOrigin: `${-xOffset}px ${-yOffset}px`,
+              transform: `rotate(${rotation}deg) scaleX(-1)`,
+            }}
+          />
+        </>
+      )}
+    </g>
+  );
+}
+
+type HandshapeForm = {
+  fill: string;
+  outline: string;
+};
+
 function ClassifiedHandshape({
   classifier,
-  handshapePath,
+  dominantHand,
+  nondominantHand: givenNondominantHand,
+  showMovement = true,
 }: {
   classifier: Classifier | null;
-  handshapePath: string;
+  dominantHand: HandshapeForm | "PLACEHOLDER";
+  nondominantHand?: HandshapeForm | "PLACEHOLDER";
+  showMovement?: boolean;
 }) {
+  const nondominantHand = givenNondominantHand || dominantHand;
   switch (classifier) {
     case "bu":
       return (
         <>
-          <DominantHandSvgObject
-            handshapePath={handshapePath}
-            x={400}
-            y={800}
-            rotation={0}
+          <path
+            d={classifiersPaths.bu.fill}
+            transform={`translate(500,700)`}
+            style={{
+              fill: "rgb(var(--background-end-rgb))",
+              filter: "brightness(0.9)",
+            }}
           />
           <path
-            d={classifiersPaths.bu}
-            transform={`scale(.85) translate(0,200)`}
+            d={classifiersPaths.bu.outline}
+            transform={`translate(500,700)`}
+          />
+          <DominantHandSvgObject
+            handshapeForm={dominantHand}
+            x={400}
+            y={750}
+            rotation={0}
           />
         </>
       );
@@ -354,9 +425,9 @@ function ClassifiedHandshape({
       return (
         <>
           <DominantHandSvgObject
-            handshapePath={handshapePath}
+            handshapeForm={dominantHand}
             x={200}
-            y={300}
+            y={230}
             rotation={20}
           />
         </>
@@ -365,18 +436,36 @@ function ClassifiedHandshape({
       return (
         <>
           <DominantHandSvgObject
-            handshapePath={handshapePath}
-            x={150}
-            y={600}
-            rotation={30}
+            handshapeForm={dominantHand}
+            x={300}
+            y={550}
+            rotation={40}
           />
         </>
       );
     case "ku":
       return (
         <>
+          {showMovement && (
+            <>
+              <path
+                d={classifiersPaths.shortUp.fill}
+                transform={`translate(400,750)`}
+                style={{
+                  fill: "rgb(var(--background-end-rgb), 0.5)",
+                }}
+              />
+              <path
+                d={classifiersPaths.shortUp.outline}
+                transform={`translate(400,750)`}
+                style={{
+                  opacity: "0.7",
+                }}
+              />
+            </>
+          )}
           <DominantHandSvgObject
-            handshapePath={handshapePath}
+            handshapeForm={dominantHand}
             x={400}
             y={600}
             rotation={10}
@@ -386,69 +475,177 @@ function ClassifiedHandshape({
     case "li":
       return (
         <>
+          {showMovement && (
+            <>
+              {" "}
+              <path
+                d={classifiersPaths.longDown.fill}
+                style={{
+                  transform: "translate(240px,100px)",
+                  fill: "rgb(var(--background-end-rgb), 0.5)",
+                }}
+              />
+              <path
+                d={classifiersPaths.longDown.outline}
+                style={{
+                  transform: "translate(240px,100px)",
+                  opacity: "0.7",
+                }}
+              />
+              <path
+                d={classifiersPaths.longDown.fill}
+                style={{
+                  transform: "translate(670px,100px)",
+                  fill: "rgb(var(--background-end-rgb), 0.5)",
+                }}
+              />
+              <path
+                d={classifiersPaths.longDown.outline}
+                style={{
+                  transform: "translate(670px,100px)",
+                  opacity: "0.7",
+                }}
+              />
+            </>
+          )}
           <DominantHandSvgObject
-            handshapePath={handshapePath}
-            x={100}
-            y={400}
-            rotation={0}
+            handshapeForm={dominantHand}
+            x={150}
+            y={500}
+            rotation={-10}
           />
           <NonDominantHandSvgObject
-            handshapePath={handshapePath}
-            x={1000 - 100}
-            y={400}
-            rotation={0}
+            handshapeForm={nondominantHand}
+            x={1000 - 150}
+            y={500}
+            rotation={10}
           />
         </>
       );
     case "mi":
       return (
         <>
+          {showMovement && (
+            <>
+              <path
+                d={classifiersPaths.shortUp.fill}
+                style={{
+                  transformOrigin: "100px 100px",
+                  transform: "translate(200px, 500px) rotate(220deg) ",
+                  fill: "rgb(var(--background-end-rgb), 0.5)",
+                }}
+              />
+              <path
+                d={classifiersPaths.shortUp.outline}
+                style={{
+                  transformOrigin: "100px 100px",
+                  transform: "translate(200px, 500px) rotate(220deg) ",
+                }}
+              />
+              <path
+                d={classifiersPaths.shortUp.fill}
+                style={{
+                  transformOrigin: "100px 100px",
+                  transform: "translate(520px, 550px) rotate(140deg) ",
+                  fill: "rgb(var(--background-end-rgb), 0.5)",
+                }}
+              />
+              <path
+                d={classifiersPaths.shortUp.outline}
+                style={{
+                  transformOrigin: "100px 100px",
+                  transform: "translate(520px, 550px) rotate(140deg) ",
+                }}
+              />
+            </>
+          )}
           <DominantHandSvgObject
-            handshapePath={handshapePath}
-            x={100}
+            handshapeForm={dominantHand}
+            x={200}
             y={800}
             rotation={40}
           />
           <NonDominantHandSvgObject
-            handshapePath={handshapePath}
-            x={1000 - 100}
+            handshapeForm={nondominantHand}
+            x={1000 - 200}
             y={800}
-            rotation={40}
+            rotation={-40}
           />
         </>
       );
     case "nu":
       return (
         <>
+          {showMovement && (
+            <>
+              <path
+                d={classifiersPaths.longDown.fill}
+                style={{
+                  transform: "translate(400px, 400px) rotate(10deg)",
+                  fill: "rgb(var(--background-end-rgb), 0.3)",
+                }}
+              />
+
+              <path
+                d={classifiersPaths.longDown.outline}
+                style={{
+                  transform: "translate(400px, 400px) rotate(10deg)",
+                }}
+              />
+            </>
+          )}
           <DominantHandSvgObject
-            handshapePath={handshapePath}
+            handshapeForm={dominantHand}
             x={400}
-            y={900}
+            y={800}
             rotation={40}
+            scale={1.1}
           />
         </>
       );
     case "pi":
       return (
         <>
-          <DominantHandSvgObject
-            handshapePath={handshapePath}
-            x={300}
-            y={600}
-            rotation={20}
+          <path
+            d={classifiersPaths.pi.fill}
+            transform={`translate(450,650)`}
+            style={{
+              fill: "rgb(var(--background-end-rgb))",
+              filter: "brightness(0.9)",
+            }}
           />
           <path
-            d={classifiersPaths.pi}
-            transform={`scale(.85) translate(100,00)`}
+            d={classifiersPaths.pi.outline}
+            transform={`translate(450,650)`}
+          />
+          <DominantHandSvgObject
+            handshapeForm={dominantHand}
+            x={450}
+            y={600}
+            rotation={20}
           />
         </>
       );
     case "si":
       return (
         <>
+          {showMovement && (
+            <>
+              <path
+                d={classifiersPaths.curve.fill}
+                transform={`translate(300,150)`}
+                style={{ fill: "rgb(var(--background-end-rgb), 0.7)" }}
+              />
+              <path
+                d={classifiersPaths.curve.outline}
+                transform={`translate(300,150)`}
+                style={{ opacity: "0.7" }}
+              />
+            </>
+          )}
           <DominantHandSvgObject
-            handshapePath={handshapePath}
-            x={160}
+            handshapeForm={dominantHand}
+            x={180}
             y={400}
             rotation={-20}
           />
@@ -458,72 +655,98 @@ function ClassifiedHandshape({
       return (
         <>
           <DominantHandSvgObject
-            handshapePath={handshapePath}
-            x={700}
+            handshapeForm={dominantHand}
+            x={550}
             y={600}
             rotation={20}
           />
           <path
-            d={classifiersPaths.tu}
-            transform={`scale(.85) translate(300,00)`}
+            d={classifiersPaths.tu.fill}
+            transform={`translate(400,700)`}
+            style={{
+              fill: "rgb(var(--background-end-rgb))",
+              filter: "brightness(0.9)",
+            }}
+          />
+          <path
+            d={classifiersPaths.tu.outline}
+            transform={`translate(400,700)`}
+          />
+        </>
+      );
+    default:
+      return (
+        <>
+          <DominantHandSvgObject
+            handshapeForm={dominantHand}
+            x={250}
+            y={650}
+            rotation={0}
           />
         </>
       );
   }
-
-  // if (!classifier)
-  return (
-    <>
-      <DominantHandSvgObject
-        handshapePath={handshapePath}
-        x={200}
-        y={700}
-        rotation={0}
-      />
-    </>
-  );
 }
 
 function ClassifierOrPrefixSign({
   prefix,
   size,
+  className,
 }: {
   prefix: string | null;
   size?: number;
+  className?: string;
 }) {
   const prefixSyllables = prefix?.split(/(?<=[aeiou])(?=[bdgklmnpst])/) || [];
   const classifier = (prefixSyllables[0] || null) as Classifier | null;
   const remainingPrefix = prefixSyllables.slice(1) as Radical[];
   return (
-    <>
-      {" "}
-      {classifier}
-      {remainingPrefix}
-      <svg
-        className="flex flex-row gap-2 bg-[rgba(var(--background-end-rgb),_.3)]"
-        viewBox="-200 -200 1400 1400"
-        width={size}
-        height={size}
-        style={{ fill: "rgb(var(--foreground-rgb))" }}
-      >
-        <path d={classifiersPaths.bust} />
+    <svg
+      className={`flex flex-row gap-2 bg-[rgba(var(--background-end-rgb),_.3)] ${className}`}
+      viewBox="0 0 1000 1000"
+      width={size}
+      height={size}
+      style={{ fill: "rgb(var(--foreground-rgb))" }}
+    >
+      <path d={classifiersPaths.bust.outline} transform="translate(260,75)" />
 
-        {remainingPrefix.map((radical, i) => {
-          return (
-            <ClassifiedHandshape
-              classifier={classifier}
-              key={i}
-              handshapePath={radicalsPaths[radical]}
-            />
-          );
-        })}
-        {remainingPrefix.length === 0 ? (
+      {remainingPrefix.map((radical, i) => {
+        return (
           <ClassifiedHandshape
             classifier={classifier}
-            handshapePath="PLACEHOLDER"
+            key={i}
+            dominantHand={radicalsPaths[radical]}
           />
-        ) : null}
-      </svg>
-    </>
+        );
+      })}
+      {remainingPrefix.length === 0 ? (
+        <>
+          <ClassifiedHandshape
+            classifier={classifier}
+            dominantHand="PLACEHOLDER"
+          />
+          <g opacity=".5">
+            <ClassifiedHandshape
+              classifier={classifier}
+              dominantHand={radicalsPaths.na}
+            />
+          </g>
+        </>
+      ) : null}
+    </svg>
   );
 }
+
+const classifierDescriptions: Record<Classifier | "null", string> = {
+  null: "Words having no classifier are the most common in the language. They include things like like numerals, pronouns, and grammatical helpers.",
+  bu: "This classifier denotes spatial relationships. These are all transitive verbs, i.e. verbs which take a direct object.",
+  di: "This classiier denotes bodily relationships, bodily actions, and senses. These are all transitive verbs, i.e. verbs which take a direct object.",
+  gi: "This classifier denotes body parts, plant parts, and organic things in general. These are all nouns and adjectives/intransitive verbs.",
+  ku: "This classifier denotes life forms or states of living things. These are all nouns and adjectives/intransitive verbs.",
+  li: "This classifier denotes substances, physical properties, and sensations. These are all nouns and adjectives/intransitive verbs.",
+  mi: "This classifier denotes buildings, vehicles, and other artificial structures or places. These are all nouns.",
+  nu: "This classifier denotes social and verbal relationships and actions. These are all transitive verbs, i.e. verbs which take a direct object.",
+  pi: "This classifier denotes tools, artificial materials, and other artifacts made by people. These are all nouns.",
+  si: "This classifier denotes natural places, weather phenomena, and other natural forces. These are all nouns and adjectives/intransitive verbs.",
+  tu: "This classifier denotes shapes, physical and temporal dimensions, physical states, and physical actions. These are all nouns and adjectives/intransitive verbs.",
+};
