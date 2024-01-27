@@ -1,6 +1,6 @@
-import RootsTables from "@/components/RootsTables";
-import { getRootsTable } from "./dic/[prefix]/rootsTables";
+import { PrefixPage } from "@/components/PrefixPage";
+import { getPrefixTable } from "./roots/rootsTables";
 
 export default function Home() {
-  return <RootsTables prefix={null} table={getRootsTable(null)} />;
+  return <PrefixPage prefix={null} table={getPrefixTable(null)} />;
 }

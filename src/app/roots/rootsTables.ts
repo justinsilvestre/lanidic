@@ -1,24 +1,68 @@
-import rootsTables_ from "@/app/rootsTables.json";
+import { Radical } from "@/app/roots/rootsStructure";
+import rootsTables_ from "@/app/roots/rootsTables.json";
 
-export const rootsTables = rootsTables_ as Record<Prefix, RootsTable>;
-export type RootsTable = {
+export const rootsTables = rootsTables_ as {
+  rootsCount: number;
+  byPrefix: Record<Prefix, PrefixTable>;
+  byRadical: Record<Radical, Record<RadicalMeaning, string[]>>;
+  roots: Record<string, RootSpecsText>;
+};
+export type PrefixTable = {
   definition: string;
   prefixAsRoot: string | null;
   prefixForms?: string[];
-  children: Record<Suffix, RootSpecsText>;
+  children: Suffix[];
 };
 type Prefix = string;
 type Suffix = string;
+type RadicalMeaning = string;
+
 type RootSpecsText = string;
 
-export function getRootsTable(prefix: string | null = null): RootsTable {
+export type ExpandedPrefixTable = {
+  definition: string;
+  prefixAsRoot: string | null;
+  prefixForms?: string[];
+  children: Record<string, string>;
+};
+
+export type ExpandedRadicalTable = {
+  radicals: Record<RadicalMeaning, Record<string, string>>;
+};
+
+export function getPrefixTable(
+  prefix: string | null = null
+): ExpandedPrefixTable {
   if (prefix === null) return monosyllablesTable;
-  const table = rootsTables[prefix as keyof typeof rootsTables];
+  const table = rootsTables.byPrefix[prefix as keyof typeof rootsTables];
   if (!table) throw new Error(`No roots table for prefix ${prefix}`);
-  return table;
+  return {
+    ...table,
+    children: Object.fromEntries(
+      table.children.map((suffix) => [
+        suffix,
+        rootsTables.roots[prefix + suffix],
+      ])
+    ),
+  };
 }
 
-const monosyllablesTable: RootsTable = {
+export function getRadicalTable(radical: Radical): ExpandedRadicalTable {
+  const table = rootsTables.byRadical[radical];
+  if (!table) throw new Error(`No roots table for radical ${radical}`);
+  return {
+    radicals: Object.fromEntries(
+      Object.entries(table).map(([meaning, roots]) => [
+        meaning,
+        Object.fromEntries(
+          roots.map((root) => [root, rootsTables.roots[root]])
+        ),
+      ])
+    ),
+  };
+}
+
+const monosyllablesTable: ExpandedPrefixTable = {
   definition: "",
   prefixAsRoot: null,
   children: {

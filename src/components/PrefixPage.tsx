@@ -2,66 +2,27 @@
 "use client";
 
 import Link from "next/link";
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import radicalsPaths from "@/app/svg/radicalsPaths.json";
 import classifiersPaths from "@/app/svg/classifiersPaths.json";
-import { RootsTable, rootsTables } from "@/app/dic/[prefix]/rootsTables";
+import { ExpandedPrefixTable, rootsTables } from "@/app/roots/rootsTables";
+import {
+  complementaryPairs,
+  consonants,
+  vowels,
+  Radical,
+  Classifier,
+  classifiers,
+} from "@/app/roots/rootsStructure";
+import { RootDefinition } from "./RootDefinition";
 
-// to do:
-// - mnemonic sentences
-// - prefix forms
-// - show words with polysyllable suffixes
-// - prefix animation, whole word animation
-// - polysyllable preix descriptions (word definition + meanings used in mnemonics)
-// - view words containing radical
-
-const classifiers = [
-  "bu",
-  "di",
-  "gi",
-  "ku",
-  "li",
-  "mi",
-  "nu",
-  "pi",
-  "si",
-  "tu",
-];
-
-type Classifier = (typeof classifiers)[number];
-
-const consonants = ["b", "d", "g", "k", "l", "m", "n", "p", "s", "t"] as const;
-const vowels = ["a", "i", "u"] as const;
-
-const complementaryPairs = [
-  ["na", "tu"],
-  ["si", "ku"],
-  ["ma", "lu"],
-  ["pi", "bu"],
-  ["ga", "di"],
-  ["mi", "ka"],
-  ["du", "li"],
-  ["bi", "gu"],
-  ["nu", "pa"],
-  ["da", "ti"],
-  ["la", "ni"],
-  ["gi", "su"],
-  ["mu", "ta"],
-  ["ba", "ki"],
-  ["pu", "sa"],
-];
-
-type Consonant = (typeof consonants)[number];
-type Vowel = (typeof vowels)[number];
-type Radical = `${Consonant}${Vowel}`;
-
-function RootsTableDisplay({
+function PrefixTableDisplay({
   prefix,
   table,
   className,
 }: {
   prefix: string | null;
-  table: RootsTable;
+  table: ExpandedPrefixTable;
   mode?: "consonant triplets" | "complementaryPairs";
   className?: string;
 }) {
@@ -76,10 +37,17 @@ function RootsTableDisplay({
       <h1 className="text-2xl  text-center mb-2">
         {prefix ? (
           <>
-            words with {prefixRadicals.length ? <>prefix</> : <>classifier</>}{" "}
+            {prefixRadicals.length ? (
+              <>words with prefix</>
+            ) : (
+              <>words with classifier</>
+            )}{" "}
             <strong>
               {prefixRadicals.length ? (
-                <>{rootsTables[prefix].prefixForms?.join(", ") || prefix}</>
+                <>
+                  {rootsTables.byPrefix[prefix].prefixForms?.join(", ") ||
+                    prefix}
+                </>
               ) : (
                 <>{prefixSyllables[0]}</>
               )}
@@ -101,11 +69,34 @@ function RootsTableDisplay({
             {classifierDescriptions[prefix?.length === 2 ? prefix : "null"]}
           </p>
         ) : null}
-        {prefix && rootsTables[prefix]?.definition && (
+        {prefix && rootsTables.byPrefix[prefix]?.definition && (
           <>
-            These words are derived from{" "}
-            <b>{rootsTables[prefix].prefixAsRoot}</b>, meaning "
-            {rootsTables[prefix].definition.replace(/\.$/, "")}".
+            <p className="mb-4">
+              These words are derived from{" "}
+              <b>{rootsTables.byPrefix[prefix].prefixAsRoot}</b>, meaning "
+              {rootsTables.byPrefix[prefix].definition.replace(/\.$/, "")}".
+            </p>
+            <p className="">
+              classifier:{" "}
+              <Link
+                href={`/p/${prefixSyllables[0]}`}
+                className="font-bold underline hover:no-underline"
+              >
+                {prefixSyllables[0]}-
+              </Link>
+            </p>
+            <p className="">
+              {prefixRadicals.length === 1 ? "radical: " : "radicals: "}
+              {prefixRadicals.map((radical) => (
+                <Link
+                  href={`/r/${radical}`}
+                  key={radical}
+                  className="font-bold underline hover:no-underline"
+                >
+                  {radical}
+                </Link>
+              ))}
+            </p>
           </>
         )}
       </div>
@@ -136,17 +127,17 @@ function RootsTableDisplay({
           ? complementaryPairs.map(([radicalA, radicalB]) => {
               return (
                 <div key={radicalA} className="flex flex-row flex-wrap ">
-                  <TableCell
+                  <RootDefinition
                     prefix={prefix}
                     suffix={radicalA}
-                    radicalSuffixEntry={table.children[radicalA]}
+                    entry={table.children[radicalA]}
                     key={radicalA}
                     className={`basis-1/2 flex-grow p-1 text-right flex-row-reverse`}
                   />
-                  <TableCell
+                  <RootDefinition
                     prefix={prefix}
                     suffix={radicalB}
-                    radicalSuffixEntry={table.children[radicalB]}
+                    entry={table.children[radicalB]}
                     key={radicalB}
                     className="basis-1/2 flex-grow p-1 flex-row min-w-[200px]"
                   />
@@ -163,10 +154,10 @@ function RootsTableDisplay({
                     const radical: Radical = (consonant + vowel) as Radical;
                     const radicalSuffixEntry = table.children[radical];
                     return (
-                      <TableCell
+                      <RootDefinition
                         prefix={prefix}
                         suffix={radical}
-                        radicalSuffixEntry={radicalSuffixEntry}
+                        entry={radicalSuffixEntry}
                         key={radical}
                         className="basis-1/3 p-1 flex-row min-w-[200px] max-sm:flex-grow"
                       />
@@ -180,168 +171,21 @@ function RootsTableDisplay({
   );
 }
 
-function TableCell({
-  prefix,
-  suffix,
-  radicalSuffixEntry,
-  className,
-}: {
-  prefix: string | null;
-  suffix: string;
-  radicalSuffixEntry: string;
-  className?: string;
-}) {
-  if (!radicalSuffixEntry)
-    return (
-      <div className={`${className}  p-2`}>
-        <div className="h-full w-full bg-[rgba(var(--foreground-rgb),_.04)]"></div>
-      </div>
-    );
-  const [word, abbreviatedDerivation, derivationText, definition] =
-    radicalSuffixEntry.split(" = ");
-  const suffixSyllables = suffix.split(
-    /(?<=[aeiou])(?=[bdgklmnpst])/
-  ) as Radical[];
-
-  const prefixSyllables = prefix?.split(/(?<=[aeiou])(?=[bdgklmnpst])/) || [];
-  const classifier = (prefixSyllables[0] || null) as Classifier | null;
-  const firstRadical =
-    (prefixSyllables[1] as Radical | undefined) || suffixSyllables[0];
-  return (
-    <div className={`flex gap-2 ${className}`}>
-      <div className="">
-        {abbreviatedDerivation.split(/ ?\+ ?/).map((meaningChunk, i) => {
-          const isPrefix = prefix && i === 0;
-          // if (isPrefix) return meaningChunk;
-          if (isPrefix) return null;
-          const suffixSyllable = suffixSyllables[
-            i - (prefix ? 1 : 0)
-          ] as Radical;
-
-          return (
-            <span key={String(i)} className="inline-block text-center">
-              <svg
-                className="flex flex-row gap-2 bg-[rgba(var(--background-end-rgb),_.3)]"
-                viewBox="0 0 1000 1000"
-                width={130}
-                height={130}
-                style={{ fill: "rgb(var(--foreground-rgb))" }}
-              >
-                <path
-                  d={classifiersPaths.bust.outline}
-                  transform="translate(260,75)"
-                />
-                <ClassifiedHandshape
-                  classifier={classifier}
-                  dominantHand={radicalsPaths[suffixSyllable]}
-                  nondominantHand={radicalsPaths[firstRadical]}
-                  showMovement={prefixSyllables.length <= 1}
-                />
-              </svg>
-            </span>
-          );
-        })}
-      </div>
-      <div>
-        <div className="">
-          <b>{word}</b>
-          <> </>
-          {rootsTables[prefix + suffix] && (
-            <>
-              <Link
-                href={`/dic/${prefix}${suffix}`}
-                className="underline hover:no-underline"
-              >
-                {rootsTables[prefix + suffix].prefixForms
-                  ?.map((p) => p + "-")
-                  .join(", ")}
-              </Link>
-            </>
-          )}
-        </div>
-        <div className="">{definition}</div>
-        {derivationText && (
-          <div className="text-sm mt-4 p-1 bg-[rgba(var(--foreground-rgb),_.05)]">
-            {capitalize(derivationText)
-              .split(/(?={)|(?<=})/)
-              .map((segment, i) => {
-                if (segment.startsWith("{")) {
-                  const colonSegments = segment.slice(1, -1).split(":");
-                  if (colonSegments.length === 1) {
-                    const prefixDefinition = colonSegments[0];
-                    const wordSyllables = word.split(
-                      /(?<=[aeiou])(?=[bdgklmnpst])/
-                    );
-                    const prefixRealization = wordSyllables
-                      .slice(0, prefixSyllables.length)
-                      .join("");
-                    if (!prefix) throw new Error(`no prefix for ${word}`);
-                    return (
-                      <span key={String(i)}>
-                        <span className="[font-variant:small-caps] [font-size:1.2em]">
-                          {prefixDefinition}
-                        </span>
-                      </span>
-                    );
-                  } else {
-                    const [syllable, syllableMeaning] = colonSegments;
-                    if (syllable.length === 1)
-                      return (
-                        <span key={String(i)}>
-                          <span className="[font-variant:small-caps] [font-size:1.2em]">
-                            {syllableMeaning}
-                          </span>
-                        </span>
-                      );
-                    return (
-                      <span key={String(i)}>
-                        <span className="inline-flex flex-col items-center">
-                          <span>/{toRadicalForm(syllable)}/</span>
-                        </span>{" "}
-                        <span className="font-bold">{syllableMeaning}</span>
-                      </span>
-                    );
-                  }
-                }
-                return segment;
-              })}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
-
-export default function RootsTables({
+export function PrefixPage({
   prefix,
   table,
 }: {
   prefix: string | null;
-  table: RootsTable;
+  table: ExpandedPrefixTable;
 }) {
-  const prefixRadicals =
-    prefix?.split(/(?<=[aeiou])(?=[bdgklmnpst])/).slice(1) || [];
-
   return (
-    <main className="flex min-h-screen flex-col items-center p-4">
-      <h2>classifiers</h2>
-      <ul>
-        <li className="inline-block p-2">
-          <Link href={"/"}>∅</Link>
-        </li>
-        {classifiers.map((classifier) => (
-          <li key={classifier} className="inline-block p-2">
-            <Link href={"/dic/" + classifier}>{classifier}-</Link>
-          </li>
-        ))}
-      </ul>
-
-      <RootsTableDisplay
+    <>
+      <PrefixTableDisplay
         className="w-full max-w-screen-lg m-4"
         prefix={prefix}
         table={table}
       />
-    </main>
+    </>
   );
 }
 
@@ -463,7 +307,7 @@ type HandshapeForm = {
   outline: string;
 };
 
-function ClassifiedHandshape({
+export function ClassifiedHandshape({
   classifier,
   dominantHand,
   nondominantHand: givenNondominantHand,
@@ -829,11 +673,11 @@ const classifierDescriptions: Record<Classifier | "null", string> = {
   tu: "This classifier denotes shapes, physical and temporal dimensions, physical states, and physical actions. These are all nouns and adjectives/intransitive verbs.",
 };
 
-function capitalize(string: string) {
+export function capitalize(string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function toRadicalForm(derivationFormatSyllable: string) {
+export function toRadicalForm(derivationFormatSyllable: string) {
   return derivationFormatSyllable
     .toLowerCase()
     .replace("e", "i")
