@@ -162,8 +162,8 @@ function getRadicalDescription(radical: Radical) {
         <>
           <p className="my-4 max-w-[550px] m-auto">
             The radical <b>/bi/</b> stands for <b>centrality</b>,{" "}
-            <b>concentration</b>,<b>thought</b>, <b>order</b>, <b>intention</b>,{" "}
-            <b>artificiality</b>. By extension from its meaning of centrality,
+            <b>concentration</b>, <b>thought</b>, <b>order</b>, <b>intention</b>
+            , <b>artificiality</b>. By extension from its meaning of centrality,
             it also stands for <b>spinning</b> movements, which are centered on
             one point. Its complement is{" "}
             <Link className="underline hover:no-underline" href="/r/gu">
@@ -248,7 +248,7 @@ function getRadicalDescription(radical: Radical) {
             The radical <b>/du/</b> stands for <b>soil</b>, <b>land</b>,{" "}
             <b>depth</b>, <b>lowness</b>, <b>descent</b>, <b>pressure</b>,{" "}
             <b>gravity</b>, <b>substance</b>, <b>materiality</b>, <b>roots</b>,{" "}
-            <b>solidity</b>,<b>earthliness</b>, <b>worldliness</b>, and{" "}
+            <b>solidity</b>, <b>earthliness</b>, <b>worldliness</b>, and{" "}
             <b>society</b>. Its complement is{" "}
             <Link className="underline hover:no-underline" href="/r/li">
               /li/
@@ -262,8 +262,8 @@ function getRadicalDescription(radical: Radical) {
             As a standalone word, <b>do</b> means "you", the person who is being
             pointed at by the extended fingers of the handsign. As the
             second-person pronoun, its reference is the most stable and{" "}
-            <i>grounded</i>
-            of all the pronouns, from the perspective of the addressee.
+            <i>grounded</i> of all the pronouns, from the perspective of the
+            addressee.
           </p>
         </>
       );
@@ -293,7 +293,7 @@ function getRadicalDescription(radical: Radical) {
           <p className="my-4 max-w-[550px] m-auto">
             The radical <b>/gu/</b> stands for <b>sides</b>, <b>laterality</b>,{" "}
             <b>byproducts</b>, <b>accidents</b>, <b>juxtaposition</b>,
-            <b>simultaneity</b>, <b>time</b>,<b>accompaniment</b>, and{" "}
+            <b>simultaneity</b>, <b>time</b>, <b>accompaniment</b>, and{" "}
             <b>mixing</b>. Its complement is{" "}
             <Link className="underline hover:no-underline" href="/r/bi">
               /bi/
@@ -314,8 +314,8 @@ function getRadicalDescription(radical: Radical) {
         <>
           <p className="my-4 max-w-[550px] m-auto">
             The radical <b>/gi/</b> stands for <b>joints</b>, <b>joining</b>,{" "}
-            <b>linking</b>,<b>accumulation</b>, <b>adhesion</b>, <b>sticking</b>
-            , and <b>groups</b>. Its complement is{" "}
+            <b>linking</b>, <b>accumulation</b>, <b>adhesion</b>,{" "}
+            <b>sticking</b>, and <b>groups</b>. Its complement is{" "}
             <Link className="underline hover:no-underline" href="/r/su">
               /su/
             </Link>
@@ -360,9 +360,9 @@ function getRadicalDescription(radical: Radical) {
           <p className="my-4 max-w-[550px] m-auto">
             The radical <b>/ka/</b> stands for <b>exterior</b>,{" "}
             <b>foreignness</b>, <b>exposedness</b>, <b>novelty</b>,{" "}
-            <b>ignorance</b>,<b>strangeness</b>, <b>appearance</b>, <b>color</b>
-            , <b>marking</b>, <b>expression</b>, <b>manifestation</b>, and{" "}
-            <b>existence</b>. Its complement is{" "}
+            <b>ignorance</b>, <b>strangeness</b>, <b>appearance</b>,{" "}
+            <b>color</b>, <b>marking</b>, <b>expression</b>,{" "}
+            <b>manifestation</b>, and <b>existence</b>. Its complement is{" "}
             <Link className="underline hover:no-underline" href="/r/ma">
               /ma/
             </Link>
@@ -496,7 +496,7 @@ function getRadicalDescription(radical: Radical) {
         <>
           <p className="my-4 max-w-[550px] m-auto">
             The radical <b>/mi/</b> stands for <b>interiority</b>, <b>homes</b>,{" "}
-            <b>domesticity</b>,<b>familiarity</b>, <b>core</b>, <b>depth</b>,{" "}
+            <b>domesticity</b>, <b>familiarity</b>, <b>core</b>, <b>depth</b>,{" "}
             <b>concealment</b>, <b>privacy</b>, <b>intimacy</b>, <b>secrets</b>,
             and the <b>mind</b>. Its complement is{" "}
             <Link className="underline hover:no-underline" href="/r/ka">
@@ -622,7 +622,7 @@ function getRadicalDescription(radical: Radical) {
         <>
           <p className="my-4 max-w-[550px] m-auto">
             The radical <b>/pi/</b> stands for <b>paths</b>, <b>ways</b>,{" "}
-            <b>means</b>, <b>tools</b>,<b>length</b>, <b>extension</b>,{" "}
+            <b>means</b>, <b>tools</b>, <b>length</b>, <b>extension</b>,{" "}
             <b>application</b>, <b>distance</b>, and <b>duration</b>. Its
             complement is{" "}
             <Link className="underline hover:no-underline" href="/r/bu">
