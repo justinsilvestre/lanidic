@@ -164,7 +164,7 @@ function PrefixTableDisplay({
                         suffix={radical}
                         entry={radicalSuffixEntry}
                         key={radical}
-                        className="basis-1/3 p-1 flex-row min-w-[200px] max-sm:flex-grow"
+                        className="basis-1/3 p-1 flex-row min-w-[400px] max-sm:flex-grow"
                         showPrefixInPreview={false}
                       />
                     );
