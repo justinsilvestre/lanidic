@@ -7,6 +7,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --non-dominant-hand-filter: brightness(0.7);
+  scroll-behavior: smooth;
 }
 
 body.dark {
@@ -17,13 +18,16 @@ body.dark {
 }
 
 body {
+  transition: all .5s ease;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+  background: rgb(var(--background-end-rgb));
+
 }
 
 @layer utilities {

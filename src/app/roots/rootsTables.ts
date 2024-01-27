@@ -66,7 +66,7 @@ const monosyllablesTable: ExpandedPrefixTable = {
   definition: "",
   prefixAsRoot: null,
   children: {
-    ba: "ba = [monosyllable] =  = stay",
+    ba: "ba = [monosyllable] =  = stay, remain",
     bi: "be = [monosyllable] =  = now",
     bu: "bo = [monosyllable] =  = eight",
     da: "da = [monosyllable] =  = more, much",

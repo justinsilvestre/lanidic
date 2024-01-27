@@ -3898,7 +3898,7 @@
     "tugisi": "tigisai = mixed + water = something {mixed} with {SE:water}. = wet, saturated, soaked.",
     "tugu": "tagau = [classifier] + X =  = long time, old.",
     "tuguna": "tuguna = [classifier] + unit+time = a {NA:unit} of {GO:time}. = hour.",
-    "tugusu": "tugusau = [classifier] + segment+time = a {SO:segment} of a unit {GO:time}. = minute.",
+    "tugusu": "tugusau = [classifier] + segment+time = a {SO:segment} of a unit of {GO:time}. = minute.",
     "tuguti": "tugute = [classifier] + small+time = a {TE:small} unit of {GO:time}. = second.",
     "tugutisi": "tugutasai = second + three = one part of a {second} divided into a equal parts numbering ten to the power of {SE:three}. = millisecond.",
     "tuka": "tuka = physical property + outside = a {T:physical property} of something having been touched on the {KA:outside}. = marked, smeared.",
