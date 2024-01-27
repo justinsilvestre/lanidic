@@ -1406,7 +1406,7 @@
         "na"
       ],
       "children": [
-        "banu",
+        "ba",
         "bagu",
         "bu",
         "buda",
@@ -1433,7 +1433,7 @@
       ]
     },
     "nuba": {
-      "definition": "",
+      "definition": "live, inhabit.",
       "prefixAsRoot": "nuba",
       "prefixForms": [
         "nubo"
@@ -3058,9 +3058,6 @@
       "preserve": [
         "minu"
       ],
-      "social": [
-        "nuba"
-      ],
       "protect": [
         "pikanu"
       ],
@@ -3788,7 +3785,7 @@
     "misudu": "musudau = room + bottom = the {DO:bottom} surface of a {room}. = floor.",
     "misuli": "musule = room + top = the {LE:top} surface of a {room}. = ceiling.",
     "miti": "matai = artificial structure + small = an {M:artificial structure} that is {TE:small}. = hut, shed.",
-    "nuba": "nuba = [classifier] + stay+social = to {BA:stay} at some place regularly such that some {NU:social} group would recognize the occupancy as mostly permanent. = live, inhabit.",
+    "nuba": "nuba = social + stay = to {BA:stay} at some place regularly such that some {N:social} group would recognize the occupancy as mostly permanent. = live, inhabit.",
     "nubagu": "nubogau = [classifier] + X+X =  = to claim, to own",
     "nubaki": "nuboke = inhabit + move = to {KE:move} the place one {inhabit@@inhabits}. = move, immigrate to, emigrate to.",
     "nubu": "nabau = social + goal = a {N:social} action involving a shared intrinsic {BO:goal}. = play, perform, celebrate, observe.",
