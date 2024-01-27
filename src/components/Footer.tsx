@@ -22,7 +22,7 @@ export function Footer() {
   }, []);
 
   return (
-    <footer>
+    <footer className="max-w-screen-lg p-4 m-auto text-right">
       {mode === "light" ? (
         <button
           onClick={() => {
@@ -38,7 +38,7 @@ export function Footer() {
             }
           }}
         >
-          Dark Mode
+          ☾ dark
         </button>
       ) : (
         <button
@@ -55,7 +55,7 @@ export function Footer() {
             }
           }}
         >
-          Light Mode
+          ☼ light
         </button>
       )}
     </footer>

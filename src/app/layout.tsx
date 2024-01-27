@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
+import { useRouter } from "next/navigation";
+import { Header } from "../components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,13 +14,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: any;
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
+      <body className={` min-h-screen ${inter.className}`}>
+        <Header />
+        <main className="flex flex-col items-center p-4">{children}</main>
         <Footer />
       </body>
     </html>
