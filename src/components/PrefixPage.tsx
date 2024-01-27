@@ -15,6 +15,7 @@ import {
   classifiers,
 } from "@/app/roots/rootsStructure";
 import { RootDefinition } from "./RootDefinition";
+import { parseDerivationText } from "./parseDerivationText";
 
 function PrefixTableDisplay({
   prefix,
@@ -37,11 +38,7 @@ function PrefixTableDisplay({
       <h1 className="text-2xl  text-center mb-2">
         {prefix ? (
           <>
-            {prefixRadicals.length ? (
-              <>words with prefix</>
-            ) : (
-              <>words with classifier</>
-            )}{" "}
+            {prefixRadicals.length ? <>prefix</> : <>word classifier</>}{" "}
             <strong>
               {prefixRadicals.length ? (
                 <>
@@ -58,50 +55,102 @@ function PrefixTableDisplay({
           <>standalone radicals</>
         )}
       </h1>
-      <div className="m-auto max-w-[500px]">
+      <div className="m-auto max-w-[600px] flex flex-row gap-2">
         <ClassifierOrPrefixSign
+          className="flex-shrink-0 w-[150px]"
           prefix={prefix}
           size={150}
-          className="float-left mr-4"
         />
-        {prefix?.length === 2 || !prefix ? (
-          <p>
-            {classifierDescriptions[prefix?.length === 2 ? prefix : "null"]}
-          </p>
-        ) : null}
-        {prefix && rootsTables.byPrefix[prefix]?.definition && (
-          <>
-            <p className="mb-4">
-              These words are derived from{" "}
-              <b>{rootsTables.byPrefix[prefix].prefixAsRoot}</b>, meaning "
-              {rootsTables.byPrefix[prefix].definition.replace(/\.$/, "")}".
+        <div className="flex-grow">
+          {prefix?.length === 2 || !prefix ? (
+            <p>
+              {classifierDescriptions[prefix?.length === 2 ? prefix : "null"]}
             </p>
-            <p className="">
-              classifier:{" "}
-              <Link
-                href={`/p/${prefixSyllables[0]}`}
-                className="font-bold underline hover:no-underline"
-              >
-                {prefixSyllables[0]}-
-              </Link>
-            </p>
-            <p className="">
-              {prefixRadicals.length === 1 ? "radical: " : "radicals: "}
-              {prefixRadicals.map((radical, i) => (
-                <span key={radical}>
-                  <Link href={`/r/${radical}`} className="group">
-                    /
-                    <span className="underline hover:no-underline">
-                      {radical}
-                    </span>
-                    /
-                  </Link>
-                  {i < prefixRadicals.length - 1 ? ", " : ""}
-                </span>
-              ))}
-            </p>
-          </>
-        )}
+          ) : null}
+          {prefix && rootsTables.byPrefix[prefix]?.definition && (
+            <>
+              <p className="mb-4">
+                These words are derived from{" "}
+                <b>{rootsTables.byPrefix[prefix].prefixAsRoot}</b>, meaning "
+                {rootsTables.byPrefix[prefix].definition.replace(/\.$/, "")}".
+              </p>
+              <p className="mb-4 text-sm mt-4 p-1 bg-[rgba(var(--foreground-rgb),_.05)]">
+                {parseDerivationText(
+                  prefixSyllables.join(""),
+                  rootsTables.roots[prefixSyllables.join("")].split(" = ")[2]
+                ).map((segment, i) => {
+                  switch (segment.type) {
+                    case "text":
+                      return segment.text;
+                    case "prefix":
+                    case "classifier": {
+                      const prefixAsRoot =
+                        rootsTables.byPrefix[prefix].prefixAsRoot;
+                      return (
+                        <span key={String(i)}>
+                          <Link
+                            href={`/p/${segment.syllablesText}`}
+                            className="group whitespace-nowrap"
+                          >
+                            <span className="[font-variant:small-caps] [font-size:1.2em] group-hover:underline">
+                              {segment.inflectedMeaning || segment.meaning}
+                            </span>
+                            &nbsp;
+                            <span className="italic group-hover:text-orange-600">
+                              ({prefixAsRoot})
+                            </span>
+                          </Link>
+                        </span>
+                      );
+                    }
+                    case "radical": {
+                      const radical = toRadicalForm(segment.syllablesText);
+                      return (
+                        <span key={String(i)}>
+                          <Link
+                            href={`/r/${radical}`}
+                            className="group whitespace-nowrap"
+                          >
+                            <span className="inline-flex flex-col items-center group-hover:text-orange-700">
+                              <span>/{radical}/</span>
+                            </span>
+                            &nbsp;
+                            <span className="font-bold underline group-hover:no-underline">
+                              {segment.inflectedMeaning || segment.meaning}
+                            </span>
+                          </Link>
+                        </span>
+                      );
+                    }
+                  }
+                })}
+              </p>
+
+              <p className="">
+                classifier:{" "}
+                <Link
+                  href={`/p/${prefixSyllables[0]}`}
+                  className="font-bold underline hover:no-underline mr-5"
+                >
+                  {prefixSyllables[0]}-
+                </Link>
+                {prefixRadicals.length === 1 ? "radical: " : "radicals: "}
+                {prefixRadicals.map((radical, i) => (
+                  <span key={radical}>
+                    <Link href={`/r/${radical}`} className="group">
+                      /
+                      <span className="underline hover:no-underline">
+                        {radical}
+                      </span>
+                      /
+                    </Link>
+                    {i < prefixRadicals.length - 1 ? ", " : ""}
+                  </span>
+                ))}
+              </p>
+            </>
+          )}
+        </div>
       </div>
       <div className="flex flex-row gap-2 m-auto my-4 max-w-[500px]">
         <button

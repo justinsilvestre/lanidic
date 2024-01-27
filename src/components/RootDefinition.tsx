@@ -4,9 +4,10 @@ import Link from "next/link";
 import radicalsPaths from "@/app/svg/radicalsPaths.json";
 import classifiersPaths from "@/app/svg/classifiersPaths.json";
 import { rootsTables } from "@/app/roots/rootsTables";
-import { Radical, Classifier, classifiers } from "@/app/roots/rootsStructure";
+import { Radical, Classifier } from "@/app/roots/rootsStructure";
 import { ClassifiedHandshape, capitalize, toRadicalForm } from "./PrefixPage";
 import { useEffect, useState } from "react";
+import { parseDerivationText } from "./parseDerivationText";
 
 export function RootDefinition({
   prefix,
@@ -66,33 +67,26 @@ export function RootDefinition({
           )}
         </div>
         <div className="">{definition}</div>
-        {derivationText && (
+        {prefix && (
           <div className="text-sm mt-4 p-1 bg-[rgba(var(--foreground-rgb),_.05)]">
-            {capitalize(derivationText)
-              .split(/(?={)|(?<=})/)
-              .map((segment, i) => {
-                if (segment.startsWith("{")) {
-                  const colonSegments = segment.slice(1, -1).split(":");
-                  if (colonSegments.length === 1) {
-                    const [prefixMeaning, inflectedPrefixMeaning] =
-                      colonSegments[0].split("@@");
-                    const wordSyllables = word.split(
-                      /(?<=[aeiou])(?=[bdgklmnpst])/
-                    );
-                    const prefixRealization = wordSyllables
-                      .slice(0, prefixSyllables.length)
-                      .join("");
-                    if (!prefix) throw new Error(`no prefix for ${word}`);
+            {parseDerivationText(prefix, capitalize(derivationText)).map(
+              (segment, i) => {
+                switch (segment.type) {
+                  case "text":
+                    return segment.text;
+                  case "prefix":
+                  case "classifier": {
                     const prefixAsRoot =
-                      rootsTables.byPrefix[prefix].prefixAsRoot;
+                      rootsTables.byPrefix[prefix].prefixAsRoot ||
+                      segment.syllablesText;
                     return (
                       <span key={String(i)}>
                         <Link
-                          href={`/p/${prefix}`}
+                          href={`/p/${segment.syllablesText}`}
                           className="group whitespace-nowrap"
                         >
                           <span className="[font-variant:small-caps] [font-size:1.2em] group-hover:underline">
-                            {inflectedPrefixMeaning || prefixMeaning}
+                            {segment.inflectedMeaning || segment.meaning}
                           </span>
                           &nbsp;
                           <span className="italic group-hover:text-orange-600">
@@ -101,34 +95,9 @@ export function RootDefinition({
                         </Link>
                       </span>
                     );
-                  } else {
-                    const [syllable] = colonSegments;
-                    const [syllableMeaning, inflectedSyllableMeaning] =
-                      colonSegments[1].split("@@");
-                    const syllableIsClassifier = syllable.length === 1;
-                    if (syllableIsClassifier) {
-                      const classifier = classifiers.find((c) =>
-                        c.startsWith(syllable.toLowerCase())
-                      );
-                      return (
-                        <span key={String(i)}>
-                          <Link
-                            href={`/p/${classifier}`}
-                            className="group whitespace-nowrap"
-                          >
-                            <span className="[font-variant:small-caps] [font-size:1.2em]">
-                              {inflectedSyllableMeaning || syllableMeaning}
-                            </span>
-                            &nbsp;(
-                            <span className="italic group-hover:text-orange-600">
-                              {classifier}-
-                            </span>
-                            )
-                          </Link>
-                        </span>
-                      );
-                    }
-                    const radical = toRadicalForm(syllable);
+                  }
+                  case "radical": {
+                    const radical = toRadicalForm(segment.syllablesText);
                     return (
                       <span key={String(i)}>
                         <Link
@@ -140,15 +109,15 @@ export function RootDefinition({
                           </span>
                           &nbsp;
                           <span className="font-bold underline group-hover:no-underline">
-                            {inflectedSyllableMeaning || syllableMeaning}
+                            {segment.inflectedMeaning || segment.meaning}
                           </span>
                         </Link>
                       </span>
                     );
                   }
                 }
-                return segment;
-              })}
+              }
+            )}
           </div>
         )}
         {!prefixSyllables.length && (
@@ -317,3 +286,15 @@ function RootSvg({
     </svg>
   );
 }
+
+export type DerivationTextSegment =
+  | {
+      type: "radical" | "classifier" | "prefix";
+      meaning: string;
+      inflectedMeaning?: string;
+      syllablesText: string;
+    }
+  | {
+      type: "text";
+      text: string;
+    };

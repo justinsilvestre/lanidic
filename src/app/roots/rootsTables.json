@@ -3860,7 +3860,7 @@
     "pikamalu": "pikemelo = [classifier] + X+X+X =  = writing, handwriting, print",
     "pikamaluba": "pikemeluba = [classifier] + X+X+X+X =  = inscription, engraving",
     "pikamalunu": "pikemelanau = [classifier] + X+X+X+X =  = print",
-    "pikanu": "pikeno = cover + protect = a tool used as a {cover} for the purpose of {NO:protect}ing it. = shield, guard.",
+    "pikanu": "pikeno = cover + protect = a tool used as a {cover} for the purpose of {NO:protect@@protecting} something. = shield, guard.",
     "pikasi": "pikesai = covering + water = a {covering} meant to block {SE:water}. = umbrella.",
     "piki": "pakai = tool + move = a {P:tool} for the {KE:move@@movement} of something. = machine, lever.",
     "pikibu": "pikibo = tool + move+round = a {P:tool} for {KE:move@@movement} of something which is {BO:round}. = wheel.",
