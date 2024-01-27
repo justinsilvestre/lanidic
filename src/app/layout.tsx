@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
-import Link from "next/link";
-import { classifiers, consonants } from "./roots/rootsStructure";
+import { useRouter } from "next/navigation";
+import { Header } from "../components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,37 +14,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: any;
 }>) {
   return (
     <html lang="en">
       <body className={` min-h-screen ${inter.className}`}>
-        <header className="flex flex-col items-center p-4">
-          <h2>classifiers</h2>
-          <ul>
-            <li className="inline-block p-2">
-              <Link href={"/"}>∅</Link>
-            </li>
-            {classifiers.map((classifier) => (
-              <li key={classifier} className="inline-block p-2">
-                <Link href={"/p/" + classifier}>{classifier}-</Link>
-              </li>
-            ))}
-          </ul>
-          <h2>radicals</h2>
-          <ul>
-            {consonants.map((consonant) => (
-              <li key={consonant} className="inline-block p-2">
-                <Link href={`/r/${consonant}a`}>/{consonant}a/</Link>
-                <br />
-                <Link href={`/r/${consonant}i`}>/{consonant}i/</Link>
-                <br />
-                <Link href={`/r/${consonant}u`}>/{consonant}u/</Link>
-              </li>
-            ))}
-          </ul>
-        </header>
+        <Header />
         <main className="flex flex-col items-center p-4">{children}</main>
         <Footer />
       </body>

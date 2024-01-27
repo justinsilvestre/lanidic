@@ -1,6 +1,7 @@
 import { Radical } from "@/app/roots/rootsStructure";
 import { ExpandedRadicalTable } from "@/app/roots/rootsTables";
 import { RootDefinition } from "./RootDefinition";
+import { RadicalHandshapeSvg } from "./RadicalHandshapeSvg";
 
 export function RadicalPage({
   radical,
@@ -31,8 +32,21 @@ function RadicalTableDisplay({
 }) {
   return (
     <div className={className}>
-      <h1 className="text-4xl font-bold">{radical}</h1>
+      <h1 className="">
+        <RadicalHandshapeSvg
+          radical={radical}
+          size={100}
+          className="inline-block"
+        />{" "}
+        <span className="text-4xl">
+          radical <span className="font-bold">/{radical}/</span>{" "}
+        </span>
+        <span className="text-3xl">
+          ({getRadicalForms(radical).join(", ")})
+        </span>
+      </h1>
       <p>{Object.keys(table.radicals).join(", ")}</p>
+
       <div className="flex flex-col">
         {Object.entries(table.radicals).map(([radicalMeaning, entries]) => {
           return (
@@ -74,4 +88,29 @@ function RadicalTableDisplay({
       </div>
     </div>
   );
+}
+
+function getRadicalForms(radical: Radical) {
+  const consonant = radical[0];
+  const vowel = radical[1];
+  if (vowel === "a")
+    return [`-${consonant}e-`, `-${consonant}o-`, `-${consonant}a`];
+
+  if (vowel === "i")
+    return [
+      `-${consonant}i-`,
+      `-${consonant}a-`,
+      `-${consonant}e`,
+      `-${consonant}ai`,
+    ];
+
+  if (vowel === "u")
+    return [
+      `-${consonant}u`,
+      `-${consonant}a-`,
+      `-${consonant}o`,
+      `-${consonant}au`,
+    ];
+
+  throw new Error(`Invalid radical ${radical}`);
 }

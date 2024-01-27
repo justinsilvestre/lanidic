@@ -1020,7 +1020,7 @@
         "du",
         "ka",
         "ki",
-        "titi",
+        "tiki",
         "ku",
         "liku",
         "ma",
@@ -2575,6 +2575,9 @@
       ],
       "activity": [
         "liki"
+      ],
+      "force": [
+        "likiti"
       ]
     },
     "ku": {
@@ -3189,9 +3192,6 @@
       "leaf": [
         "kuti"
       ],
-      "force": [
-        "likiti"
-      ],
       "least": [
         "simati"
       ]
@@ -3275,7 +3275,7 @@
     "dilika": "dilika = breathe + out = to {breathe} {KA:out}. = exhale.",
     "dilimi": "dilimai = breathe + in = to {breathe} {ME:in}. = inhale.",
     "dilimu": "dilimo = breathe + pull = to {MO:pull} something in as the air one {breathe@@breathes}. = suck.",
-    "dilita": "dilita = breathe + expel = tp {TA:expel} something out as as the air one {breathe@@breathes}. = blow.",
+    "dilita": "dilita = breathe + expel = to {TA:expel} something out as as the air one {breathe@@breathes}. = blow.",
     "dilu": "dalau = sense + dark = to {B:sense} with the ears, as is possible even in the {LO:dark}. = hear.",
     "dima": "dima = sense + light = to {B:sense} as {MA:light} with the eyes. = see.",
     "dimabi": "dimebai = see + concentrate = to {see} something and {BE:concentrate} one's awareness on it. = look at, pay attention.",
@@ -3560,7 +3560,7 @@
     "likasiti": "likesitai = blue + small = {blue} that has a {TE:small} amount of saturation. = blueish, dull blue.",
     "likati": "liketai = color + small = having a {TE:small} amount of {color}. = dull (color), faint, washed-out.",
     "liki": "lakai = intangible property + activity = an {L:intangible property} of something in a state of {KE:activity}. = strong, force, energy.",
-    "likiti": "likitai = [classifier] + small+force = having a {TE:small} amount of {TE:force}. = weak, ineffectual.",
+    "likiti": "likitai = [classifier] + small+force = having a {TE:small} amount of {KE:force}. = weak, ineffectual.",
     "liku": "lakau = substance + burn = a kind of {L:substance} that {KO:burn@@burns}. = fire.",
     "likuli": "lukule = [classifier] + air+fire = the sort of {LE:air} that comes from a {KO:fire}. = smoke, fumes.",
     "likupa": "lukupa = fire + remains = the {PA:remains} of a {fire}. = ash, char.",

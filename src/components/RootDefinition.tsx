@@ -4,7 +4,7 @@ import Link from "next/link";
 import radicalsPaths from "@/app/svg/radicalsPaths.json";
 import classifiersPaths from "@/app/svg/classifiersPaths.json";
 import { rootsTables } from "@/app/roots/rootsTables";
-import { Radical, Classifier } from "@/app/roots/rootsStructure";
+import { Radical, Classifier, classifiers } from "@/app/roots/rootsStructure";
 import { ClassifiedHandshape, capitalize, toRadicalForm } from "./PrefixPage";
 
 export function RootDefinition({
@@ -109,10 +109,14 @@ export function RootDefinition({
                       rootsTables.byPrefix[prefix].prefixAsRoot;
                     return (
                       <span key={String(i)}>
-                        <Link href={`/p/${prefix}`} className="group">
+                        <Link
+                          href={`/p/${prefix}`}
+                          className="group whitespace-nowrap"
+                        >
                           <span className="[font-variant:small-caps] [font-size:1.2em] group-hover:underline">
                             {inflectedPrefixMeaning || prefixMeaning}
-                          </span>{" "}
+                          </span>
+                          &nbsp;
                           <span className="italic group-hover:text-orange-600">
                             ({prefixAsRoot})
                           </span>
@@ -123,22 +127,40 @@ export function RootDefinition({
                     const [syllable] = colonSegments;
                     const [syllableMeaning, inflectedSyllableMeaning] =
                       colonSegments[1].split("@@");
-                    const syllableIsRadical = syllable.length === 1;
-                    if (syllableIsRadical)
+                    const syllableIsClassifier = syllable.length === 1;
+                    if (syllableIsClassifier) {
+                      const classifier = classifiers.find((c) =>
+                        c.startsWith(syllable.toLowerCase())
+                      );
                       return (
                         <span key={String(i)}>
-                          <span className="[font-variant:small-caps] [font-size:1.2em]">
-                            {inflectedSyllableMeaning || syllableMeaning}
-                          </span>
+                          <Link
+                            href={`/p/${classifier}`}
+                            className="group whitespace-nowrap"
+                          >
+                            <span className="[font-variant:small-caps] [font-size:1.2em]">
+                              {inflectedSyllableMeaning || syllableMeaning}
+                            </span>
+                            &nbsp;(
+                            <span className="italic group-hover:text-orange-600">
+                              {classifier}-
+                            </span>
+                            )
+                          </Link>
                         </span>
                       );
+                    }
                     const radical = toRadicalForm(syllable);
                     return (
                       <span key={String(i)}>
-                        <Link href={`/r/${radical}`} className="group">
+                        <Link
+                          href={`/r/${radical}`}
+                          className="group whitespace-nowrap"
+                        >
                           <span className="inline-flex flex-col items-center group-hover:text-orange-700">
                             <span>/{radical}/</span>
-                          </span>{" "}
+                          </span>
+                          &nbsp;
                           <span className="font-bold underline group-hover:no-underline">
                             {inflectedSyllableMeaning || syllableMeaning}
                           </span>
