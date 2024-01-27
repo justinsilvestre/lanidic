@@ -35,16 +35,19 @@ function RadicalTableDisplay({
   const radicalMeanings = Object.keys(table.radicals);
   return (
     <div className={className}>
-      <h1 className=" m-auto max-w-screen-lg text-center">
+      <h1 className="justify-center max-w-screen-lg text-center flex flex-row">
         <RadicalHandshapeSvg
           radical={radical}
           size={100}
           className="inline-block"
         />{" "}
-        <span className="text-2xl">
-          radical <span className="font-bold">/{radical}/</span>{" "}
-        </span>
-        <span className="text-xl">({getRadicalForms(radical).join(", ")})</span>
+        <div>
+          <span className="text-2xl">
+            radical <span className="font-bold">/{radical}/</span>{" "}
+          </span>
+          <br />
+          <span className="text-xl">{getRadicalForms(radical).join(", ")}</span>
+        </div>
       </h1>
       <p className="text-center">
         {radicalMeanings.map((meaning, i) => (
@@ -139,7 +142,11 @@ function getRadicalDescription(radical: Radical) {
             The radical <b>/ba/</b> stands for <b>hardness</b>, <b>coldness</b>,{" "}
             <b>rigidity</b>, <b>stillness</b>, <b>inactivity</b>,{" "}
             <b>slowness</b>, <b>endurance</b>, and <b>inertia</b>. Its
-            complement is <Link href="/r/ku">/ku/</Link>.
+            complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/ku">
+              /ku/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign is iconic of a rock, its hard mass standing still on
@@ -158,7 +165,11 @@ function getRadicalDescription(radical: Radical) {
             <b>concentration</b>,<b>thought</b>, <b>order</b>, <b>intention</b>,{" "}
             <b>artificiality</b>. By extension from its meaning of centrality,
             it also stands for <b>spinning</b> movements, which are centered on
-            one point. Its complement is <Link href="/r/gu">/gu/</Link>.
+            one point. Its complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/gu">
+              /gu/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign is iconic of a head, the seat of thought, raised in its
@@ -176,7 +187,11 @@ function getRadicalDescription(radical: Radical) {
           <p className="my-4 max-w-[550px] m-auto">
             The radical <b>/bu/</b> stands for <b>fullness</b>, <b>abundance</b>
             , , <b>fertility</b>, <b>luxuriance</b>, <b>thickness</b>, and{" "}
-            <b>roundness</b>. Its complement is <Link href="/r/pi">/pi/</Link>.
+            <b>roundness</b>. Its complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/pi">
+              /pi/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign is iconic of a hand holding a round fruit, which is
@@ -193,7 +208,11 @@ function getRadicalDescription(radical: Radical) {
           <p className="my-4 max-w-[550px] m-auto">
             The radical <b>/da/</b> stands for <b>greatness</b>, <b>majority</b>
             , <b>superiority</b>, <b>branching</b>, and <b>size</b>. Its
-            complement is <Link href="/r/ti">/ti/</Link>.
+            complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/ti">
+              /ti/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign is iconic of a tree, its branches growing out from a
@@ -211,7 +230,11 @@ function getRadicalDescription(radical: Radical) {
             The radical <b>/di/</b> stands for <b>craft</b>, <b>handling</b>,{" "}
             <b>dexterity</b>, <b>skill</b>, <b>arms</b>, <b>branches</b>,{" "}
             <b>holding</b>, <b>assistance</b>, <b>touch</b>, and
-            <b>perception</b>. Its complement is <Link href="/r/ga">/ga/</Link>.
+            <b>perception</b>. Its complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/ga">
+              /ga/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             As a standalone word, <b>de</b> is a numeral, meaning "ten".
@@ -226,7 +249,11 @@ function getRadicalDescription(radical: Radical) {
             <b>depth</b>, <b>lowness</b>, <b>descent</b>, <b>pressure</b>,{" "}
             <b>gravity</b>, <b>substance</b>, <b>materiality</b>, <b>roots</b>,{" "}
             <b>solidity</b>,<b>earthliness</b>, <b>worldliness</b>, and{" "}
-            <b>society</b>. Its complement is <Link href="/r/li">/li/</Link>.
+            <b>society</b>. Its complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/li">
+              /li/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign points down towards the ground with the palm.
@@ -244,11 +271,13 @@ function getRadicalDescription(radical: Radical) {
       return (
         <>
           <p className="my-4 max-w-[550px] m-auto">
-            The radical <b>/ga/</b> stands for <b>openings</b>,{" "}
-            <p className="my-4 max-w-[550px] m-auto">gaps</p>,{" "}
-            <p className="my-4 max-w-[550px] m-auto">mouths</p>,{" "}
-            <p className="my-4 max-w-[550px] m-auto">consumption</p>, and{" "}
-            <b>speech</b>. Its complement is <Link href="/r/di">/di/</Link>.
+            The radical <b>/ga/</b> stands for <b>openings</b>, <b>gaps</b>,{" "}
+            <b>mouths</b>, <b>consumption</b>, and <b>speech</b>. Its complement
+            is{" "}
+            <Link className="underline hover:no-underline" href="/r/di">
+              /di/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign is iconic of a gaping mouth.
@@ -263,10 +292,13 @@ function getRadicalDescription(radical: Radical) {
         <>
           <p className="my-4 max-w-[550px] m-auto">
             The radical <b>/gu/</b> stands for <b>sides</b>, <b>laterality</b>,{" "}
-            <b>byproducts</b>, <b>accidents</b>,{" "}
-            <p className="my-4 max-w-[550px] m-auto">juxtaposition</p>,
+            <b>byproducts</b>, <b>accidents</b>, <b>juxtaposition</b>,
             <b>simultaneity</b>, <b>time</b>,<b>accompaniment</b>, and{" "}
-            <b>mixing</b>. Its complement is <Link href="/r/bi">/bi/</Link>.
+            <b>mixing</b>. Its complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/bi">
+              /bi/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign shows the thumb and index finger side by side.
@@ -284,7 +316,10 @@ function getRadicalDescription(radical: Radical) {
             The radical <b>/gi/</b> stands for <b>joints</b>, <b>joining</b>,{" "}
             <b>linking</b>,<b>accumulation</b>, <b>adhesion</b>, <b>sticking</b>
             , and <b>groups</b>. Its complement is{" "}
-            <Link href="/r/su">/su/</Link>.
+            <Link className="underline hover:no-underline" href="/r/su">
+              /su/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign shows index and middle fingers bent, making the knuckle
@@ -305,7 +340,10 @@ function getRadicalDescription(radical: Radical) {
             The radical <b>/ki/</b> stands for <b>movement</b>, <b>mobility</b>,{" "}
             <b>quickness</b>, <b>acceleration</b>, <b>dynamism</b>,{" "}
             <b>energy</b>, and <b>shifting</b>. Its complement is{" "}
-            <Link href="/r/ba">/ba/</Link>.
+            <Link className="underline hover:no-underline" href="/r/ba">
+              /ba/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign is iconic of two running legs.
@@ -324,7 +362,11 @@ function getRadicalDescription(radical: Radical) {
             <b>foreignness</b>, <b>exposedness</b>, <b>novelty</b>,{" "}
             <b>ignorance</b>,<b>strangeness</b>, <b>appearance</b>, <b>color</b>
             , <b>marking</b>, <b>expression</b>, <b>manifestation</b>, and{" "}
-            <b>existence</b>. Its complement is <Link href="/r/ma">/ma/</Link>.
+            <b>existence</b>. Its complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/ma">
+              /ma/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign shows the little finger pointing outwards.
@@ -342,7 +384,10 @@ function getRadicalDescription(radical: Radical) {
             The radical <b>/ku/</b> stands for <b>burning</b>, <b>processing</b>
             , <b>digesting</b>, <b>fuel</b>, <b>transformation</b>,{" "}
             <b>destruction</b>, and <b>fire</b>. Its complement is{" "}
-            <Link href="/r/si">/si/</Link>.
+            <Link className="underline hover:no-underline" href="/r/si">
+              /si/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign is iconic of an active fire, with four fingers like
@@ -362,7 +407,11 @@ function getRadicalDescription(radical: Radical) {
             <b>equality</b>, <b>counting</b>, <b>numbers</b>, as well as flat
             things,
             <b>flaps</b>, <b>tongues</b>, and, by extension, <b>taste</b>. Its
-            complement is <Link href="/r/ni">/ni/</Link>.
+            complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/ni">
+              /ni/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign is iconic of a flat surface, or a tongue sticking out.
@@ -380,7 +429,11 @@ function getRadicalDescription(radical: Radical) {
             The radical <b>/li/</b> stands for <b>air</b>, <b>wind</b>,{" "}
             <b>height</b>, <b>ascent</b>, <b>flight</b>, <b>floating</b>,{" "}
             <b>breath</b>, <b>spirit</b>, <b>gas</b>, <b>volatility</b>, and{" "}
-            <b>olfaction</b>. Its complement is <Link href="/r/du">/du/</Link>.
+            <b>olfaction</b>. Its complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/du">
+              /du/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign points up towards the sky.
@@ -400,7 +453,11 @@ function getRadicalDescription(radical: Radical) {
             well as
             <b>sound</b> (a sense that works even in darkness), <b>voice</b>,{" "}
             <b>vibration</b>, <b>tides</b>, the <b>moon</b>, and <b>rhythm</b>.
-            Its complement is <Link href="/r/ma">/ma/</Link>.
+            Its complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/ma">
+              /ma/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign is iconic of a crescent moon, or a mouth open in song.
@@ -419,7 +476,11 @@ function getRadicalDescription(radical: Radical) {
             The radical <b>/ma/</b> stands for <b>day</b>, <b>light</b>,{" "}
             <b>vision</b>, <b>clarity</b>, <b>brightness</b>, <b>center</b>,{" "}
             <b>centrality</b>, <b>circle</b>, <b>roundness</b>, <b>eye</b>, and{" "}
-            <b>revelation</b>. Its complement is <Link href="/r/lu">/lu/</Link>.
+            <b>revelation</b>. Its complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/lu">
+              /lu/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign shows five fingers spread out, like rays of light
@@ -438,7 +499,10 @@ function getRadicalDescription(radical: Radical) {
             <b>domesticity</b>,<b>familiarity</b>, <b>core</b>, <b>depth</b>,{" "}
             <b>concealment</b>, <b>privacy</b>, <b>intimacy</b>, <b>secrets</b>,
             and the <b>mind</b>. Its complement is{" "}
-            <Link href="/r/ka">/ka/</Link>.
+            <Link className="underline hover:no-underline" href="/r/ka">
+              /ka/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign points inward, towards the body of the speaker.
@@ -456,7 +520,10 @@ function getRadicalDescription(radical: Radical) {
             <b>pulling in</b>, <b>absorption</b>, <b>suction</b>,{" "}
             <b>enclosure</b>, <b>capture</b>, and <b>support</b>, as well{" "}
             <b>recessed</b> or <b>concave</b> shapes. Its complement is{" "}
-            <Link href="/r/ta">/ta/</Link>.
+            <Link className="underline hover:no-underline" href="/r/ta">
+              /ta/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign shows the hand with fingers joined as though grasping a
@@ -470,7 +537,11 @@ function getRadicalDescription(radical: Radical) {
           <p className="my-4 max-w-[550px] m-auto">
             The radical <b>/na/</b> stands for <b>wholeness</b>,{" "}
             <b>integrity</b>, <b>completion</b>, <b>health</b>, and{" "}
-            <b>purity</b>. Its complement is <Link href="/r/tu">/tu/</Link>.
+            <b>purity</b>. Its complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/tu">
+              /tu/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign shows one sole finger raised up.
@@ -487,7 +558,11 @@ function getRadicalDescription(radical: Radical) {
             The radical <b>/ni/</b> stands for <b>points</b>, <b>angles</b>,{" "}
             <b>sharpness</b>, <b>verticality</b>, <b>disruption</b>,{" "}
             <b>pointing</b>, <b>indication</b>, <b>edges</b>, and <b>tips</b>.
-            Its complement is <Link href="/r/la">/la/</Link>.
+            Its complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/la">
+              /la/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign shows the finger curled so as to emphasize the sharp
@@ -506,7 +581,10 @@ function getRadicalDescription(radical: Radical) {
             The radical <b>/nu/</b> stands for <b>priority</b>,{" "}
             <b>beginnings</b>, <b>leading</b>, <b>anteriority</b>,{" "}
             <b>production</b>, and <b>faces</b>. Its complement is{" "}
-            <Link href="/r/pa">/pa/</Link>.
+            <Link className="underline hover:no-underline" href="/r/pa">
+              /pa/
+            </Link>
+            .
           </p>
 
           <p className="my-4 max-w-[550px] m-auto">
@@ -524,7 +602,11 @@ function getRadicalDescription(radical: Radical) {
           <p className="my-4 max-w-[550px] m-auto">
             The radical <b>/pa/</b> stands for <b>posteriority</b>, <b>backs</b>
             , <b>results</b>, <b>offspring</b>, and <b>remnants</b>. Its
-            complement is <Link href="/r/nu">/nu/</Link>.
+            complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/nu">
+              /nu/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign shows the fingers curled, almost as though to reach
@@ -539,11 +621,14 @@ function getRadicalDescription(radical: Radical) {
       return (
         <>
           <p className="my-4 max-w-[550px] m-auto">
-            The radical <b>/pi/</b> stands for <b>paths</b>,{" "}
-            <p className="my-4 max-w-[550px] m-auto">ways</p>, <b>means</b>,{" "}
-            <p className="my-4 max-w-[550px] m-auto">tools</p>,<b>length</b>,{" "}
-            <b>extension</b>, <b>application</b>, <b>distance</b>, and{" "}
-            <b>duration</b>. Its complement is <Link href="/r/bu">/bu/</Link>.
+            The radical <b>/pi/</b> stands for <b>paths</b>, <b>ways</b>,{" "}
+            <b>means</b>, <b>tools</b>,<b>length</b>, <b>extension</b>,{" "}
+            <b>application</b>, <b>distance</b>, and <b>duration</b>. Its
+            complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/bu">
+              /bu/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign shows the fingers extended, in one direction, as though
@@ -563,7 +648,11 @@ function getRadicalDescription(radical: Radical) {
             The radical <b>/pu/</b> stands for <b>difference</b>,{" "}
             <b>differentiation</b>, <b>negativity</b>, <b>crossing</b>,{" "}
             <b>opposition</b>, <b>transcendence</b>, <b>distance</b>, and{" "}
-            <b>space</b>. Its complement is <Link href="/r/sa">/sa/</Link>.
+            <b>space</b>. Its complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/sa">
+              /sa/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign shows two fingers extended with a gap between them, as
@@ -582,7 +671,10 @@ function getRadicalDescription(radical: Radical) {
             The radical <b>/sa/</b> stands for <b>sameness</b>,{" "}
             <b>positivity</b>, <b>equality</b>, <b>reflection</b>, <b>copy</b>,
             and <b>similarity</b>. Its complement is{" "}
-            <Link href="/r/pu">/pu/</Link>.
+            <Link className="underline hover:no-underline" href="/r/pu">
+              /pu/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign shows two fingers extended, touching, as though to show
@@ -599,7 +691,10 @@ function getRadicalDescription(radical: Radical) {
           <p className="my-4 max-w-[550px] m-auto">
             The radical <b>/si/</b> stands for <b>liquid</b>, <b>flowing</b>,{" "}
             <b>quenching</b>, <b>soothing</b>, <b>healing</b>, <b>satiation</b>,
-            and <b>filling</b>. Its complement is <Link href="/r/ku">/ku/</Link>
+            and <b>filling</b>. Its complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/ku">
+              /ku/
+            </Link>
             .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
@@ -617,7 +712,11 @@ function getRadicalDescription(radical: Radical) {
           <p className="my-4 max-w-[550px] m-auto">
             The radical <b>/su/</b> stands for <b>section</b>, <b>part</b>,{" "}
             <b>exclusion</b>, <b>specificity</b>, <b>particularity</b>,{" "}
-            <b>particle</b>, <b>slicing</b>, <b>place</b>, <b>locality</b>.
+            <b>particles</b>, <b>slicing</b>, <b>place</b>, <b>locality</b>. Its
+            complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/gu">
+              /gu/
+            </Link>
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign shows the fingers curled, as though to cut of a small
@@ -635,14 +734,18 @@ function getRadicalDescription(radical: Radical) {
             The radical <b>/ta/</b> stands for <b>giving</b>, <b>resistance</b>,{" "}
             <b>pushing</b>, <b>pressure</b>, <b>throwing</b>, and{" "}
             <b>dispensation</b>, as well as shapes that <b>protrude</b>. Its
-            complement is <Link href="/r/mu">/mu/</Link>.
+            complement is{" "}
+            <Link className="underline hover:no-underline" href="/r/mu">
+              /mu/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign shows the fingers extended, as though to push something
             away, or to suggest a protruding shape.
           </p>
           <p className="my-4 max-w-[550px] m-auto">
-            As a standalone word, <b>ta</b> "only", a word that excludes
+            As a standalone word, <b>ta</b> means "only", a word that excludes
             everything else, pushing it away from the sphere of consideration.
           </p>
         </>
@@ -653,7 +756,10 @@ function getRadicalDescription(radical: Radical) {
           <p className="my-4 max-w-[550px] m-auto">
             The radical <b>/ti/</b> stands for <b>smallness</b>, <b>scarcity</b>
             , <b>fibers</b>, and <b>foliage</b>. Its complement is{" "}
-            <Link href="/r/da">/da/</Link>.
+            <Link className="underline hover:no-underline" href="/r/da">
+              /da/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign shows the two fingers touching lightly, as though
@@ -672,8 +778,12 @@ function getRadicalDescription(radical: Radical) {
           <p className="my-4 max-w-[550px] m-auto">
             The radical <b>/tu/</b> stands for <b>separation</b>,{" "}
             <b>splitting</b>, <b>cutting</b>, <b>duplication</b>,{" "}
-            <b>repetition</b>, <b>pattern</b>, <b>furcation</b>. Its complement
-            is <Link href="/r/na">/na/</Link>.
+            <b>repetition</b>, <b>patterns</b>, <b>furcation</b>. Its complement
+            is{" "}
+            <Link className="underline hover:no-underline" href="/r/na">
+              /na/
+            </Link>
+            .
           </p>
           <p className="my-4 max-w-[550px] m-auto">
             The handsign shows two fingers extended, to suggest a form being

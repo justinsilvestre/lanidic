@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import radicalsPaths from "@/app/svg/radicalsPaths.json";
 import classifiersPaths from "@/app/svg/classifiersPaths.json";
 import { ExpandedPrefixTable, rootsTables } from "@/app/roots/rootsTables";
@@ -629,7 +629,7 @@ function ClassifierOrPrefixSign({
       onClick={
         totalFramesCount > 1 ? () => setAnimationFrameIndex(0) : undefined
       }
-      className={`flex flex-row gap-2 bg-[rgba(var(--background-end-rgb),_.3)] ${className}`}
+      className={`group flex flex-row gap-2 bg-[rgba(var(--background-end-rgb),_.3)] ${className}`}
       viewBox="0 0 1000 1000"
       width={size}
       height={size}
@@ -677,7 +677,6 @@ function ClassifierOrPrefixSign({
           fontSize={100}
           style={{
             fill: "rgb(var(--foreground-rgb))",
-            // drop shadow
             filter:
               "drop-shadow(5px 5px 5px rgb(var(--background-end-rgb))) drop-shadow(5px 5px 5px rgb(var(--background-end-rgb))) drop-shadow(5px 5px 5px rgb(var(--background-end-rgb)))",
           }}
@@ -687,22 +686,97 @@ function ClassifierOrPrefixSign({
             : `/${prefixRadicals[animationFrameIndex]}/`}
         </text>
       )}
+      {totalFramesCount > 1 && animationFrameIndex === null && (
+        <text
+          x={40}
+          y={950}
+          textAnchor="left"
+          fontSize={90}
+          className=" opacity-50 group-hover:opacity-100"
+          style={{
+            fill: "rgb(var(--foreground-rgb))",
+            filter:
+              "drop-shadow(5px 5px 5px rgb(var(--background-end-rgb))) drop-shadow(5px 5px 5px rgb(var(--background-end-rgb))) drop-shadow(5px 5px 5px rgb(var(--background-end-rgb)))",
+          }}
+        >
+          {"▶"}&#xFE0E;
+        </text>
+      )}
     </svg>
   );
 }
 
-const classifierDescriptions: Record<Classifier | "null", string> = {
-  null: "These especially common words include things like like numerals, pronouns, and grammatical helpers. They are all monosyllables, and they are signed in the neutral position.",
-  bu: "This classifier denotes spatial relationships. These are all transitive verbs, i.e. verbs which take a direct object.",
-  di: "This classiier denotes bodily relationships, bodily actions, and senses. These are all transitive verbs, i.e. verbs which take a direct object.",
-  gi: "This classifier denotes body parts, plant parts, and organic things in general. These are all nouns and adjectives/intransitive verbs.",
-  ku: "This classifier denotes life forms or states of living things. These are all nouns and adjectives/intransitive verbs.",
-  li: "This classifier denotes substances, physical properties, and sensations. These are all nouns and adjectives/intransitive verbs.",
-  mi: "This classifier denotes buildings, vehicles, and other artificial structures or places. These are all nouns.",
-  nu: "This classifier denotes social and verbal relationships and actions. These are all transitive verbs, i.e. verbs which take a direct object.",
-  pi: "This classifier denotes tools, artificial materials, and other artifacts made by people. These are all nouns.",
-  si: "This classifier denotes natural places, weather phenomena, and other natural forces. These are all nouns and adjectives/intransitive verbs.",
-  tu: "This classifier denotes shapes, physical and temporal dimensions, physical states, and physical actions. These are all nouns and adjectives/intransitive verbs.",
+const classifierDescriptions: Record<Classifier | "null", ReactNode> = {
+  null: (
+    <>
+      Words with <b>no classifier</b> include common words such as numerals,
+      pronouns, and grammatical helpers. With no classifier, they are{" "}
+      <b>monosyllabic</b> in the oral language, and they are signed in the{" "}
+      <b>neutral position</b>.
+    </>
+  ),
+  bu: (
+    <>
+      Words in <b>bu-</b> denote spatial relationships. These are all transitive
+      verbs, i.e. verbs which take a direct object.
+    </>
+  ),
+  di: (
+    <>
+      Words in <b>bu-</b> denote bodily relationships, bodily actions, and
+      senses. These are all transitive verbs, i.e. verbs which take a direct
+      object.
+    </>
+  ),
+  gi: (
+    <>
+      Words in <b>bu-</b> denote body parts, plant parts, and organic things in
+      general. These are all nouns and adjectives/intransitive verbs.
+    </>
+  ),
+  ku: (
+    <>
+      Words in <b>bu-</b> denote life forms or states of living things. These
+      are all nouns and adjectives/intransitive verbs.
+    </>
+  ),
+  li: (
+    <>
+      Words in <b>bu-</b> denote substances, physical properties, and
+      sensations. These are all nouns and adjectives/intransitive verbs.
+    </>
+  ),
+  mi: (
+    <>
+      Words in <b>bu-</b> denote buildings, vehicles, and other artificial
+      structures or places. These are all nouns.
+    </>
+  ),
+  nu: (
+    <>
+      Words in <b>bu-</b> denote social and verbal relationships and actions.
+      These are all transitive verbs, i.e. verbs which take a direct object.
+    </>
+  ),
+  pi: (
+    <>
+      Words in <b>bu-</b> denote tools, artificial materials, and other
+      artifacts made by people. These are all nouns.
+    </>
+  ),
+  si: (
+    <>
+      Words in <b>bu-</b> denote natural places, weather phenomena, and other
+      natural forces. These are all nouns and adjectives/intransitive verbs.
+    </>
+  ),
+  tu: (
+    <>
+      Words in <b>bu-</b> denote shapes, physical and temporal dimensions,
+      physical states, and physical actions. These are all nouns and
+      adjectives/intransitive verbs.
+    </>
+  ),
 };
 
 export function capitalize(string: string) {

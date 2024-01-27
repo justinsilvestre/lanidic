@@ -10,11 +10,11 @@ export function Header() {
     <header className="flex flex-col items-center p-4">
       <h2>classifiers</h2>
       <ul>
-        <li className="inline-block p-2">
+        <li className="inline-block p-0.5 md:p-2">
           <Link href={"/"}>∅</Link>
         </li>
         {classifiers.map((classifier) => (
-          <li key={classifier} className="inline-block p-2">
+          <li key={classifier} className="inline-block p-0.5 md:p-2">
             {params.prefix !== classifier ? (
               <Link href={"/p/" + classifier}>{classifier}-</Link>
             ) : (
@@ -26,7 +26,7 @@ export function Header() {
       <h2>radicals</h2>
       <ul>
         {consonants.map((consonant) => (
-          <li key={consonant} className="inline-block p-2">
+          <li key={consonant} className="inline-block p-0.5 md:p-2">
             {params.radical !== consonant + "a" ? (
               <Link href={`/r/${consonant}a`}>/{consonant}a/</Link>
             ) : (

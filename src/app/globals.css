@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --background-rgb: 235, 235, 235;
   --non-dominant-hand-filter: brightness(0.7);
   scroll-behavior: smooth;
 }
@@ -14,6 +15,7 @@ body.dark {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 10, 10, 10;
   --background-end-rgb: 20, 20, 20;
+  --background-rgb: 15, 15, 15;
   --non-dominant-hand-filter: brightness(1.3);
 }
 
@@ -26,8 +28,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-  background: rgb(var(--background-end-rgb));
-
+  background: rgb(var(--background-rgb));
+  position: relative;
 }
 
 @layer utilities {

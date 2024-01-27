@@ -151,6 +151,29 @@ export function RootDefinition({
               })}
           </div>
         )}
+        {!prefixSyllables.length && (
+          <div className="text-xs mt-3">
+            <h4 className="  ">radical meanings:</h4>
+            {Object.keys(rootsTables.byRadical[suffix as Radical]).map(
+              (radicalMeaning, i, arr) => (
+                <span key={String(i)} className="italic">
+                  <Link
+                    href={`/r/${suffix}#${radicalMeaning}`}
+                    className="hover:underline text-xs"
+                  >
+                    <span className="inline-flex flex-col items-center hover:underline text-xs">
+                      <span>
+                        {radicalMeaning}
+                        {i < arr.length - 1 && ","}
+                      </span>
+                    </span>
+                  </Link>
+                  {i < arr.length - 1 && <> </>}
+                </span>
+              )
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -186,7 +209,11 @@ function RootSvg({
     }
 
     const timeout = setTimeout(() => {
-      setAnimationFrameIndex(animationFrameIndex + 1);
+      const nextFrameIndex = animationFrameIndex + 1;
+
+      setAnimationFrameIndex(
+        nextFrameIndex === totalFramesCount ? null : nextFrameIndex
+      );
     }, 700);
 
     console.log(animationFrameIndex);
@@ -199,7 +226,7 @@ function RootSvg({
       onClick={
         totalFramesCount > 1 ? () => setAnimationFrameIndex(0) : undefined
       }
-      className={`flex flex-row gap-2 bg-[rgba(var(--background-end-rgb),_.3)] ${
+      className={`group flex flex-row gap-2 bg-[rgba(var(--background-end-rgb),_.3)] ${
         totalFramesCount > 1 ? "cursor-pointer" : ""
       }`}
       viewBox="0 0 1000 1000"
@@ -262,7 +289,6 @@ function RootSvg({
           fontSize={100}
           style={{
             fill: "rgb(var(--foreground-rgb))",
-            // drop shadow
             filter:
               "drop-shadow(5px 5px 5px rgb(var(--background-end-rgb))) drop-shadow(5px 5px 5px rgb(var(--background-end-rgb))) drop-shadow(5px 5px 5px rgb(var(--background-end-rgb)))",
           }}
@@ -270,6 +296,22 @@ function RootSvg({
           {animationFrameIndex === 0
             ? `${classifier}- /${firstRadical}/`
             : `/${radicals[animationFrameIndex]}/`}
+        </text>
+      )}
+      {totalFramesCount > 1 && animationFrameIndex === null && (
+        <text
+          x={40}
+          y={950}
+          textAnchor="left"
+          fontSize={90}
+          className=" opacity-50 group-hover:opacity-100"
+          style={{
+            fill: "rgb(var(--foreground-rgb))",
+            filter:
+              "drop-shadow(5px 5px 5px rgb(var(--background-end-rgb))) drop-shadow(5px 5px 5px rgb(var(--background-end-rgb))) drop-shadow(5px 5px 5px rgb(var(--background-end-rgb)))",
+          }}
+        >
+          {"▶"}&#xFE0E;
         </text>
       )}
     </svg>
