@@ -1,7 +1,6 @@
 // to do:
-// - prefix animation, whole word animation
 // - polysyllable prefix descriptions (word definition + meanings used in mnemonics)
-// - view words containing radical
+
 export const classifiers = [
   "bu",
   "di",
