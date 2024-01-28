@@ -38,7 +38,7 @@ export function RootDefinition({
     []) as Radical[];
   const classifier = (prefixSyllables[0] || null) as Classifier | null;
   return (
-    <div className={`flex gap-2 ${className}`}>
+    <div className={`flex gap-2 ${className}`} id={word}>
       <div className="">
         <span className="inline-block text-center">
           <RootSvg
